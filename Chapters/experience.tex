@@ -1,0 +1,226 @@
+% Chapter Template
+
+\chapter{Experimental Results on New Routing Strategies} % Main chapter title
+
+\label{expereince}
+
+\lhead{Chapter 2. \emph{Experimental Results on New Routing Strategies}}
+
+\section{Experiment Test Setup}
+We tested our experiments on clusters of cisco's server with linux containers with different configuration set ups on Lurch. In the case of needs, dynamic modifications also have been added on Lurch to be more interactive for different test scnearios.
+
+In this chapter we will show, test and validate our 4 routing strategies on 2 different setup networks with 5 nodes (medium size) and another one with 17 nodes (large size) each one with costumized capacity. We plot rates in Kbps vs time for each link involved in strategy. $\{ai\}$, $i=$1:8 are Access Points and nodes with \textit{NodeID} are Autonomous nodes in the network.
+   
+In all scenarios we plot the figures of each link by nodeID of ends connected. In, Out means the direction of packets that come to node. We consider number of hops as cost of link as it is meaningful in ICN architecture.
+\textit{TreeOnConsumer}, \textit{TreeOnProducer}, \textit{MinCostMultipath}, \textit{MaxFlow} are 4 different parameters of RoutingNDN module to choose which are done for \textit{Medium} and \textit{Large} size. We have put the result of each case inside the subsection.
+
+In all cases Clients are searching /n/a/noseg chunk and repositories are containing /n folder which has alphabetical letters to like a,b,c,d, ... then chunks of \textit{BigBuckBunny.mp4} are appended to them. Engine of repository is an application called \textit{repo-ng}. 
+
+\section{Strategies on Medium Size NDN Network}
+
+
+\subsection{TreeOnConsumer}
+As figure \ref{TreeOnConsumer} shows, 'luca' and 'jordan' nodes are clients searching '/n/a/noseg' chunk and 'shahab' node is producer of content. The first prefix of content is /n folder contains.
+
+Figure \ref{treeonconsumer} shows 4 traced rates in which yellow and green one are data packets. Same packets are routed through \textit{TreeOnConsumer} tree to the clients with different rates. In this figure you can see the delay between 'sj' and 'sl' which is becasue of capacity difference of between containers. So you have 2 threads on 2 different machines occuring and recorded at the same time.
+
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.4]{Figures/TreeOnConsumer.png}
+
+\caption{TreeOnConsumer Tree Medium} \label{TreeOnConsumer} 
+
+
+\includegraphics[scale = 0.4]{Figures/treeonconsumer.png}
+
+\caption{TreeOnConsumer (Rate vs Time) Medium} \label{treeonconsumer} 
+
+
+\end{center}
+
+\end{figure}
+
+
+\subsection{TreeOnProducer}
+Figure \ref{TreeOnProducer} shows 'jordan', a client who searches '/n/a/noseg' and 2 producers ('shahab','mauro') who send packets to client by this strategy using tree of \textit{TreeOnProducer}. 
+Figure \ref{treeonproducer} shows as well this downloading traced during time which can be used whenever client wants a high quality content.
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.4]{Figures/TreeOnProducer.png}
+
+\caption{TreeOnProducer Tree Medium} \label{TreeOnProducer} 
+
+
+\includegraphics[scale = 0.4]{Figures/treeonproducer.png}
+
+\caption{TreeOnProducer (Rate vs Time) Medium} \label{treeonproducer} 
+
+
+\end{center}
+
+\end{figure}
+
+\subsection{MinCostMultipath}
+Figure \ref{MinCostMultipath} shows \textit{MinCostMultipath} tree of minimum of network in which we use number of hops as cost of links. This is the case in which we want to broadcast video livestreaming as we discussed. Same chunk of datas are searching at the same time for a live movie like a football match content to all clients.
+ 
+Figure \ref{mincost} shows traced data as well.
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.4]{Figures/MinCostMultipath.png}
+
+\caption{MinCostMultipath Tree Medium} \label{MinCostMultipath} 
+
+\includegraphics[scale = 0.4]{Figures/mincostmultipath.png}
+\caption{MinCostMultipath (Rate vs Time) Medium} \label{mincost} 
+
+\end{center}
+
+\end{figure}
+
+\subsection{MaxFlow}
+In figure \ref{MaxFlow} 'jordan' node gets information from all of path possible to maximize data throughput.
+
+Figure \ref{maxflow} shows data rates which are maximum for each link. It can be used whenever clients need higher quality data.
+
+You can see for marginal paths you have on the stable rates.
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.4]{Figures/MaxFlow.png}
+
+\caption{MaxFlow Medium} \label{MaxFlow} 
+
+
+\end{center}
+
+\end{figure}
+
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.4]{Figures/maxflow.png}
+
+\caption{MaxFlow (Rate vs Time(s)) Medium} \label{maxflow} 
+
+
+\end{center}
+
+\end{figure}
+
+
+
+
+ 
+
+\section{Strategies on Large Size NDN Network}
+
+\subsection{TreeOnConsumer}
+Figure \ref{TreeOnConsumer_big} shows a red subgraph, $a1, a2, a3, a4$ are Acces Points on which the mobile clients are connected through \textit{TreeOnConsumer} tree on the network.\\
+In \ref{treeonconsumer_big}  rates are traced against time as well. The 'sj' link curve is upper than the other becasue you have 3 clients Child on this side against 'sg' side in which you have just one Child. So the Interest/Data packets are bigger on right first depth of tree.
+
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.4]{Figures/TreeOnConsumer_big.png}
+
+\caption{TreeOnConsumer Tree Large} \label{TreeOnConsumer_big} 
+
+
+\includegraphics[scale = 0.4]{Figures/treeonconsumer_big.png}
+
+\caption{TreeOnConsumer (Rate vs Time) Large} \label{treeonconsumer_big} 
+
+
+\end{center}
+
+\end{figure}
+
+
+\subsection{TreeOnProducer}
+Figure \ref{TreeOnProducer_big} shows $a6$ as Access Point client which recieves data from different producer nodes at the same time.
+
+This strategy can be used whenever client can achieve to multiple repositories and it can download his chunk at the same time.
+
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.4]{Figures/TreeOnProducer_big.png}
+
+\caption{TreeOnProducer Tree Medium} \label{TreeOnProducer_big} 
+
+
+\includegraphics[scale = 0.4]{Figures/treeonproducer_big.png}
+
+\caption{TreeOnProducer (Rate vs Time) Large} \label{treeonproducer_big} 
+
+
+\end{center}
+
+\end{figure}
+
+
+\subsection{MinCostMultipath}
+Figure \ref{MinCostMultiPath} shows how the \textit{MinCostmultiPath} tree is chosen to deliver content to all clients which are connected to access points.
+ 
+Notably this strategy can be used when you want to do a \textit{Equal Cost Multi Path} (ECMP) routing in which your minimized paths have equal cost to destination so we should use load-balance or multipath forwading strategy to allow traffic to pass along the network. 
+
+The algorithm of this strategy is written by the idea of searching minimum multipath from producer to client.
+
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.4]{Figures/MinCostMultipath_big.png}
+
+\caption{MinCostMultiPath Tree Large} \label{MinCostMultiPath} 
+
+
+\includegraphics[scale = 0.4]{Figures/mincostmultipath_big.png}
+
+\caption{MinCostMultiPath (Rate vs Time) Large} \label{mincostmultipath} 
+
+
+\end{center}
+
+\end{figure}
+
+
+\subsection{MaxFlow}
+Figure \ref{MaxFlow_big} shows the paths chosen by strategy to maximize the throughput. This strategy works with capacity of each link and according to these value it returns the paths which can maximum the throughput toward clients.
+
+Figure \ref{maxflow_big} shows how the rates are changing during time with this strategy. As you can see data packets have maximum value to achieve the output.  
+
+The mobile stations are connected to $a2,a3$ Access Point can download their contents through taps interfaces.
+
+The algorithm of this strategy is written by finding the paths which maximize throughput with preventing out of range extra loops.
+
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.4]{Figures/MaxFlow_big.png}
+
+\caption{MaxFlow Tree Large} \label{MaxFlow_big} 
+
+
+\includegraphics[scale = 0.4]{Figures/maxflow_big.png}
+
+\caption{MaxFlow (Rate vs Time) Large} \label{maxflow_big} 
+
+
+\end{center}
+
+\end{figure}
+
+
+

@@ -1,0 +1,395 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Masters/Doctoral Thesis 
+% LaTeX Template
+% Version 1.43 (17/5/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Shahab SHARIAT BAGHERI 
+%\subsection http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/
+% and
+% Sunil Patel
+% http://www.sunilpatel.co.uk/thesis-template/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Note:
+% Make sure to edit document variables in the Thesis.cls file
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, oneside]{Thesis} % The default font size and one-sided printing (no margin offsets)
+
+\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+
+\usepackage{tikz}
+\usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+% table sizing
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{listings}
+%%%
+\usepackage{schemabloc}
+\usetikzlibrary{circuits}
+%%%
+
+\usetikzlibrary{arrows,positioning,shapes,snakes}
+
+%%%
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\newcommand{\z}{\mathpzc{z}}
+%%%
+
+\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+\title{\ttitle} % Defines the thesis title - don't touch this
+
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\setstretch{1.3} % Line spacing of 1.3
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{} % Clears all page headers and footers
+\rhead{\thepage} % Sets the right side header to show the page number
+\lhead{} % Clears the left side page header
+
+\pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+\newcommand{\suma}{\Large$+$}
+\newcommand{\inte}{$\displaystyle \int$}
+\newcommand{\derv}{\huge$\frac{d}{dt}$}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+% PDF meta-data
+\hypersetup{pdftitle={\ttitle}}
+\hypersetup{pdfsubject=\subjectname}
+\hypersetup{pdfauthor=\authornames}
+\hypersetup{pdfkeywords=\keywordnames}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+
+\begin{center}
+ \includegraphics[width=0.15\textwidth,natwidth=610,natheight=642]{telecom.jpeg}
+ \includegraphics[width=0.3\textwidth,natwidth=610,natheight=642]{cisco.png}
+
+\textsc{\LARGE Paris Saclay University and TELECOM ParisTech}\\[1.5cm] % University name
+\textsc{\Large Internship report \\ Master of Multimedia Netwokring} % Thesis type
+
+\HRule \\[0.2cm] % Horizontal line
+{\huge \bfseries \ttitle}\\[0.4cm] % Thesis title
+\HRule \\[1.2cm] % Horizontal line
+
+
+\begin{minipage}{0.4\textwidth}
+
+\begin{flushleft} \large
+\emph{Author:}\\
+{\authornames} % Author name - remove the \href bracket to remove the link
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+
+\begin{flushright} \large
+\emph{Responsbile of Internship:}\\
+\href{https://scholar.google.com/citations?user=Q36qUAsAAAAJ&hl=fr}{Luca MUSCARIELLO}\\
+% Supervisor name - remove the \href bracket to remove the link  
+\end{flushright}
+
+\end{minipage}\\[1.8cm]
+%\degreename\\[0.5cm] % University requirement text
+
+
+%\textit\\{in the}[0.4cm]
+
+%\deptname\\[0.5cm] % Research group name and department name
+
+
+
+{\large \today}
+\vfill
+\end{center}
+
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%	Your institution may give you a different text to place here
+%----------------------------------------------------------------------------------------
+
+%\Declaration{
+%
+%\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+%
+%I, \authornames, declare that this thesis titled, '\ttitle' and the work presented in it are my own. I confirm that:
+%
+%\begin{itemize} 
+%\item[\tiny{$\blacksquare$}] This work was done wholly or mainly while in candidature for a research degree at this University.
+%\item[\tiny{$\blacksquare$}] Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated.
+%\item[\tiny{$\blacksquare$}] Where I have consulted the published work of others, this is always clearly attributed.
+%\item[\tiny{$\blacksquare$}] Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work.
+%\item[\tiny{$\blacksquare$}] I have acknowledged all main sources of help.
+%\item[\tiny{$\blacksquare$}] Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself.\\
+%\end{itemize}
+% 
+%Signed:\\
+%\rule[1em]{25em}{0.5pt} % This prints a line for the signature
+% 
+%Date:\\
+%\rule[1em]{25em}{0.5pt} % This prints a line to write the date
+%}
+%
+%\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	QUOTATION PAGE
+%----------------------------------------------------------------------------------------
+
+\pagestyle{empty} % No headers or footers for the following pages
+
+\null\vfill % Add some space to move the quote down the page a bit
+
+\textit{Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop Questioning.}
+
+\begin{flushright}
+Albert Einstein
+\end{flushright}
+
+\vfill\vfill\vfill\vfill\vfill\vfill\null % Add some space at the bottom to position the quote just right
+
+\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+
+\addtotoc{Abstract} % Add the "Abstract" page entry to the Contents
+
+\abstract % Add a gap in the Contents, for aesthetics
+\textbf{I}nformation \textbf{C}entric \textbf{N}etworking (ICN) in one sentence is rethinking of internet in the sense that it will be no more calling (IP-architecutre) for communication rather we search the content on the network using caching datas with different on each node. Notably this architecure is a good suite for embedded systems in which you have good control on chaching level , memory allocations, network functionalities. In this case like all networks in each node your packets need routing table to send. In this work we propose 4 different strategies called \textit{TreeOnConsumer}, \textit{TreeOnProducer}, \textit{MinCostMultipath}, \textit{MaxFlow} which decide the best path to create faces through proper interfaces then forward packets. Finally we design an algorithm to automatize the algorithm to be chosen in function of network conditions. We developed \textit{Lurch}, the emulator to interact with linux containers dynamically on cisco's server. We use \textit{ndn-icp-download} an application for downloading ndn content. We use \textit{ifstat} linux utility to read network interface statistics.  
+Results are real data rate packet in Kbps using these algorithms which choose different paths according to proper algorithm and network condition.
+
+%\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+\setstretch{1.3} % Reset the line-spacing to 1.3 for body text (if it has changed)
+%
+%\acknowledgements{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+%%%
+%%%Thanks to my solid academic Internship, today I can write rapidly several programs and models in Communications Systems \ldots
+%%}
+\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\pagestyle{fancy} % The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+
+\lhead{\emph{Contents}} % Set the left side page header to "Contents"
+\tableofcontents % Write out the Table of Contents
+
+\lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
+\listoffigures % Write out the List of Figures
+
+\lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
+%\listoftables % Write out the List of Tables
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+
+%\clearpage % Start a new page
+%%
+%\setstretch{1.5} % Set the line spacing to 1.5, this makes the following tables easier to read
+%%
+%\lhead{\emph{Abbreviations}} % Set the left side page header to "Abbreviations"
+%\listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
+%%{
+%\textbf{CPFSK} & \textbf{C}ontinous \textbf{P}hase \textbf{F}requency \textbf{S}hit \textbf{K}eying \\
+%
+%\textbf{BFSK} & \textbf{B}inary \textbf{F}requency \textbf{S}hit \textbf{K}eying \\
+%%
+%\textbf{GFSK} & \textbf{G}aussian \textbf{F}requency \textbf{S}hit \textbf{K}eying \\
+%\textbf{DASH7} & \textbf{D}evelopers \textbf{A}lliance for \textbf{S}tandard \textbf{H}armonization
+%\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+%}
+
+%----------------------------------------------------------------------------------------
+%	PHYSICAL CONSTANTS/OTHER DEFINITIONS
+%----------------------------------------------------------------------------------------
+
+\texttt{%\clearpage % Start a new page
+%
+%\lhead{\emph{Physical Constants}} % Set the left side page header to "Physical Constants"
+%
+%\listofconstants{lrcl} % Include a list of Physical Constants (a four column table)
+{
+%Speed of Light & $c$ & $=$ & $2.997\ 924\ 58\times10^{8}\ \mbox{ms}^{-\mbox{s}}$ (exact)\\
+%% Constant Name & Symbol & = & Constant Value (with units) \\
+}}
+
+%----------------------------------------------------------------------------------------
+%	SYMBOLS
+%----------------------------------------------------------------------------------------
+
+%\clearpage % Start a new page
+%
+%\lhead{\emph{Symbols}} % Set the left side page header to "Symbols"
+%
+%\listofnomenclature{lll} % Include a list of Symbols (a three column table)
+{
+%$a$ & distance & m \\
+%$P$ & power & W (Js$^{-1}$) \\
+% Symbol & Name & Unit \\
+
+%& & \\ % Gap to separate the Roman symbols from the Greek
+
+%$\omega$ & angular frequency & rads$^{-1}$ \\
+% Symbol & Name & Unit \\
+}
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+
+\setstretch{1.3} % Return the line spacing back to 1.3
+
+\pagestyle{empty} % Page style needs to be empty for this page
+
+\dedicatory{To \textit{My Parents} and \textit{PIRL} \ldots} % Dedication text
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{fancy} % Return the page headers back to the "fancy" style
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+
+\input{Chapters/introduction}
+\input{Chapters/Routing} 
+\input{Chapters/experience}
+%\input{Chapters/coding} 
+%\input{Chapters/conclusion} 
+
+%\input{Chapters/Chapter7} 
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+
+\input{Appendices/AppendixA}
+%\input{Appendices/AppendixB}
+%\input{Appendices/AppendixC}
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\backmatter
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\label{Bibliography}
+
+%\lhead{\emph{Bibliography}} % Change the page header to say "Bibliography"
+
+%\bibliographystyle{unsrtnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+
+%\bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+
+
+\begin{thebibliography}{9}
+
+\bibitem{modulation} 
+Computer Networks
+\textit{Andrew Tanenbaum}%
+\bibitem{python} 
+Weighted Graph Algorithms with Python
+\textit{Marian Smoluchowski Institute of Physics, Jagiellonian Un
+iversity} April, 2014
+%
+\bibitem{jacobson} 
+Networking Named Content
+\textit{Van Jacobson
+Diana K. Smetters
+James D. Thornton
+Michael F. Plass}
+%
+\bibitem{oran} 
+Information Centric Networking for Media Distribution: 
+Will it Blend?
+\textit{David Oran, Research \& Advanced Development 
+Cisco Systems, Cambridge, MA, USA}
+%
+%\bibitem{RF} 
+%N.P Kontakos and J.K Pollard
+%\textit{Bluetooth RF Layer Performance Evaluation} University College London, 2001
+%
+%\bibitem{preamble} 
+%S. Nagaraj, S. Khan a,d C. Schlegel, Departement of Electrical Engineering University of Alberta,
+%\textit{On Preamble Detection in Packet-Based Wireless Networks}, 2006
+%
+%\bibitem{richardson} 
+%Thomas J. Richardson and Rüdiger L. Urbanke 
+%\textit{Efficient Encoding of Low-Density Parity-Check
+%Codes}, IEEE Transactions of Information Theory, 2001.
+%
+%\bibitem{urban} 
+%Henrik Asplund, Kjell Larsson and Peter Ökvist
+%\textit{How typical is the "Typical Urban" channel model}. Ericsson Research
+%
+%\bibitem{errorcontrolcoding} 
+%Shu Lin, Daniel J.Costello, Jr. 
+%\textit{Error Control Coding}. (Second Edition), 2004.
+%
+%\bibitem{logdomain} 
+%Henk Wymeersch, Heidi Steendam and Marc Moeneclaey 
+%\textit{Log-domain decoding of LDPC codes overGF(q)}. 
+%DIGCOM research group, TELIN Dept., Ghent University, 2004.
+%
+%\bibitem{LDPC} 
+%Y. Kou, Student member of IEEE, S. Lin, M.P.C. Frossorier, Seniors of IEEE
+%\textit{Low-Density Parity-Check Codes Based on Finite Geometries: A Rediscovery and New Results}, 2001
+%
+%\bibitem{rs} 
+%Bo Zhou, Li Zhang, Jingyu Kang, Qin Huang, Ying Y. Tai and Shu Lin, Department of Electrical and Computer Engineering
+%University of California, Davis 
+%\textit{Non-Binary LDPC Codes vs. Reed-Solomon Codes}, The state key Laboratory on Microwave and Digital Communications, China, 2011
+
+
+\end{thebibliography}
+
+
+\end{document}  
