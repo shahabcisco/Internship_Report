@@ -1,61 +1,64 @@
-\beamer@endinputifotherversion {3.24pt}
+\beamer@endinputifotherversion {3.36pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
-\headcommand {\sectionentry {1}{Une G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e} de Stage}{3}{Une G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e} de Stage}{0}}
+\headcommand {\sectionentry {1}{Internship Environment}{3}{Internship Environment}{0}}
 \headcommand {\beamer@sectionpages {1}{2}}
 \headcommand {\beamer@subsectionpages {1}{2}}
-\headcommand {\slideentry {1}{0}{3}{3/3}{}{0}}
+\headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{4}{DASH7 et Wizzilab}}\headcommand {\beamer@subsectionpages {3}{3}}
-\headcommand {\slideentry {1}{1}{1}{4/7}{DASH7 et Wizzilab}{0}}
-\headcommand {\beamer@framepages {4}{7}}
-\headcommand {\slideentry {1}{1}{2}{8/9}{DASH7 et Wizzilab}{0}}
-\headcommand {\beamer@framepages {8}{9}}
-\headcommand {\slideentry {1}{1}{3}{10/11}{DASH7 et Wizzilab}{0}}
-\headcommand {\beamer@framepages {10}{11}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{12}{Les Objectifs et Outils}}\headcommand {\beamer@subsectionpages {4}{11}}
-\headcommand {\slideentry {1}{2}{1}{12/14}{Les Objectifs et Outils}{0}}
-\headcommand {\beamer@framepages {12}{14}}
-\headcommand {\slideentry {1}{2}{2}{15/15}{Les Objectifs et Outils}{0}}
-\headcommand {\beamer@framepages {15}{15}}
-\headcommand {\sectionentry {2}{Les D\IeC {\'e}veloppements sur DASH7}{16}{Les D\IeC {\'e}veloppements sur DASH7}{0}}
-\headcommand {\beamer@sectionpages {3}{15}}
-\headcommand {\beamer@subsectionpages {12}{15}}
-\headcommand {\slideentry {2}{0}{3}{16/16}{}{0}}
-\headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{17}{Modulation et D\IeC {\'e}finition des Canaux adjacents}}\headcommand {\beamer@subsectionpages {16}{16}}
-\headcommand {\beamer@subsubsectionentry {0}{2}{1}{1}{17}{Choix du Filtre Gaussien}}
-\headcommand {\slideentry {2}{1}{1}{17/18}{Modulation et D\IeC {\'e}finition des Canaux adjacents}{0}}
-\headcommand {\beamer@framepages {17}{18}}
-\headcommand {\beamer@subsubsectionentry {0}{2}{1}{2}{19}{D\IeC {\'e}finition des Canaux et D\IeC {\'e}signer des Mask}}
-\headcommand {\slideentry {2}{1}{2}{19/21}{Modulation et D\IeC {\'e}finition des Canaux adjacents}{0}}
-\headcommand {\beamer@framepages {19}{21}}
-\headcommand {\slideentry {2}{1}{3}{22/22}{Modulation et D\IeC {\'e}finition des Canaux adjacents}{0}}
-\headcommand {\beamer@framepages {22}{22}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{23}{Nouveaux Codage du Canal}}\headcommand {\beamer@subsectionpages {17}{22}}
-\headcommand {\beamer@subsubsectionentry {0}{2}{2}{1}{23}{Les Codes Propos\IeC {\'e}s}}
-\headcommand {\slideentry {2}{2}{1}{23/23}{Nouveaux Codage du Canal}{0}}
-\headcommand {\beamer@framepages {23}{23}}
-\headcommand {\beamer@subsubsectionentry {0}{2}{2}{2}{24}{Les R\IeC {\'e}sultats et les Courbes BLER des Nouveaux Codes}}
-\headcommand {\slideentry {2}{2}{2}{24/24}{Nouveaux Codage du Canal}{0}}
-\headcommand {\beamer@framepages {24}{24}}
-\headcommand {\slideentry {2}{2}{3}{25/25}{Nouveaux Codage du Canal}{0}}
-\headcommand {\beamer@framepages {25}{25}}
-\headcommand {\slideentry {2}{2}{4}{26/29}{Nouveaux Codage du Canal}{0}}
-\headcommand {\beamer@framepages {26}{29}}
-\headcommand {\sectionentry {3}{Conclusions et Perspectives}{30}{Conclusions et Perspectives}{0}}
-\headcommand {\beamer@sectionpages {16}{29}}
-\headcommand {\beamer@subsectionpages {23}{29}}
-\headcommand {\slideentry {3}{0}{5}{30/30}{}{0}}
-\headcommand {\beamer@framepages {30}{30}}
-\headcommand {\slideentry {3}{0}{6}{31/31}{}{0}}
-\headcommand {\beamer@framepages {31}{31}}
-\headcommand {\slideentry {3}{0}{7}{32/32}{}{0}}
-\headcommand {\beamer@framepages {32}{32}}
-\headcommand {\beamer@partpages {1}{33}}
-\headcommand {\beamer@subsectionpages {30}{33}}
-\headcommand {\beamer@sectionpages {30}{33}}
-\headcommand {\beamer@documentpages {33}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{4}{CISCO \& PIRL}}\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\slideentry {1}{1}{1}{4/4}{CISCO \& PIRL}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\slideentry {1}{1}{2}{5/5}{CISCO \& PIRL}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\slideentry {1}{1}{3}{6/7}{CISCO \& PIRL}{0}}
+\headcommand {\beamer@framepages {6}{7}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{8}{Goals and Perspectives}}\headcommand {\beamer@subsectionpages {4}{7}}
+\headcommand {\slideentry {1}{2}{1}{8/10}{Goals and Perspectives}{0}}
+\headcommand {\beamer@framepages {8}{10}}
+\headcommand {\slideentry {1}{2}{2}{11/11}{Goals and Perspectives}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\sectionentry {2}{Ideas and Strategies}{12}{Ideas and Strategies}{0}}
+\headcommand {\beamer@sectionpages {3}{11}}
+\headcommand {\beamer@subsectionpages {8}{11}}
+\headcommand {\slideentry {2}{0}{1}{12/12}{}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{13}{ICN brief Introduction}}\headcommand {\beamer@subsectionpages {12}{12}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{1}{1}{13}{NDN networks}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{1}{2}{13}{NFD}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{13}{Linux Containers and Virtualization}}\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{2}{1}{13}{Choix du Filtre Gaussien}}
+\headcommand {\slideentry {2}{2}{1}{13/14}{Linux Containers and Virtualization}{0}}
+\headcommand {\beamer@framepages {13}{14}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{2}{2}{15}{Routing Algorithms}}
+\headcommand {\slideentry {2}{2}{2}{15/17}{Linux Containers and Virtualization}{0}}
+\headcommand {\beamer@framepages {15}{17}}
+\headcommand {\slideentry {2}{2}{3}{18/18}{Linux Containers and Virtualization}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{19}{Routing Algorithms}}\headcommand {\beamer@subsectionpages {13}{18}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{3}{1}{19}{Les Codes Propos\IeC {\'e}s}}
+\headcommand {\slideentry {2}{3}{1}{19/19}{Routing Algorithms}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{3}{2}{20}{Les R\IeC {\'e}sultats et les Courbes BLER des Nouveaux Codes}}
+\headcommand {\slideentry {2}{3}{2}{20/20}{Routing Algorithms}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\slideentry {2}{3}{3}{21/21}{Routing Algorithms}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {2}{3}{4}{22/25}{Routing Algorithms}{0}}
+\headcommand {\beamer@framepages {22}{25}}
+\headcommand {\sectionentry {3}{Conclusion}{26}{Conclusion}{0}}
+\headcommand {\beamer@sectionpages {12}{25}}
+\headcommand {\beamer@subsectionpages {19}{25}}
+\headcommand {\slideentry {3}{0}{1}{26/26}{}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\slideentry {3}{0}{2}{27/27}{}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\slideentry {3}{0}{3}{28/28}{}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\beamer@partpages {1}{29}}
+\headcommand {\beamer@subsectionpages {26}{29}}
+\headcommand {\beamer@sectionpages {26}{29}}
+\headcommand {\beamer@documentpages {29}}
 \headcommand {\def \inserttotalframenumber {19}}
