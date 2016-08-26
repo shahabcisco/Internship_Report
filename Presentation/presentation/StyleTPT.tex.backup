@@ -1,0 +1,1291 @@
+\documentclass[8pt]{beamer} 
+\usepackage{pgf}
+\usepackage{animate}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage[english]{babel}
+\usepackage{amssymb,amsmath,amscd,amsfonts,amsthm,bbm,bm}
+\usepackage{wasysym}
+%\usepackage{graphicx}
+%\usepackage{animate}
+%\usepackage{psfrag}
+%\usepackage{paralist}
+\usepackage{color}
+%\usepackage{float}
+%\usepackage{relsize}
+%\usepackage{euscript}
+%\usepackage{setspace}
+%\usepackage{flushend}
+%%\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{plotmarks}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows,shapes,decorations,backgrounds}
+\usepackage{tkz-berge}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+\newcommand{\SNR}{\mathsf{SNR}}
+\newcommand{\Q}{\mathbb{Q}}
+% *** TPT STYLE ***
+
+\setbeamerfont{subsection in toc}{size=\large}
+
+\definecolor{colorframetitle}{RGB}{191,18,56} % Title of frames
+\definecolor{redbox}{RGB}{191,18,56} % 
+\definecolor{blackbox}{RGB}{0,0,0} % 
+\definecolor{brownbox}{RGB}{128,99,90} % 
+
+\usepackage[absolute,overlay]{textpos}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing,calc}
+\usetikzlibrary{arrows,shapes,snakes,automata,backgrounds,petri}
+\usepackage{scalefnt}
+
+\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
+
+\tikzstyle{mybox} = [draw=redbox, fill=redbox!20, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+\tikzstyle{fancytitle} =[fill=redbox, text=white, rectangle]
+
+
+\newcommand{\MyLogo}{
+%\begin{textblock}{14}(117.2,0.7)
+\begin{textblock}{14}(117.8,86)
+  \includegraphics[width=1cm]{figures/tpt}
+ \end{textblock}
+}
+
+\usepackage{beamerthemesplit}
+
+\setbeamercolor{itemize item}{fg=redbox}
+\setbeamercolor{structure}{fg=redbox, bg=red}
+\setbeamercolor{block title}{bg=brownbox,fg=white}
+\setbeamercolor{block title alerted}{bg=redbox,fg=white}
+\setbeamercolor{block body alerted}{bg=brownbox!0,fg=black}
+\setbeamercolor{block title example}{bg=black, fg=white}
+\setbeamercolor{palette primary}{fg=black,bg=white} % changed this
+\setbeamercolor{palette secondary}{use=structure,fg=structure.fg!100!white} % changed this
+\setbeamercolor{palette tertiary}{use=structure,fg=structure.fg!100!white} % changed this
+\setbeamercolor*{palette quaternary}{fg=black,bg=white} % outline on top left
+\setbeamercolor{background canvas}{bg=white, fg=black} 
+\setbeamercolor{frametitle}{fg=colorframetitle}
+
+
+% First  frame
+\newcommand{\RectanglesOfMainSlide}{%
+\raisebox{0mm}[0pt][0pt]{%
+\begin{pgfpicture}{0mm}{0mm}{0mm}{0mm}
+\pgfsetlinewidth{5mm}
+\color{redbox}
+\pgfline{\pgfpoint{-4mm}{-12mm}}{\pgfpoint{24mm}{-12mm}}
+\color{blackbox}
+\pgfline{\pgfpoint{24mm}{-12mm}}{\pgfpoint{52mm}{-12mm}}
+\color{brownbox}
+\pgfline{\pgfpoint{52mm}{-12mm}}{\pgfpoint{80mm}{-12mm}}
+\end{pgfpicture}}}
+
+\newcommand{\makeFirstFrame}{
+\setbeamertemplate{footline}{} 
+\frame[plain]{
+\begin{columns}[c]
+\column{3cm}
+\vspace{-2cm}\\
+\includegraphics[width=2.5cm]{figures/tpt}
+\\Institut\\ Mines-Telecom
+\column{7cm}
+\vspace{1cm}\\
+\LARGE{\textbf{\theTitle}}\\
+\vspace{0.5cm}
+\normalsize{\theAuthors}\\
+\vspace{0.5cm}
+\normalsize{\theConferenceAndPlace}\\
+\vspace{-1cm}
+\RectanglesOfMainSlide
+\end{columns}
+}
+\activateFootline
+}
+
+
+% Frames decoration
+
+\newcommand{\RectanglesBeforeTitle}{%
+\raisebox{0mm}[0pt][0pt]{%
+\begin{pgfpicture}{0mm}{0mm}{0mm}{0mm}
+\pgfsetlinewidth{5mm}
+\color{redbox}
+\pgfline{\pgfpoint{-2mm}{2.2mm}}{\pgfpoint{4mm}{2.2mm}}
+\color{blackbox}
+\pgfline{\pgfpoint{4mm}{2.2mm}}{\pgfpoint{10mm}{2.2mm}}
+\color{brownbox}
+\pgfline{\pgfpoint{10mm}{2.2mm}}{\pgfpoint{16mm}{2.2mm}}
+\end{pgfpicture}}}
+
+\setbeamertemplate{frametitle}{
+\begin{columns}[t]
+\column{16mm}
+\RectanglesBeforeTitle 
+\column{10.7cm}
+\strut\textbf{\insertframetitle}\strut
+\end{columns}
+}
+
+% Foot line
+
+\newcommand{\Ffootline}{
+\MyLogo
+\begin{tikzpicture}
+ \fill [color=white, fill=redbox] (-1, -0.05) rectangle (1, 0.30);
+\node[white, right] (note1) at (-1, 0.10) {\insertframenumber/\inserttotalframenumber};
+\node[white, left] (note1bis) at (0.98, 0.10) {\theDate};
+ \fill [color=white, fill=blackbox] (1.05, -0.05) rectangle (4.5, 0.30);
+\node[white, align=center] (note2) at (2.77, 0.12) {Institut Mines-Telecom};
+ \fill [color=red, fill=brownbox] (4.55, -0.05) rectangle (10.75, 0.30);
+\node[white, align = center] (note3) at (7.65, 0.10) {\theTitle};
+
+%\node[white] (note3) at (7.5, 0.10) {\theTitle};
+\end{tikzpicture}
+}
+
+\newcommand{\activateFootline}{
+\setbeamertemplate{footline}{
+\usebeamerfont{structure}
+\Ffootline
+}
+}
+
+
+% *** END OF TPT STYLE ***
+
+
+%remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% To show the outline at the beginning of each section
+\AtBeginSection[]{
+   \begin{frame}
+   \frametitle{Plan}
+   %\begin{center}{\LARGE Outline }\end{center}
+   \tableofcontents[currentsection,hideothersubsections]
+   \end{frame} 
+}
+
+%\newcommand{\LinkToMethodo}{
+%\begin{textblock}{25}(102,89)
+%  \hyperlink{METHODO}{\beamergotobutton{Back to methodology}}
+% \end{textblock}
+%}
+
+\newcommand{\mytilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
+
+\newcommand{\tikzgrid}{
+\begin{pgfonlayer}{background}
+\draw[gray!50]
+(current bounding box.south west)
+grid[step=.2] (current bounding box.north east);
+\draw[red!50]
+(current bounding box.south west)
+grid (current bounding box.north east);
+\end{pgfonlayer}
+}
+
+\newcommand*{\ExtractCoordinate}[3]{\path (#1); \pgfgetlastxy{#2}{#3};}%
+
+\newdimen\tlx
+\newdimen\tlx
+\newdimen\brx
+\newdimen\bry
+
+%% To FILL to customize presentation with the TPT style
+
+\newcommand{\theTitle}{Interference Alignment via Compute-and-Forward}
+\newcommand{\theAuthors}{Ehsan E. Khaleghi \\ Supervisor: Prof.~Jean-Claude Belfiore}
+\newcommand{\theConferenceAndPlace}{19 February 2015}
+\newcommand{\theDate}{19/02/2015}
+
+%\usepackage{calc}
+%\usepackage{bbm}
+
+%\usetheme{Copenhagen}
+
+%\usepackage{showkeys}
+%\usepackage{hyperref}
+
+\DeclareMathOperator{\tr}{Tr}
+\DeclareMathOperator{\support}{supp}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\diag}{diag}
+\newcommand{\bs}{\boldsymbol}
+
+% Convergences 
+\newcommand{\toaslong}{\xrightarrow[T\to\infty]{\text{p.s.}}}
+\newcommand{\toasshort}{\xrightarrow{\text{p.s.}}}
+\newcommand{\toprobalong}{\xrightarrow[T\to\infty]{{\cal P}}}
+\newcommand{\toprobashort}{\xrightarrow{{\mathcal P}}}
+\newcommand{\tolawlong}{\xrightarrow[T\to\infty]{{\cal L}}}
+\newcommand{\tolawshort}{\xrightarrow{{\mathcal L}}}
+\newcommand{\tolong}{\xrightarrow[T\to\infty]{}}
+\newcommand{\norme}[1]{\left\Vert #1\right\Vert}
+
+% Notations bb 
+\newcommand{\N}{\mathbb N}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\1}{\mathbbm 1}
+\newcommand{\PP}{\mathbb{P}}
+ 
+\newcommand{\bl}{\{} 
+\newcommand{\br}{\}} 
+
+\def\bx{{\bf x}}\def\bx{{\bf x}}
+
+\def\bA{{\bf A}}
+\def\bY{{\bf Y}}
+\def\bV{{\bf V}}
+\def\bQ{{\bf Q}}
+\def\ba{{\bf a}}
+\def\bc{{\bf c}}
+\def\bd{{\bf d}}
+\def\bm{{\bf m}}
+\def\bg{{\bf g}}
+\def\bp{{\bf p}}
+\def\bv{{\bf v}}
+\def\bx{{\bf x}}
+\def\by{{\bf y}}
+\def\brho{{\boldsymbol \rho}}
+\def\bDelta{{\boldsymbol \Delta}}
+\def\bdelta{{\boldsymbol \delta}}
+
+\def\bOmega{{\bf \Omega}}
+\def\bbT{{\bf \mathbb{T}}}
+
+\newtheorem{assumption}{Assumption}
+
+\newcommand{\semitransp}[2][35]{\color{fg!#1}#2}
+
+\begin{document}
+ 
+\makeFirstFrame
+
+\frame{
+  \frametitle{Plan}
+  \tableofcontents
+}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\section{Lattices}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{What Does a Lattice Mean ?}
+
+\uncover<1->{
+\vspace{-0.2cm}
+\begin{block}{}
+\centering
+
+\begin{minipage}{0.47\textwidth}
+    \begin{itemize}
+        \item For a 8-year old kid :
+    \end{itemize}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \includegraphics[scale=0.1]{1}
+\end{minipage}
+
+\vspace{0.1cm}
+\begin{minipage}{0.47\textwidth}
+    \begin{itemize}
+        \item For a physicist / crystallographer :
+    \end{itemize}
+\end{minipage}
+\hspace{0.12cm}
+\begin{minipage}{0.5\textwidth}
+    \includegraphics[scale=0.1]{2}
+\end{minipage}
+
+\pause
+
+\vspace{0.1cm}
+\begin{minipage}{0.47\textwidth}
+    \begin{itemize}
+        \item For a mathematician :
+    \end{itemize}
+\end{minipage}
+\hspace{0.12cm}
+\begin{minipage}{0.5\textwidth}
+    \includegraphics[scale=0.1]{3}
+\end{minipage}
+
+
+\vspace{0.1cm}
+\begin{minipage}{0.47\textwidth}
+    \begin{itemize}
+        \item For a computer scientist :
+    \end{itemize}
+\end{minipage}
+\hspace{0.12cm}
+\begin{minipage}{0.5\textwidth}
+    \includegraphics[scale=0.08]{4}
+\end{minipage}
+
+\pause
+
+\vspace{0.1cm}
+\begin{minipage}{0.47\textwidth}
+    \begin{itemize}
+        \item For a coding theorist :
+    \end{itemize}
+\end{minipage}
+\hspace{0.12cm}
+\begin{minipage}{0.5\textwidth}
+    \includegraphics[scale=0.06]{5}
+\end{minipage}
+
+\vspace{0.1cm}
+\hspace{-0.1cm}
+\begin{minipage}{0.47\textwidth}
+    \begin{itemize}
+        \item For an \textit{Information Theorist} :
+    \end{itemize}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \includegraphics[scale=0.05]{6}
+\end{minipage}
+
+\end{block}}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{General References}
+
+\begin{frame}{General References, Short Courses}
+
+ \begin{block}{General References}
+  \centering
+  \begin{itemize}
+  \item J. H. Conway, N. J. A. Sloane, ``Sphere Packing, Lattices and Groups'', Springer-Verlag, 1998.
+  \item Zamir R., ``Lattices are Everywhere'', ITA 2009 (IEEExplore).
+  \pause
+  \item ``Lattice Coding for Signals and Networks'' by Ram Zamir.
+  \item ``Explicit Lattice Constructions: From Codes to Number Fields'' by Fr\'ed\'erique Oggier and Jean-Claude Belfiore.
+  \pause
+  \item Regev-Micciancio, ``Lattice Based-Crypto in Post-Quantum Cryptography'', Springer, 2009.  
+  \end{itemize}
+  \end{block}
+
+ 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Brief History}
+
+\begin{frame}{History}
+
+ \uncover<1->{
+ \begin{block}{}
+  \centering
+  \begin{itemize}
+  \item \underline{In $18^{th}$ century} \
+  Mathematicians such as Gauss and Lagrange used lattices in number theory.
+  \item \underline{In $19^{th}$ century} \
+  Minkovski greatly advances the study of lattices in his geometry of numbers.
+  \end{itemize}
+  \end{block}}
+  
+  \uncover<2->{
+  \begin{block}{}
+  \centering
+  \begin{itemize}
+  \item \underline{Applications to Coding and information Theory}
+  
+    \begin{itemize}
+    \item [1975] De Buda - Lattice Codes for the Gaussian Channel.
+    \item [1987-1992] Calderbank-Sloane, D. Forney - Treliis Codes, Coset Codes, Geometrically Uniform Codes.
+    \item [1992-2004] {Loeliger (Asymptotically Good Lattices), 
+    Zamir (Quantizers, Wyner-Ziv), Boutros-Viterbo-Rastello-Belfiore (Fading Channels),
+    Shamai-Erez.}}
+    \uncover<3->{
+    \item [2004-2005] Erez-Zamir and Litsyn - Lattices Which Are Good For (Almost) Everything (AWGN, Coding, Quantization
+    Packing, Covering).
+    \vspace{0.5cm}
+    \item Subsequent works on: Side information problems, joint source-channel decoding, spherical codes, ...
+    \end{itemize}
+  \end{itemize}
+  \end{block}}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Lattice Definitions}
+
+\begin{frame}
+\frametitle{Lattice Definitions (1/2)}
+
+\begin{columns}
+\column{0.5\linewidth}
+\vspace{-0.1cm}
+\begin{block}{Lattice}<1-> 
+\begin{itemize}
+ \item Lattice is a discrete subgroup of Euclidean space.
+ \centering{$\Lambda=\left\lbrace \mathbf{x}= \mathbf{M} \mathbf{s} , \mathbf{s} \in \mathbb{Z}^{n} \right\rbrace \subseteq \mathbb{R}^{n}$}\\ 
+ \vspace{-0.15cm}
+ \begin{flushleft}{$\mathbf{M}$: a \textcolor{blue}{\textit{generator matrix}}.\\ $\mathbf{G}=\mathbf{M}^{t}\mathbf{M}$: \textcolor{blue}{Gram matrix}.}
+ \end{flushleft}
+ \uncover<2->{\item Close under reflection \& addition.}
+ \end{itemize}
+\end{block}
+\vspace{-0.1cm}
+\begin{block}{Lattice Quantizer}<4-> For $\mathbf{x} \in \mathbb{R}^{n}$ returns the \textcolor{blue}{\textit{Closest Point} in $\Lambda$}: $\mathit{Q}_{\Lambda}(\mathbf{x}) = \argmin_{\lambda \in \Lambda} \parallel \mathbf{x} - \lambda \parallel$. 
+\end{block}
+\vspace{-0.1cm}
+\begin{block}{Voronoi region}<7->
+Set of points that quantize to a given lattice point $\lambda \in \Lambda$. The \textit{\textcolor{blue}{fundamental Voronoi Region}} $\mathcal{V}_{\Lambda}$ corresponds to the zero vector.
+\end{block}
+
+\column{0.50\linewidth}
+\visible<3->
+{
+\begin{figure}[htp]
+ \centering
+ \begin{tikzpicture} [xscale=0.75,yscale=0.75]
+   
+\uncover<3->{ \draw [black,fill=black] (0,0) circle [radius=0.1]; }  
+\uncover<3->{ \draw [fill] (1,0) circle [radius=0.04]; }  
+\uncover<3->{ \draw [fill] (2,0) circle [radius=0.04]; }  
+\uncover<3->{ \draw [fill] (-1,0) circle [radius=0.04];}  
+\uncover<3->{ \draw [fill] (-2,0) circle [radius=0.04];}  
+
+\uncover<3->{ \draw [fill] (0,1) circle [radius=0.04]; }  
+\uncover<3->{ \draw [fill] (0,2) circle [radius=0.04]; }   
+\uncover<3->{ \draw [fill] (0,-1) circle [radius=0.04];}  
+\uncover<3->{ \draw [fill] (0,-2) circle [radius=0.04];}  
+
+\uncover<3->{ \draw [fill] (1,1) circle [radius=0.04]; }  
+\uncover<3->{ \draw [fill] (2,1) circle [radius=0.04]; }   
+\uncover<3->{ \draw [fill] (1,2) circle [radius=0.04]; }  
+\uncover<3->{ \draw [fill] (2,2) circle [radius=0.04]; }   
+
+\uncover<3->{ \draw [fill] (1,-2) circle [radius=0.04]; }  
+\uncover<3->{ \draw [fill] (2,-2) circle [radius=0.04]; }   
+
+\uncover<3->{ \draw [fill] (-1,-1) circle [radius=0.04];}  
+\uncover<3->{ \draw [fill] (-2,-1) circle [radius=0.04];}   
+\uncover<3->{ \draw [fill] (1,-1) circle [radius=0.04]; }  
+\uncover<3->{ \draw [fill] (2,-1) circle [radius=0.04]; }  
+ 
+
+\uncover<3->{ \draw [fill] (-1,1) circle [radius=0.04]; }  
+\uncover<3->{ \draw [fill] (-2,1) circle [radius=0.04]; }   
+\uncover<3->{ \draw [fill] (-1,2) circle [radius=0.04]; }  
+\uncover<3->{ \draw [fill] (-2,1) circle [radius=0.04]; }  
+
+\uncover<3->{ \draw [fill] (-2,-2) circle [radius=0.04];}  
+\uncover<3->{ \draw [fill] (-1,-2) circle [radius=0.04];} 
+\uncover<3->{ \draw [fill] (-2,2) circle [radius=0.04]; } 
+
+\uncover<5,6,7,8>{\draw [red,fill=red] (1.35,0.35) circle [radius=0.04];}
+\uncover<6,7,8>{\draw [->] [thick,blue] (1.35,0.35)--(1,0);}
+\uncover<6,7,8>{\draw [blue,fill=blue] (1,0) circle [radius=0.04];}
+\uncover<6,7,8>{ \node [blue] at (0.75,0.25) {$\mathit{Q}_{\Lambda}$};}
+
+\uncover<8->{ \draw [dashed,blue] (-0.5,-2.25)--(-0.5,2.25); }
+\uncover<8->{ \draw [dashed,blue] (-1.5,-2.25)--(-1.5,2.25); }
+\uncover<8->{ \draw [dashed,blue] (0.5,-2.25)--(0.5,2.25); }
+\uncover<8->{ \draw [dashed,blue] (1.5,-2.25)--(1.5,2.25); }
+
+\uncover<8->{ \draw [dashed,blue] (-2.25,0.5)--(2.25,0.5); }
+\uncover<8->{ \draw [dashed,blue] (-2.25,1.5)--(2.25,1.5); }
+\uncover<8->{ \draw [dashed,blue] (-2.25,-0.5)--(2.25,-0.5); }
+\uncover<8->{ \draw [dashed,blue] (-2.25,-1.5)--(2.25,-1.5); }
+
+\uncover<8->{\draw [ thick,blue] (0.5,0.5)--(-0.5,0.5);}
+\uncover<8->{\draw [ thick,blue] (0.5,0.5)--(0.5,-0.5);}
+\uncover<8->{\draw [ thick,blue] (-0.5,-0.5)--(0.5,-0.5);}
+\uncover<8->{\draw [ thick,blue] (-0.5,0.5)--(-0.5,-0.5);}
+
+\end{tikzpicture} \caption{Integer Lattice in $\mathbb{Z}^{2}: \mathbf{M}=\mathbf{I}_2$.}
+\end{figure}}
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Lattice Definitions (2/2)}
+\begin{columns}
+\column{0.5\linewidth}
+\uncover<1->{
+\begin{block}{Modulo operation}
+Returns the quantization error for $\mathbf{x} \in \mathbb{R}^{n}$: $\left[ \mathbf{x} \right]\mathrm{mod}\Lambda = \mathbf{x} -  \mathit{Q}_{\Lambda} \left( \mathbf{x} \right)$.
+\end{block}}
+\vspace{0.25cm}
+\uncover<2->{
+\begin{block}{Nested lattice codes}
+ A \textcolor{black}{\textit{nested lattice code} $\Lambda$} is the set of all points of 
+ a lattice \textcolor{blue}{$\Lambda_{\mathrm{F}}$} (\textcolor{blue}{\textit{Fine} lattice}) 
+ that fall within the fundamental Voronoi Region of a lattice \textcolor{red}{$\Lambda_{\mathrm{C}}$} (\textcolor{red}{\textit{Coarse} lattice}).
+\end{block}}
+\column{0.5\linewidth}
+
+\visible<3->
+{
+\begin{figure}[htp]
+ \centering
+ \begin{tikzpicture} [xscale=0.15,yscale=0.15]
+   
+\uncover<3->{ \draw [black,fill=black] (0,0) circle [radius=0.5]; }  
+\uncover<3->{ \draw [blue,fill=blue] (-3,1) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (3,-1) circle [radius=0.3]; }  
+
+\uncover<3->{ \draw [blue,fill=blue] (5,2) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (2,3) circle [radius=0.3]; } 
+ 
+\uncover<3->{ \draw [blue,fill=blue] (-5,-2) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (-2,-3) circle [radius=0.3]; }  
+ 
+\uncover<3->{ \draw [blue,fill=blue] (1,-4) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (4,-5) circle [radius=0.3]; } 
+\uncover<3->{ \draw [blue,fill=blue] (-1,4) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (-4,5) circle [radius=0.3]; } 
+
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+\uncover<3->{ \draw [blue,fill=blue] (11,0) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (8,1) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (14,-1) circle [radius=0.3]; }  
+
+\uncover<3->{ \draw [blue,fill=blue] (16,2) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (13,3) circle [radius=0.3]; } 
+ 
+\uncover<3->{ \draw [blue,fill=blue] (6,-2) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (9,-3) circle [radius=0.3]; }  
+ 
+\uncover<3->{ \draw [blue,fill=blue] (12,-4) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (15,-5) circle [radius=0.3]; } 
+\uncover<3->{ \draw [blue,fill=blue] (10,4) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (7,5) circle [radius=0.3]; } 
+% % % % % % % % % % % % % % % % % % % % % % % % % % %
+\uncover<3->{ \draw [blue,fill=blue] (0,11) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (-3,12) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (3,10) circle [radius=0.3]; }  
+
+\uncover<3->{ \draw [blue,fill=blue] (5,13) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (2,14) circle [radius=0.3]; } 
+ 
+\uncover<3->{ \draw [blue,fill=blue] (-5,9) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (-2,8) circle [radius=0.3]; }  
+ 
+\uncover<3->{ \draw [blue,fill=blue] (1,7) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (4,6) circle [radius=0.3]; } 
+\uncover<3->{ \draw [blue,fill=blue] (-1,15) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (-4,16) circle [radius=0.3]; } 
+
+
+
+\uncover<3->{ \draw [blue,fill=blue] (11,11) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (8,12) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (14,10) circle [radius=0.3]; }  
+
+\uncover<3->{ \draw [blue,fill=blue] (16,13) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (13,14) circle [radius=0.3]; } 
+ 
+\uncover<3->{ \draw [blue,fill=blue] (6,9) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (9,8) circle [radius=0.3]; }  
+ 
+\uncover<3->{ \draw [blue,fill=blue] (12,7) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (15,6) circle [radius=0.3]; } 
+\uncover<3->{ \draw [blue,fill=blue] (10,15) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (7,16) circle [radius=0.3]; } 
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\uncover<3->{ \draw [blue,fill=blue] (0,-11) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (-3,-10) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (3,-12) circle [radius=0.3]; }  
+
+\uncover<3->{ \draw [blue,fill=blue] (5,-9) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (2,-8) circle [radius=0.3]; } 
+ 
+\uncover<3->{ \draw [blue,fill=blue] (-5,-13) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (-2,-14) circle [radius=0.3]; }  
+ 
+\uncover<3->{ \draw [blue,fill=blue] (1,-15) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (4,-16) circle [radius=0.3]; } 
+\uncover<3->{ \draw [blue,fill=blue] (-1,-7) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (-4,-6) circle [radius=0.3]; } 
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\uncover<3->{ \draw [blue,fill=blue] (11,-11) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (8,-10) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (14,-12) circle [radius=0.3]; }  
+
+\uncover<3->{ \draw [blue,fill=blue] (16,-9) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (13,-8) circle [radius=0.3]; } 
+ 
+\uncover<3->{ \draw [blue,fill=blue] (6,-13) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (9,-14) circle [radius=0.3]; }  
+ 
+\uncover<3->{ \draw [blue,fill=blue] (12,-15) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (15,-16) circle [radius=0.3]; } 
+\uncover<3->{ \draw [blue,fill=blue] (10,-7) circle [radius=0.3]; }  
+\uncover<3->{ \draw [blue,fill=blue] (7,-6) circle [radius=0.3]; } 
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\uncover<4->{ \draw [red,fill=red] (10.7,0.3) rectangle (11.3,-0.3); } 
+\uncover<4->{ \draw [red,fill=red] (-0.3,0.3) rectangle (0.3,-0.3); }
+
+\uncover<4->{ \draw [red,fill=red] (10.7,11.3) rectangle (11.3,10.7); } 
+\uncover<4->{ \draw [red,fill=red] (-0.3,11.3) rectangle (0.3,10.7); }
+
+ 
+\uncover<4->{ \draw [red,fill=red] (-0.3,-10.7) rectangle (0.3,-11.3); }
+\uncover<4->{ \draw [red,fill=red] (10.7,-10.7) rectangle (11.3,-11.3); }
+
+\uncover<4->{\draw [ thick,dashed,red] (5.5,-16)--(5.5,16);}
+\uncover<4->{\draw [ thick,dashed,red] (-5.5,-16)--(-5.5,16);}
+\uncover<4->{\draw [ thick,dashed,red] (16.5,-16)--(16.5,16);}
+
+\uncover<4->{\draw [ thick,dashed,red] (-6.5,5.5)--(18,5.5);}
+\uncover<4->{\draw [ thick,dashed,red] (-6.5,-5.5)--(18,-5.5);}
+%\uncover<7->{\draw [ thick,red] (-0.5,0.5)--(-0.5,-0.5);}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\uncover<5->{ \draw [fill] (0,0) circle [radius=0.3]; }  
+\uncover<5->{ \draw [fill] (-3,1) circle [radius=0.3]; }  
+\uncover<5->{ \draw [fill] (3,-1) circle [radius=0.3]; }  
+
+\uncover<5->{ \draw [fill] (5,2) circle [radius=0.3]; }  
+\uncover<5->{ \draw [fill] (2,3) circle [radius=0.3]; } 
+ 
+\uncover<5->{ \draw [fill] (-5,-2) circle [radius=0.3]; }  
+\uncover<5->{ \draw [fill] (-2,-3) circle [radius=0.3]; }  
+ 
+\uncover<5->{ \draw [fill] (1,-4) circle [radius=0.3]; }  
+\uncover<5->{ \draw [fill] (4,-5) circle [radius=0.3]; } 
+\uncover<5->{ \draw [fill] (-1,4) circle [radius=0.3]; }  
+\uncover<5->{ \draw [fill] (-4,5) circle [radius=0.3]; }
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+ \uncover<5->{\draw [red, thick] (-5.5,-5.5)--(-5.5,5.5);}
+ \uncover<5->{\draw [red, thick] (5.5,-5.5)--(5.5,5.5);}
+  \uncover<5->{\draw [red, thick] (5.5,5.5)--(-5.5,5.5);}
+   \uncover<5->{\draw [red, thick] (-5.5,-5.5)--(5.5,-5.5);}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\uncover<3->{\node [blue,thick] at (19,7) {$\Lambda_{\mathrm{F}}$};}
+
+\uncover<3->{\node [blue,thick] at (25,4) {$\mathbf{M}=\tiny{\left[ \begin{array}{cc}
+2 & 3 \\ 3 & -1 
+\end{array} \right]}$};}
+
+\uncover<4->{\node [red,thick] at (22,1) {$\Lambda_{\mathrm{C}}=11\mathbb{Z}^{2}$};}   
+   \uncover<5->{\node [thick] at (24.5,-2) {$\Lambda=\lbrace \textcolor{blue}
+   {\Lambda_{\mathrm{F}}} \cap \textcolor{red}{\mathcal{V}_{\mathrm{C}}} \rbrace$};}
+ \end{tikzpicture} 
+ \vspace{-0.6cm}\hspace{-0.2cm}\caption{$2-$dimensional nested lattice codes.}
+ \end{figure}}
+\end{columns}
+\vspace{-0.35cm}
+\hspace{-0.5cm}
+\uncover<6->{\begin{minipage}{1\textwidth}
+\begin{block}{Some advantages of using lattices ...}
+\begin{itemize}
+ \uncover<6->{\item \textcolor{blue}{Linear structure}: any \textcolor{blue}{integer} combination of codewords is also a codeword.}
+ \uncover<6->{\item Allow to \textcolor{blue}{reach the capacity limits of Gaussian channels} [Erez \textit{et al.}, 03].}
+% \end{itemize}
+\end{itemize}
+\end{block}
+\end{minipage}}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Interference Alignment via Compute-and-Forward}
+
+\subsection{Introduction}
+
+\begin{frame}
+\frametitle{Introduction}
+\vspace{-0.5cm}
+\uncover<1->{
+  \begin{block}{Why we need to use Interference Alignment (IA) Techniques? }
+  \centering
+  \begin{itemize}
+   \item Wireless network cells are becoming smaller and smaller.
+   \item The density of users is becoming higher and higher in each cell.
+   \item Nodes are receiving some combination of unwanted signals.
+   \item Wireless networks become more \textcolor{red}{\textit{Interference Limited}}.
+  \end{itemize}}
+  \uncover<2->{
+   $\rightarrow$ To \underline{\textit{manage interference}} and have some \underline{\textit{higher rates}} we need to use IA techniques.
+\end{block}}
+\vspace{-0.25cm}
+\uncover<3->{
+  \begin{block}{Conventional methods to avoid Interference:}
+  \centering
+  \begin{itemize}
+   \item Frequency Division Multiple Access (FDMA-Using different Sub-Bands)
+   \item Time Division Multiple Access (TDMA-Using different Time-Slots)
+  \end{itemize}
+\end{block}}
+
+\vspace{-0.25cm}
+\uncover<4->{
+  \begin{block}{Open problem!}
+  \centering
+  \begin{itemize}
+   \item 2-User channel is introduced many years ago by [C. E. Shannon 1962].
+   \item The 2-User Interference channel defined by [R. Ahlswede 1974].\\
+   \underline{Additive Gaussian noise} is present at each receiver.
+  \end{itemize}
+  \pause
+   $\rightarrow$ Open problem is to find all the characteristics of this model !
+\end{block}}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\uncover<1->{
+  \begin{block}{Different Approaches of Interference Alignment}
+  \centering
+  \begin{itemize}
+   \item Linear IA when time, space and frequency diversity is available [S. A. Jafer 2011].
+   \item Non-linear IA for static single antenna channels [S. A Motahari \textit{et al.} 2009].
+  \end{itemize}
+\end{block}}
+
+\uncover<2->{
+  \begin{block}{What techniques to be used for IA ?}
+  \centering
+  \begin{itemize}
+   \item Linear Lattice-based Interference Alignment. 
+   \item The Compute-and-Forward method described by [Nazer and Gastpar 2008].
+  \end{itemize}
+\end{block}}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Channel Model $\&$ Lattice Structure}
+
+\begin{frame}{System model}
+  \vspace{-0.35cm}
+  \uncover<1->{
+  \begin{block}{Channel Model}
+  \centering
+  The channel model is \textit{K}-User Gaussian Symmetric Interference Channel (GS-IFC).
+  \begin{itemize}
+   \item By using a simple lattice IA [Ordentlich \textit{et al.} 2012], the \textit{K}-User case will be equivalent to the 2-User case.
+   \end{itemize}
+   \begin{equation}
+    \label{Channel_Mod}
+    \mathbf{y}=H\mathbf{x}+\mathbf{z},\hspace{0.1cm}
+    with\hspace{0.1cm}H=\left[\begin{array}{cc} 1 & g\\ g & 1 \end{array}\right]
+    \end{equation}
+    
+    \begin{minipage}{0.4\textwidth}
+    \begin{flushleft}{
+    $\mathbf{y}:$ The output-vector of size 2.\\
+    $\mathbf{x}:$ The input-vector of size 2.\\
+    $\mathbf{z}:$ The noise-vector of size 2. (With $\mathcal{CN}\left(0,{\sigma}^2\right)$)\\ 
+    $g:$ Channel interferer coefficient.}
+    \end{flushleft}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+    \vspace{-0.2cm}  
+    
+    \begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=0.7]
+
+      \draw (0,0) rectangle (0.7,-0.7);
+      \node at (-0.75,-0.35) {$w_1$};
+      \draw [->] (-0.52,-0.35)--(0,-0.35);  
+      \node at (0.35,-0.35) {$\mathcal{E}_1$};
+      \draw [->] (0.7,-0.35)--(2.25,-0.35); 
+      \node at (0.4,-0.95) {$\mathrm{TX}_1$}; 
+      \node at (0.9,-0.15) {${x}_1$};
+      \draw (2.4,-0.35) circle [radius=0.15];
+      \draw  (2.3,-0.35)--(2.5,-0.35);
+      \draw (2.4,-0.25)--(2.4,-0.45);
+      \node at (1.8,-0.15) {$1$};
+      \node at (2.45,0.25) {${z}_1$};  
+      \draw [->] (2.4,0.18)--(2.4,-0.2); 
+      \draw [->] (2.55,-0.35)--(3.25,-0.35); 
+      \node at (3,-0.15) {${y}_1$};
+      \draw (3.25,0) rectangle (3.95,-0.7);
+      \node at (3.6,-0.35) {$\mathcal{D}_1$};
+      \node at (3.65,-0.95) {$\mathrm{RX}_1$}; 
+      \draw [->] (3.95,-0.35)--(4.47,-0.35); 
+      \node at (4.7,-0.3) {$\hat{w}_1$};
+                              
+      \draw (0,-2) rectangle (0.7,-2.7);
+      \node at (-0.75,-2.35) {${w}_2$};
+      \draw [->] (-0.52,-2.35)--(0,-2.35);  
+      \node at (0.35,-2.35) {$\mathcal{E}_2$};
+      \draw [->] (0.7,-2.35)--(2.25,-2.35); 
+      \node at (0.4,-2.95) {$\mathrm{TX}_2$}; 
+      \node at (0.9,-2.15) {${x}_2$};
+      \draw (2.4,-2.35) circle [radius=0.15];
+      \draw  (2.3,-2.35)--(2.5,-2.35);
+      \draw (2.4,-2.25)--(2.4,-2.45);
+      \node at (1.8,-2.15) {$1$};
+      \node at (2.45,-1.75) {${z}_2$};  
+      \draw [->] (2.4,-1.82)--(2.4,-2.2); 
+      \draw [->] (2.55,-2.35)--(3.25,-2.35); 
+      \node at (3,-2.15) {${y}_2$};
+      \draw (3.25,-2) rectangle (3.95,-2.7);
+      \node at (3.6,-2.35) {$\mathcal{D}_2$};
+      \node at (3.65,-2.95) {$\mathrm{RX}_2$}; 
+      \draw [->] (3.95,-2.35)--(4.47,-2.35); 
+      \node at (4.7,-2.3) {$\hat{w}_2$};           
+   
+      \draw [->] (1,-0.35)--(2.3,-2.25); 
+      \draw [->] (1,-2.35)--(2.3,-0.45); 
+      \node at (1.27,-1) {$g$}; 
+      \node at (1.3,-1.65) {$g$};
+   
+ \end{tikzpicture}
+ \vspace{-0.4cm}
+ \caption{2-User GS-IFC.}\label{GS-IFC}
+ \end{figure}
+ \end{minipage}
+    
+ \end{block}}
+ 
+ \vspace{-0.2cm}
+ 
+ \uncover<2->{
+ \begin{block}{Lattice Structure}
+ \centering
+ In this work we consider the \underline{nested lattice} framework [Ordentlich \textit{et al.} 2012].
+ \end{block}}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+ \vspace{-0.4cm}
+ \uncover<1->{
+ \begin{block}
+ \centering
+ \begin{itemize}
+ 
+  \item A channel is called symmetric when:\\
+  \begin{center}
+  $H(i,j)=g\hspace{0.1cm}\text{for all}\hspace{0.1cm}{i \not= j}\hspace{0.1cm}\text{and after normalization}\hspace{0.1cm}H(i,j)= 1.$
+  \end{center}
+  
+  \item All the users have the same power constraint:\\
+  \begin{center}
+  ${\frac{1}{n}} \sum_{j=0}^{n} \vert {\mathbf{x}_{i}}^2 \vert \leq P_\mathrm{i}$
+  \end{center}
+  
+  \vspace{-0.2cm}
+  \item The $\SNR$ is defined as:\\
+  \vspace{-0.2cm}
+  \begin{center}
+  $\SNR=\frac{P}{\sigma^2}$
+  \end{center}
+
+  \item For symmetric 2-User GS-IFC the Interference to Noise Ratio ($\mathsf{INR}$) is defined as:\\
+  \begin{center}
+  $\text{For user i,}\hspace{0.1cm}\mathsf{INR}_{i}=g_{i}^2\SNR$
+  \end{center}
+  \end{itemize}
+  \end{block}}
+  
+  \vspace{-0.1cm}
+  
+   \uncover<2->{
+   \begin{block}{In Compute-and-Forward scheme}
+    \centering
+    \begin{enumerate}
+
+     \item Receiving linear combination of the transmitted codewords.
+     \item Deciding which equation(s) to be decoded.}
+     \uncover<3->{
+     \item Applying the corresponding Minimum Mean Square Error estimation (MMSE).
+     \item Decoding the equation(s) in $\Lambda$.
+    \end{enumerate}
+   \end{block}}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Compute-and-Forward Transform}
+
+
+\begin{frame}{Computation rate}
+\uncover<1->{
+\vspace{-0.65cm}
+ \begin{block}{Computation rate}
+ The \underline{Computation Rate} is the maximal rate at which users can transmit codewords 
+ to destinations, when interested in decoding reliably the 
+ equation $\sum_{i}a_{i}\mathbf{x}_{i}$.
+ \begin{equation}
+ \label{Computation_rate}
+ R(\mathbf{h},\mathbf{a})=\frac{1}{2}\log_2^{+}
+ \left\{\left({\parallel \mathbf{a}\parallel^{2}}-
+ \frac{\mathsf{SNR}(\mathbf{h}^{T}\mathbf{a})^{2}}
+ {1+\mathsf{SNR}{\parallel \mathbf{h}\parallel^{2}}}\right)^{-1}\right\}
+ \end{equation}
+ Where $\log_{2}^{+}(x)\triangleq \max(\log_{2}(x),0)$.\\
+ For each user:$~\mathbf{h}=[1,g],~g\in\R$ and $\mathbf{a}=[a_1,a_2]\hspace{0.1cm}\text{with}~a_1,~a_2\in\Z$.
+ }
+ \vspace{0.2cm}
+ \uncover<2->{
+ \begin{itemize}
+  \item \textcolor{red}{How to find the vector $\mathbf{a}$ to maximize the Rate ?!}
+ \end{itemize}
+ }
+ \uncover<3->{
+ \begin{itemize}
+  \item The simplified expression is:
+  \begin{equation}
+  \label{Computation_rate_form}
+  R(\mathbf{h},\mathbf{a})=\frac{1}{2}\log_{2}^{+}
+  \left\{ \frac{\left(\frac{1}{\mathsf{SNR}}+(1+g^{2})\right)}
+  {q\left(a_1,a_2\right)}\right\} 
+  \end{equation}
+  \vspace{-0.2cm}
+  Where $q(a_1,a_2)$ is a definite positive quadratic form equal to:
+  \begin{equation}
+  \label{quadratic_form}
+  q\left(a_1,a_2\right)=(a_{1}g-a_2)^{2}+\frac{1}{\mathsf{SNR}}(a_{1}^{2}+a_{2}^{2}),~a_1,~a_2\in\mathbb{Z}
+  \end{equation}
+  \end{itemize}
+ \end{block}}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Lattice $\Lambda_{CF}$, Maximizing the rate}
+\uncover<1->{
+\vspace{-0.3cm}
+ \begin{block}{Lattice $\Lambda_{CF}$}
+ \centering
+ \begin{flushleft}{When $\SNR$ is finite the Gram matrix of definite positive 
+ form (\ref{quadratic_form}) will define a rank 2 lattice $\Lambda_{CF}$.}
+ \end{flushleft}
+ \vspace{-0.3cm}
+ \begin{equation}
+ \label{Gram_Matrix}
+  G= \left(\begin{array}{ c c } g^{2}+\frac{1}{\mathsf{SNR}} & -g \\ -g & 1+\frac{1}{\mathsf{SNR}} \end{array} \right)\
+ \end{equation}
+\end{block}}
+
+\uncover<2->{
+
+\begin{block}
+
+    \begin{minipage}{0.5\textwidth}
+    \begin{figure}
+    \centering
+    \includegraphics[scale=0.3]{7}
+    \vspace{-0.4cm}
+    \caption{\centering Upper and lower bounds on the capacity of a 2-user GS-IFC.}
+    \end{figure}
+    \end{minipage}
+    \hspace{-0.2cm}
+    \begin{minipage}{0.5\textwidth}
+    \begin{itemize}}
+    \uncover<3->{
+    \item Improve the fractal behavior of achievable sum-rate in \underline{strong} and \underline{very strong} interference regimes.} 
+    \uncover<4->{
+    \item How can we improve this result and what is the origin of this behavior ?} 
+    \uncover<5->{
+    \item How to control this behavior in asymptotic regime of $\SNR$ ($\SNR\rightarrow\infty$)?
+    \end{itemize}
+    \end{minipage}
+  \end{block}}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+ \begin{itemize}
+ \item This fractal behavior is related directly to the quality of the Diophantine approximation.
+ \item To increase the rate we should minimize the (\ref{quadratic_form}).
+ \end{itemize}
+ \pause
+ \begin{block}{Analyzing}
+ Following the method described in [Ordentlich \textit{et al.} 2012] 
+ we aim to find the two successive minima $\lambda_1$ et $\lambda_2$ 
+ of (\ref{quadratic_form}).
+ \begin{itemize}
+  \item It is shown by [Ordentlich \textit{et al. 2012}]:\\ 
+  \begin{center}
+   ${\lambda_1\lambda_2\approx\frac{1+g^2}{\SNR}}$
+   \pause
+  \end{center}
+  \item Get high Sum-Rate when the second successive minima is small.
+  \pause
+  \item The 2 successive minima are the diagonal entries of $ G_{reduce}$.
+  \end{itemize}
+  \end{block}
+  \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{How is it possible to improve the Sum-Rate ? (1/2)}
+
+\begin{block}{Definition (Diophantine approximation) - [Cassels, 1957]}
+Approximate a real number $\theta$, by a rational number $\frac{p}{q}$ when $q\not=0$. 
+\begin{center}
+ $q\left\Vert q\theta\right\Vert=\min_{p\in \mathbb{Z},q\in \mathbb{Z}^{*}}|q\theta-p|$
+\end{center}
+Then, for any $\theta$, there are infinitely many $p$ and $q$ such that 
+\begin{center}
+ $q\left\Vert q\theta\right\Vert < 5^{-\frac{1}{2}}$
+\end{center}
+\end{block}
+\pause
+\begin{theorem}
+ Let $\theta$ be irrational. 
+ Then there are infinitely many $q$ such that 
+ $q \left\Vert q\theta\right\Vert < 5^{-\frac{1}{2}}$. 
+ If $\theta$ is equivalent to $\phi$, then the constant $5^{-\frac{1}{2}}$ 
+ cannot be replaced by any smaller number. 
+\end{theorem}
+\end{frame}
+
+
+\begin{frame}{How is it possible to improve the Sum-Rate ? (2/2)}
+\uncover<1->{
+\begin{definition}
+Let $\phi=\frac{1+\sqrt{5}}{2}$ be the Golden ratio. The conjugate of $\phi$ will 
+be defined as $\bar\phi=\frac{1-\sqrt{5}}{2}$. A number $g$ is equivalent to $\phi$ if:
+\begin{equation}
+\label{Golden_Approximation}
+g=\frac{a\phi+b}{c\phi+d}\,,\;(a, b, c, d)\in\mathbb{Z\,\mathrm{~and}\,\det\left[\begin{array}{lc}
+\mathrm{a} & \mathrm{b}\\
+\mathrm{c} & \mathrm{d}
+\end{array}\right]}=\pm1 
+\end{equation}
+\end{definition}}
+\uncover<2->{
+\begin{block}{Proposition}
+When $\SNR$ is large enough, 
+and if $g$ is a number equivalent 
+to the Golden Ratio, then the second 
+minimum of $q(a_1,a_2)$ is small, in consequence the sum-rate of the interference channel will be high.}
+\uncover<3->{\begin{itemize}
+ \item The worst choice of ``\text{g}'' are rational numbers.}
+\uncover<4->{
+ \item The best choice for ``\textit{g}'' are numbers equivalent to the Golden Ratio.
+\end{itemize}
+\end{block}}
+\end{frame}
+
+\begin{frame}{Precoded Compute-and-Forward}
+
+\uncover<1->{
+\begin{itemize}
+ \item To avoid deep fadings in interesting regimes when \underline{$\SNR$ goes to infinity}:
+ \begin{itemize}
+  \item Use ``\textit{n}'' different Time-Slots (TS).
+  \item Precode at each TS the transmitted codewords by multiplying them, at the transmitters, by a real number $\eta$.
+ \end{itemize}
+\end{itemize}}
+
+\uncover<2->{\begin{block}{Efficient precoding scheme}
+For different TS, the efficient precoding scheme is to use a value of $\eta_i$ different 
+of $\eta_j$ for $i\neq j$ such that, if $\eta_i\cdot g \in\Q$, then, $\eta_j\cdot g \notin\Q,\forall i\neq j$.}
+\uncover<3->{
+\begin{itemize}
+ \item By using this strategy, only one time slot over $n$ will result in a small sum-rate, for all values of $g$.}
+ \uncover<4->{
+ \item The best choice of $\eta_i$ is \underline{the Golden Ratio or its equivalent numbers}. (Slightly greater than 1). 
+\end{itemize}
+
+\end{block}}
+
+\uncover<5->{
+\begin{minipage}{0.5\textwidth}
+    \begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=0.7]
+
+      \draw (0,0) rectangle (0.7,-0.7);
+      \node at (-0.85,-0.35) {$w_{i,1}$};
+      \draw [->] (-0.52,-0.35)--(0,-0.35);  
+      \node at (0.35,-0.35) {$\mathcal{E}_1$};
+      \draw [->] (0.7,-0.35)--(2.25,-0.35); 
+      \node at (0.4,-0.95) {$\mathrm{TX}_1$}; 
+      \node at (1,-0.15) {${x}_{i,1}$};
+      \draw (2.4,-0.35) circle [radius=0.15];
+      \draw  (2.3,-0.35)--(2.5,-0.35);
+      \draw (2.4,-0.25)--(2.4,-0.45);
+      \node at (1.8,-0.15) {$1$};
+      \node at (2.45,0.3) {${z}_{i,1}$};  
+      \draw [->] (2.4,0.18)--(2.4,-0.2); 
+      \draw [->] (2.55,-0.35)--(3.25,-0.35); 
+      \node at (3,-0.15) {${y}_{i,1}$};
+      \draw (3.25,0) rectangle (3.95,-0.7);
+      \node at (3.6,-0.35) {$\mathcal{D}_1$};
+      \node at (3.65,-0.95) {$\mathrm{RX}_1$}; 
+      \draw [->] (3.95,-0.35)--(4.47,-0.35); 
+      \node at (4.9,-0.3) {$\hat{w}_{i,1}$};
+                  
+                  
+      \draw (0,-2) rectangle (0.7,-2.7);
+      \node at (-0.85,-2.35) {${w}_{i,2}$};
+      \draw [->] (-0.52,-2.35)--(0,-2.35);  
+      \node at (0.35,-2.35) {$\mathcal{E}_2$};
+      \draw [->] (0.7,-2.35)--(2.25,-2.35); 
+      \node at (0.4,-2.95) {$\mathrm{TX}_2$}; 
+      \node at (1,-2.55) {${x}_{i,2}$};
+      \draw (2.4,-2.35) circle [radius=0.15];
+      \draw  (2.3,-2.35)--(2.5,-2.35);
+      \draw (2.4,-2.25)--(2.4,-2.45);
+      \node at (1.8,-2.15) {$\eta_i$};
+      \node at (2.45,-1.70) {${z}_{i,2}$};  
+      \draw [->] (2.4,-1.82)--(2.4,-2.2); 
+      \draw [->] (2.55,-2.35)--(3.25,-2.35); 
+      \node at (3,-2.15) {${y}_{i,2}$};
+      \draw (3.25,-2) rectangle (3.95,-2.7);
+      \node at (3.6,-2.35) {$\mathcal{D}_2$};
+      \node at (3.65,-2.95) {$\mathrm{RX}_2$}; 
+      \draw [->] (3.95,-2.35)--(4.47,-2.35); 
+      \node at (4.9,-2.3) {$\hat{w}_{i,2}$};           
+                          
+      \draw [->] (1,-0.35)--(2.3,-2.25); 
+      \draw [->] (1,-2.35)--(2.3,-0.45); 
+      \node at (1.27,-1) {$g$}; 
+      \node at (1.3,-1.65) {$\eta_i\cdot g$};
+   
+ \end{tikzpicture}
+ \vspace{-0.3cm}
+ \caption{\centering 2-User Gaussian Asymmetric Interference Channel for TS = $i$.}\label{Fig:GA-IFC}
+ \end{figure}
+ \end{minipage}
+\begin{minipage}{0.45\textwidth}
+    \vspace{-0.2cm}
+    \begin{block}{Interesting Achievement !! \smiley{}}
+    \begin{itemize}
+    \item No need of any Channel State Information (CSI) at transmitters. 
+    \end{itemize}
+    \end{block}    
+\end{minipage}}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Numerical Results}
+
+% first block appears at first
+
+\only<1>{
+    \begin{block}{Conventional Compute-and-Forward [Nazer \textit{et al.} 2008], 1 Time-Slot}
+    \begin{figure}
+    \centering
+    \includegraphics[scale=0.3]{7}
+    \vspace{-0.4cm}
+    \caption{\centering Upper and lower bounds on the capacity of a 2-user GS-IFC.}
+    \end{figure}
+    \end{block}
+    }
+    
+ \only<2>{
+ 
+
+
+ \begin{block}{$7$ $\&$ $13$ Time-Slots}
+ The performance of our proposed scheme is shown below for 7 and 13 TS.
+ \begin{itemize}
+    \item For \underline{weak} and \underline{intermediate} regimes of interference : used just $1$ TS.
+ \end{itemize}
+    \begin{minipage}{0.5\textwidth}
+    \begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.3]{TS7}
+  \caption{\centering Upper bound and achievable rate versus $g$ for a $2-$user GS-IFC for $7$ TS.}
+  \label{fig:Ts7}
+  \end{figure}
+    \end{minipage}
+    \hspace{-0.2cm}
+    \begin{minipage}{0.5\textwidth}
+    \begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.3]{TS13}
+    \caption{\centering Upper bound and achievable rate versus $g$ for a $2-$user GS-IFC for $13$ TS.}
+    \label{fig:Ts13}
+    \end{figure}
+    \end{minipage}
+  \end{block}}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusions $\&$ Perspectives}
+
+\begin{frame}{Conclusion $\&$ Perspectives}
+\vspace{-0.2cm}
+\begin{block}{Conclusions}
+In this work, based on the main framework of [Ordentlich \textit{et al.} 2012] and 
+[Nazer \textit{et al.} 2008]:
+\begin{itemize}
+ \item Characterized what are the best and the worst channels.
+ \item Proposed to use a precoder.
+ \item The proposed scheme has shown an important reduction of 
+ the fading behavior.
+ \end{itemize}
+ \end{block}
+ \pause
+
+\vspace{-0.2cm}
+\begin{block} 
+
+This result is similar to what is obtained in fast fading channels when a diversity technique is used.
+\end{block}
+\vspace{-0.2cm}
+\pause
+\begin{block}{Perspectives}
+Many things remain to do, among which:
+\begin{itemize}
+ \item The optimal number of time slots to be used.
+ \item Working through medium interference regime.
+ \item The optimal power allocation for transmitters in different regimes of interference.
+ \item Generalizing of this method to the K-User asymmetric interference channel.
+ \end{itemize}
+ \end{block}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+ \vspace{-0.3cm}
+\begin{block} 
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[scale=0.15]{8}
+\end{figure}
+\pause
+\begin{figure}[h!]
+  \centering
+    \includegraphics[scale=0.20]{9}
+\end{figure}
+\end{block}
+\vspace{-0.1cm}
+\begin{itemize}
+ \item {E. E. Khaleghi, JC. Belfiore, ``Compute-and-Forward for the Interference Channel: Diversity
+  Precoding'', In Proceedings of the 2nd international Iran Workshop on Communication and Information
+  Theory (IWCIT), Iran, Tehran, May 2014.}
+\end{itemize}
+\end{frame}
+
+
+
+\end{document}

@@ -1,0 +1,13 @@
+\beamer@endinputifotherversion {3.24pt}
+\select@language {french}
+\beamer@sectionintoc {1}{Une G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e} de Stage}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{DASH7 et Wizzilab}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Les Objectifs et Outils}{12}{0}{1}
+\beamer@sectionintoc {2}{Les D\IeC {\'e}veloppements sur DASH7}{16}{0}{2}
+\beamer@subsectionintoc {2}{1}{Modulation et D\IeC {\'e}finition des Canaux adjacents}{17}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{1}{Choix du Filtre Gaussien}{17}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{2}{D\IeC {\'e}finition des Canaux et D\IeC {\'e}signer des Mask}{19}{0}{2}
+\beamer@subsectionintoc {2}{2}{Nouveaux Codage du Canal}{23}{0}{2}
+\beamer@subsubsectionintoc {2}{2}{1}{Les Codes Propos\IeC {\'e}s}{23}{0}{2}
+\beamer@subsubsectionintoc {2}{2}{2}{Les R\IeC {\'e}sultats et les Courbes BLER des Nouveaux Codes}{24}{0}{2}
+\beamer@sectionintoc {3}{Conclusions et Perspectives}{30}{0}{3}
