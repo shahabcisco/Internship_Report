@@ -1,10 +1,10 @@
 % Chapter Template
 
-\chapter{Experimental Results on New Routing Strategies} % Main chapter title
+\chapter{Experimental Results on Routing Strategies} % Main chapter title
 
 \label{expereince}
 
-\lhead{Chapter 2. \emph{Experimental Results on New Routing Strategies}}
+\lhead{Chapter 2. \emph{Experimental Results on Routing Strategies}}
 
 \section{Experiment Test Setup}
 We tested our experiments on clusters of cisco's server with linux containers with different configuration set ups on Lurch. In the case of needs, dynamic modifications also have been added on Lurch to be more interactive for different test scnearios.
@@ -193,6 +193,52 @@ The algorithm of this strategy is written by the idea of searching minimum multi
 \end{center}
 
 \end{figure}
+
+
+\textbf{\Large{Multi Consumers and Producers}}. Figure \ref{Multi-Repo-Client} as you can see we can have $n$ producers and $m$ consumers want to download at the same time. This strategy chooses the shortest paths between clients and consumers using to give routes update. Actually for each consumer, algorithm looks which producer is closer using \textit{shortest path} then set routes properly. This strategy can be very usefull in ICN networks becasue of its architecture. 
+
+Routing is the core issues of any network even Network of streets and broadways! It's the idea of Routing in general is to have knowledge about network and its proper graph then have a table at each router to calculate best routes for each packet. This table can be static or dynamic, normally in practice routers are dynamic in function of network needs. 
+
+One beautiful idea which is very \textit{à la mode} in research and development in these days becasue of its advantages is to have a \textbf{S}oftware \textbf{D}efine \textbf{N}etwork. The SDN can be a central controller who allows users to modify the network in terms of capacities, network topology, routing, and whatever you can think about the network which can be changes dynamically.
+
+You can also imagine a scenario to occur, you can have algorithms inside algorithms to run full automate evidences. This strategy can be very usefull in these scnearios becasue of NDN architecutre.
+
+By running this strategy on Lurch, it can understand whenever you want to do a ECMP or Multi repository client. It's important becasue network when you have your controller (Lurch) who understands the scenario in which you want to apply your strategies. 
+
+  
+
+
+\begin{figure}[H]
+
+\begin{center}
+
+
+\includegraphics[scale = 0.4]{Figures/Multi-Repo-Client.png}
+
+\caption{Multi Consumers and Producers Large} \label{Multi-Repo-Client} 
+
+
+\end{center}
+
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+
+\begin{center}
+
+
+\includegraphics[scale = 0.4]{Figures/multi-repo-client.png}
+
+\caption{Multi Consumers and Producers (Rate vs Time) Large} \label{multi-repo-client} 
+
+
+\end{center}
+
+\end{figure}
+
 
 
 \subsection{MaxFlow}
