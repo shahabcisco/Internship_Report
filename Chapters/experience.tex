@@ -145,6 +145,72 @@ In \ref{treeonconsumer_big}  rates are traced against time as well. The 'sj' lin
 \end{figure}
 
 
+Figure \ref{Mob1} shows the first step of client mobility in which the mobile station is attached to node $n10$. Figure \ref{mob1} shows also the Interest/Data packets which are going through shortest paths.
+
+You can see in figure \ref{Mo2} that as soon as mobile client is attached to $n11$ routing update is happened and new routing is traced.
+
+Same case for \ref{Mob3} which is for showing that update can occured. This update can be designed periodically or to have an algorithm. After we need to know more practical constraints like how much time takes that an routing update happens? The answer depends on what we use for engine forwarder and its implementations. 
+
+
+
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.4]{Figures/Mob1.png}
+
+\caption{TreeOnConsumer Mobility Large} \label{Mob1} 
+
+
+\includegraphics[scale = 0.4]{Figures/mob1.png}
+
+\caption{TreeOnConsumer Mobility (Rate vs Time) Large} \label{mob1} 
+
+
+\end{center}
+
+\end{figure}
+
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.4]{Figures/Mob2.png}
+
+\caption{TreeOnConsumer Mobility Large} \label{Mob2} 
+
+
+\includegraphics[scale = 0.4]{Figures/mob2.png}
+
+\caption{TreeOnConsumer Mobility (Rate vs Time) Large} \label{mob2} 
+
+
+\end{center}
+
+\end{figure}
+
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.4]{Figures/Mob3.png}
+
+\caption{TreeOnConsumer Mobility Large} \label{Mob3} 
+
+
+\includegraphics[scale = 0.4]{Figures/mob3.png}
+
+\caption{TreeOnConsumer Mobility (Rate vs Time) Large} \label{mob3} 
+
+
+\end{center}
+
+\end{figure}
+
+
+
+
+
 \subsection{TreeOnProducer}
 Figure \ref{TreeOnProducer_big} shows $a6$ as Access Point client which recieves data from different producer nodes at the same time.
 
@@ -238,6 +304,51 @@ By running this strategy on Lurch, it can understand whenever you want to do a E
 \end{center}
 
 \end{figure}
+
+Now let's consider an interesting point of this strategy in Mobility of ICN. Figure \ref{Step1} shows the first step of a mobility scenario in which producer is attached to n18. In this case producer can be a Robot carrying a webcam to capture a film from environment send it to network as the content producer. The clients are mobile stations and are attached to base stations as well.   
+
+
+\begin{figure}[H]
+
+\begin{center}
+
+
+\includegraphics[scale = 0.4]{Figures/Step1.png}
+
+\caption{Producer Mobility step 1 Large} \label{Step1} 
+
+\includegraphics[scale = 0.4]{Figures/step1.png}
+
+\caption{Producer Mobility step 1 (Rate vs Time) Large} \label{step1} 
+
+
+\end{center}
+
+\end{figure}
+
+
+
+
+
+
+\begin{figure}[H]
+
+\begin{center}
+
+
+\includegraphics[scale = 0.4]{Figures/Step2.png}
+
+\caption{Producer Mobility step 2 Large} \label{Step2} 
+
+\includegraphics[scale = 0.4]{Figures/step2.png}
+
+\caption{Producer Mobility step 2 (Rate vs Time) Large} \label{step2} 
+
+
+\end{center}
+
+\end{figure}
+
 
 
 

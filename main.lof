@@ -29,12 +29,22 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces MaxFlow (Rate vs Time(s)) Medium\relax }}{20}{figure.caption.47}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces TreeOnConsumer Tree Large\relax }}{21}{figure.caption.50}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces TreeOnConsumer (Rate vs Time) Large\relax }}{21}{figure.caption.50}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces TreeOnProducer Tree Medium\relax }}{22}{figure.caption.52}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces TreeOnProducer (Rate vs Time) Large\relax }}{22}{figure.caption.52}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces MinCostMultiPath Tree Large\relax }}{23}{figure.caption.54}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces MinCostMultiPath (Rate vs Time) Large\relax }}{23}{figure.caption.54}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Multi Consumers and Producers Large\relax }}{24}{figure.caption.55}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Multi Consumers and Producers (Rate vs Time) Large\relax }}{25}{figure.caption.56}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces MaxFlow Tree Large\relax }}{26}{figure.caption.58}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces MaxFlow (Rate vs Time) Large\relax }}{26}{figure.caption.58}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces TreeOnConsumer Mobility Large\relax }}{22}{figure.caption.51}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces TreeOnConsumer Mobility (Rate vs Time) Large\relax }}{22}{figure.caption.51}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces TreeOnConsumer Mobility Large\relax }}{23}{figure.caption.52}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces TreeOnConsumer Mobility (Rate vs Time) Large\relax }}{23}{figure.caption.52}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces TreeOnConsumer Mobility Large\relax }}{24}{figure.caption.53}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces TreeOnConsumer Mobility (Rate vs Time) Large\relax }}{24}{figure.caption.53}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces TreeOnProducer Tree Medium\relax }}{25}{figure.caption.55}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces TreeOnProducer (Rate vs Time) Large\relax }}{25}{figure.caption.55}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces MinCostMultiPath Tree Large\relax }}{26}{figure.caption.57}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces MinCostMultiPath (Rate vs Time) Large\relax }}{26}{figure.caption.57}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Multi Consumers and Producers Large\relax }}{27}{figure.caption.58}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Multi Consumers and Producers (Rate vs Time) Large\relax }}{28}{figure.caption.59}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Producer Mobility step 1 Large\relax }}{29}{figure.caption.60}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Producer Mobility step 1 (Rate vs Time) Large\relax }}{29}{figure.caption.60}
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Producer Mobility step 2 Large\relax }}{30}{figure.caption.61}
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Producer Mobility step 2 (Rate vs Time) Large\relax }}{30}{figure.caption.61}
+\contentsline {figure}{\numberline {3.27}{\ignorespaces MaxFlow Tree Large\relax }}{31}{figure.caption.63}
+\contentsline {figure}{\numberline {3.28}{\ignorespaces MaxFlow (Rate vs Time) Large\relax }}{31}{figure.caption.63}
 \addvspace {10\p@ }
