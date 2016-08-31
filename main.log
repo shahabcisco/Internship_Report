@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.12)  31 AUG 2016 17:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.19)  1 SEP 2016 00:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
 LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (./Thesis.cls
 Document Class: Thesis 2007/22/02 v1.0 LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
@@ -1520,14 +1520,14 @@ Package pdftex.def Info: Pictures/treeonproducer.png used on input line 92.
 File: Pictures/balance.jpg Graphic file (type jpg)
 
 <use Pictures/balance.jpg>
-Package pdftex.def Info: Pictures/balance.jpg used on input line 110.
+Package pdftex.def Info: Pictures/balance.jpg used on input line 111.
 (pdftex.def)             Requested size: 370.28085pt x 111.7166pt.
  [14 <./Pictures/treeonconsumer.jpg> <./Pictures/treeonproducer.png>] <Pictures
 /max.jpg, id=420, 229.85875pt x 207.77625pt>
 File: Pictures/max.jpg Graphic file (type jpg)
 
 <use Pictures/max.jpg>
-Package pdftex.def Info: Pictures/max.jpg used on input line 131.
+Package pdftex.def Info: Pictures/max.jpg used on input line 132.
 (pdftex.def)             Requested size: 183.88722pt x 166.2212pt.
  [15 <./Pictures/balance.jpg>])
 (./Chapters/experience.tex [16 <./Pictures/max.jpg>]
@@ -1614,7 +1614,7 @@ File: Figures/Mob1.png Graphic file (type png)
 
 <use Figures/Mob1.png>
 Package pdftex.def Info: Figures/Mob1.png used on input line 160.
-(pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
+(pdftex.def)             Requested size: 401.49902pt x 301.12425pt.
  <Figures/mob1.png, id=485, 641.39626pt x 482.80376pt>
 File: Figures/mob1.png Graphic file (type png)
 
@@ -1627,7 +1627,7 @@ File: Figures/Mob2.png Graphic file (type png)
 
 <use Figures/Mob2.png>
 Package pdftex.def Info: Figures/Mob2.png used on input line 182.
-(pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
+(pdftex.def)             Requested size: 401.49902pt x 301.12425pt.
  <Figures/mob2.png, id=495, 633.36626pt x 481.8pt>
 File: Figures/mob2.png Graphic file (type png)
 
@@ -1639,13 +1639,13 @@ Package pdftex.def Info: Figures/mob2.png used on input line 187.
 File: Figures/Mob3.png Graphic file (type png)
  <use Figures/Mob3.png>
 Package pdftex.def Info: Figures/Mob3.png used on input line 200.
-(pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
+(pdftex.def)             Requested size: 401.49902pt x 301.12425pt.
 
 <Figures/mob3.png, id=504, 634.37pt x 476.78125pt>
 File: Figures/mob3.png Graphic file (type png)
  <use Figures/mob3.png>
 Package pdftex.def Info: Figures/mob3.png used on input line 205.
-(pdftex.def)             Requested size: 253.7435pt x 190.7091pt.
+(pdftex.def)             Requested size: 317.18422pt x 238.39003pt.
 
 [24 <./Figures/Mob2.png> <./Figures/mob2.png>] [25 <./Figures/Mob3.png> <./Figu
 res/mob3.png>] <Figures/TreeOnProducer_big.png, id=518, 803.0pt x 602.25pt>
@@ -1654,7 +1654,7 @@ File: Figures/TreeOnProducer_big.png Graphic file (type png)
 <use Figures/TreeOnProducer_big.png>
 Package pdftex.def Info: Figures/TreeOnProducer_big.png used on input line 229.
 
-(pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
+(pdftex.def)             Requested size: 401.49902pt x 301.12425pt.
 
 <Figures/treeonproducer_big.png, id=519, 697.60625pt x 478.78876pt>
 File: Figures/treeonproducer_big.png Graphic file (type png)
@@ -1662,116 +1662,121 @@ File: Figures/treeonproducer_big.png Graphic file (type png)
 <use Figures/treeonproducer_big.png>
 Package pdftex.def Info: Figures/treeonproducer_big.png used on input line 234.
 
-(pdftex.def)             Requested size: 279.03755pt x 191.5121pt.
-
-<Figures/Load.png, id=522, 803.0pt x 602.25pt>
+(pdftex.def)             Requested size: 348.80226pt x 239.39378pt.
+ [26] [27 <./Figures/TreeOnProducer_big.png> <./Figures/treeonproducer_big.png>
+]
+<Figures/Load.png, id=532, 803.0pt x 602.25pt>
 File: Figures/Load.png Graphic file (type png)
  <use Figures/Load.png>
-Package pdftex.def Info: Figures/Load.png used on input line 255.
-(pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
+Package pdftex.def Info: Figures/Load.png used on input line 261.
+(pdftex.def)             Requested size: 481.80373pt x 361.35278pt.
 
-<Figures/load.pdf, id=523, 642.4pt x 481.8pt>
+Overfull \hbox (64.33066pt too wide) in paragraph at lines 261--262
+ [] 
+ []
+
+<Figures/load.pdf, id=533, 642.4pt x 481.8pt>
 File: Figures/load.pdf Graphic file (type pdf)
  <use Figures/load.pdf>
-Package pdftex.def Info: Figures/load.pdf used on input line 260.
+Package pdftex.def Info: Figures/load.pdf used on input line 266.
 (pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
- [26 <./Figures/TreeOnProducer_big.png> <./Figures/treeonproducer_big.png>]
-<Figures/MinCostMultipath_big.png, id=530, 803.0pt x 602.25pt>
+ [28]
+<Figures/MinCostMultipath_big.png, id=538, 803.0pt x 602.25pt>
 File: Figures/MinCostMultipath_big.png Graphic file (type png)
 
 <use Figures/MinCostMultipath_big.png>
-Package pdftex.def Info: Figures/MinCostMultipath_big.png used on input line 27
-8.
+Package pdftex.def Info: Figures/MinCostMultipath_big.png used on input line 28
+4.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-<Figures/mincostmultipath_big.png, id=531, 640.3925pt x 528.97626pt>
+<Figures/mincostmultipath_big.png, id=539, 640.3925pt x 528.97626pt>
 File: Figures/mincostmultipath_big.png Graphic file (type png)
 
 <use Figures/mincostmultipath_big.png>
 Package pdftex.def Info: Figures/mincostmultipath_big.png used on input line 28
-3.
+9.
 (pdftex.def)             Requested size: 256.15245pt x 211.58675pt.
- [27 <./Figures/Load.png> <./Figures/load.pdf>] [28 <./Figures/MinCostMultipath
+ [29 <./Figures/Load.png> <./Figures/load.pdf>] [30 <./Figures/MinCostMultipath
 _big.png> <./Figures/mincostmultipath_big.png>] <Figures/Multi-Repo-Client.png,
- id=553, 803.0pt x 602.25pt>
+ id=562, 803.0pt x 602.25pt>
 File: Figures/Multi-Repo-Client.png Graphic file (type png)
 
 <use Figures/Multi-Repo-Client.png>
-Package pdftex.def Info: Figures/Multi-Repo-Client.png used on input line 311.
-(pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
+Package pdftex.def Info: Figures/Multi-Repo-Client.png used on input line 317.
+(pdftex.def)             Requested size: 401.49902pt x 301.12425pt.
 
-<Figures/multi-repo-client.png, id=554, 627.34375pt x 466.74374pt>
+<Figures/multi-repo-client.png, id=563, 627.34375pt x 466.74374pt>
 File: Figures/multi-repo-client.png Graphic file (type png)
 
 <use Figures/multi-repo-client.png>
-Package pdftex.def Info: Figures/multi-repo-client.png used on input line 328.
+Package pdftex.def Info: Figures/multi-repo-client.png used on input line 334.
 (pdftex.def)             Requested size: 250.93304pt x 186.69418pt.
- [29 <./Figures/Multi-Repo-Client.png>]
-<Figures/Step1.png, id=562, 803.0pt x 602.25pt>
+ [31 <./Figures/Multi-Repo-Client.png>]
+<Figures/Step1.png, id=570, 803.0pt x 602.25pt>
 File: Figures/Step1.png Graphic file (type png)
  <use Figures/Step1.png>
-Package pdftex.def Info: Figures/Step1.png used on input line 345.
+Package pdftex.def Info: Figures/Step1.png used on input line 351.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-<Figures/Step2.png, id=563, 803.0pt x 602.25pt>
+<Figures/Step2.png, id=571, 803.0pt x 602.25pt>
 File: Figures/Step2.png Graphic file (type png)
  <use Figures/Step2.png>
-Package pdftex.def Info: Figures/Step2.png used on input line 350.
+Package pdftex.def Info: Figures/Step2.png used on input line 356.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-[30 <./Figures/multi-repo-client.png>]
-<Figures/step1.png, id=569, 642.4pt x 476.78125pt>
+[32 <./Figures/multi-repo-client.png>]
+<Figures/step1.png, id=577, 642.4pt x 476.78125pt>
 File: Figures/step1.png Graphic file (type png)
  <use Figures/step1.png>
-Package pdftex.def Info: Figures/step1.png used on input line 367.
+Package pdftex.def Info: Figures/step1.png used on input line 373.
 (pdftex.def)             Requested size: 256.95544pt x 190.7091pt.
 
-<Figures/step2.png, id=570, 640.3925pt x 478.78876pt>
+<Figures/step2.png, id=578, 640.3925pt x 478.78876pt>
 File: Figures/step2.png Graphic file (type png)
  <use Figures/step2.png>
-Package pdftex.def Info: Figures/step2.png used on input line 372.
+Package pdftex.def Info: Figures/step2.png used on input line 378.
 (pdftex.def)             Requested size: 256.15245pt x 191.5121pt.
 
-[31 <./Figures/Step1.png> <./Figures/Step2.png>]
-<Figures/dense.png, id=579, 803.0pt x 602.25pt>
+[33 <./Figures/Step1.png> <./Figures/Step2.png>]
+<Figures/dense.png, id=587, 803.0pt x 602.25pt>
 File: Figures/dense.png Graphic file (type png)
  <use Figures/dense.png>
-Package pdftex.def Info: Figures/dense.png used on input line 393.
+Package pdftex.def Info: Figures/dense.png used on input line 399.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-<Figures/dense.pdf, id=580, 642.4pt x 481.8pt>
+<Figures/dense.pdf, id=588, 642.4pt x 481.8pt>
 File: Figures/dense.pdf Graphic file (type pdf)
  <use Figures/dense.pdf>
-Package pdftex.def Info: Figures/dense.pdf used on input line 397.
+Package pdftex.def Info: Figures/dense.pdf used on input line 403.
 (pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
- [32 <./Figures/step1.png> <./Figures/step2.png>] [33 <./Figures/dense.png> <./
-Figures/dense.pdf>] <Figures/MaxFlow_big.png, id=604, 803.0pt x 602.25pt>
+ [34 <./Figures/step1.png> <./Figures/step2.png>] [35 <./Figures/dense.png> <./
+Figures/dense.pdf>] <Figures/MaxFlow_big.png, id=613, 803.0pt x 602.25pt>
 File: Figures/MaxFlow_big.png Graphic file (type png)
 
 <use Figures/MaxFlow_big.png>
-Package pdftex.def Info: Figures/MaxFlow_big.png used on input line 430.
+Package pdftex.def Info: Figures/MaxFlow_big.png used on input line 436.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-<Figures/maxflow_big.png, id=605, 667.49374pt x 477.785pt>
+<Figures/maxflow_big.png, id=614, 667.49374pt x 477.785pt>
 File: Figures/maxflow_big.png Graphic file (type png)
 
 <use Figures/maxflow_big.png>
-Package pdftex.def Info: Figures/maxflow_big.png used on input line 435.
+Package pdftex.def Info: Figures/maxflow_big.png used on input line 441.
 (pdftex.def)             Requested size: 266.99277pt x 191.11061pt.
-) (./Chapters/conclusion.tex [34 <./Figures/MaxFlow_big.png> <./Figures/maxflow
+) (./Chapters/conclusion.tex [36 <./Figures/MaxFlow_big.png> <./Figures/maxflow
 _big.png>]
 Chapter 4.
 ------------------------------------------------------------------------------
  4 Conclusions
 ------------------------------------------------------------------------------
-) (./Appendices/AppendixA.tex [35
+) (./Appendices/AppendixA.tex [37
 
 ]
 Appendix A.
 ------------------------------------------------------------------------------
  A Code Implementation
 ------------------------------------------------------------------------------
-[36
+[38
 
 ]
 Overfull \hbox (102.73845pt too wide) in paragraph at lines 57--58
@@ -1785,7 +1790,7 @@ Overfull \hbox (102.73845pt too wide) in paragraph at lines 58--59
 ][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[37]
+[39]
 Overfull \hbox (16.03653pt too wide) in paragraph at lines 121--123
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][] 
@@ -1821,7 +1826,7 @@ Overfull \hbox (0.73619pt too wide) in paragraph at lines 156--158
 ][][][][][][][][][] 
  []
 
-[38]
+[40]
 Overfull \hbox (138.43924pt too wide) in paragraph at lines 161--164
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -1855,11 +1860,11 @@ Overfull \hbox (21.13664pt too wide) in paragraph at lines 199--201
 [][][][][][][][][][][][][][][][][] 
  []
 
-[39]) [40]
+[41]) [42]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
-[41
+[43
 
 
 ]
@@ -1869,16 +1874,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 395.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 395.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 395.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5E2FB9000788A55202EEF6E16B79F138;5118.
+(rerunfilecheck)             Checksum: C81C317D0C2FFC9B6A27644027592118;5123.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 395.
  ) 
 Here is how much of TeX's memory you used:
- 28003 strings out of 494910
- 520085 string characters out of 6179836
- 624405 words of memory out of 5000000
- 30376 multiletter control sequences out of 15000+600000
+ 28005 strings out of 493029
+ 520099 string characters out of 6136234
+ 629095 words of memory out of 5000000
+ 30620 multiletter control sequences out of 15000+600000
  15845 words of font info for 58 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
+ 1141 hyphenation exceptions out of 8191
  55i,12n,77p,1157b,1806s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
@@ -1891,10 +1896,10 @@ s/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type
 ic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmtt8.pfb>
-Output written on main.pdf (49 pages, 5501178 bytes).
+Output written on main.pdf (51 pages, 5567489 bytes).
 PDF statistics:
- 970 PDF objects out of 1000 (max. 8388607)
- 799 compressed objects within 8 object streams
- 337 named destinations out of 1000 (max. 500000)
+ 979 PDF objects out of 1000 (max. 8388607)
+ 805 compressed objects within 9 object streams
+ 339 named destinations out of 1000 (max. 500000)
  518 words of extra memory for PDF output out of 10000 (max. 10000000)
 

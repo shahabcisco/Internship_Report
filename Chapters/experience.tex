@@ -11,7 +11,7 @@ We tested our experiments on clusters of cisco's server with linux containers wi
 
 In this chapter we will show, test and validate our 4 routing strategies on 2 different setup networks with 5 nodes (medium size) and another one with 17 nodes (large size) each one with costumized capacity. We plot rates in Kbps vs time for each link involved in strategy. $\{ai\}$, $i=$1:8 are Access Points and nodes with \textit{NodeID} are Autonomous nodes in the network.
    
-In all scenarios we plot the figures of each link by nodeID of ends connected. In, Out means the direction of packets that come to node. We consider number of hops as cost of link as it is meaningful in ICN architecture.
+In all scenarios we plot the figures of each link by nodeID of ends connected. In, Out means the direction of packets that come to node. So In always is Data packets and Out are Interest packets. As it's clear they are larger than We consider number of hops as cost of link as it is meaningful in ICN architecture.
 \textit{TreeOnConsumer}, \textit{TreeOnProducer}, \textit{MinCostMultipath}, \textit{MaxFlow} are 4 different parameters of RoutingNDN module to choose which are done for \textit{Medium} and \textit{Large} size. We have put the result of each case inside the subsection.
 
 In all cases Clients are searching /n/a/noseg chunk and repositories are containing /n folder which has alphabetical letters to like a,b,c,d, ... then chunks of \textit{BigBuckBunny.mp4} are appended to them. Engine of repository is an application called \textit{repo-ng}. 
@@ -120,7 +120,7 @@ You can see for marginal paths you have on the stable rates.
 
  
 
-\section{Strategies on Large Size NDN Network}
+\section{Strategies on Large Size NDN Networks}
 
 \subsection{TreeOnConsumer}
 Figure \ref{TreeOnConsumer_big} shows a red subgraph, $a1, a2, a3, a4$ are Acces Points on which the mobile clients are connected through \textit{TreeOnConsumer} tree on the network.\\
@@ -157,7 +157,7 @@ Same case for \ref{Mob3} which is for showing that update can occured. This upda
 
 \begin{center}
 
-\includegraphics[scale = 0.4]{Figures/Mob1.png}
+\includegraphics[scale = 0.5]{Figures/Mob1.png}
 
 \caption{TreeOnConsumer Mobility Large} \label{Mob1} 
 
@@ -171,7 +171,7 @@ Same case for \ref{Mob3} which is for showing that update can occured. This upda
 
 \end{figure}
 
-Now in figure \ref{Mob2} and \ref{Mob1} you see the rates which are changed whenever producer is changed. This changed is done mannually in this case.
+Now in figure \ref{mob1} and \ref{mob2} you see the rates which are changed whenever producer is changed. This changed is done mannually in this case.
 
 
 
@@ -179,7 +179,7 @@ Now in figure \ref{Mob2} and \ref{Mob1} you see the rates which are changed when
 
 \begin{center}
 
-\includegraphics[scale = 0.4]{Figures/Mob2.png}
+\includegraphics[scale = 0.5]{Figures/Mob2.png}
 
 \caption{TreeOnConsumer Mobility Large} \label{Mob2} 
 
@@ -197,12 +197,12 @@ Now in figure \ref{Mob2} and \ref{Mob1} you see the rates which are changed when
 
 \begin{center}
 
-\includegraphics[scale = 0.4]{Figures/Mob3.png}
+\includegraphics[scale = 0.5]{Figures/Mob3.png}
 
 \caption{TreeOnConsumer Mobility Large} \label{Mob3} 
 
 
-\includegraphics[scale = 0.4]{Figures/mob3.png}
+\includegraphics[scale = 0.5]{Figures/mob3.png}
 
 \caption{TreeOnConsumer Mobility (Rate vs Time) Large} \label{mob3} 
 
@@ -226,12 +226,12 @@ This is very usefull specially in case of load balancing strategy. Client can ge
 
 \begin{center}
 
-\includegraphics[scale = 0.4]{Figures/TreeOnProducer_big.png}
+\includegraphics[scale = 0.5]{Figures/TreeOnProducer_big.png}
 
 \caption{TreeOnProducer Tree Medium} \label{TreeOnProducer_big} 
 
 
-\includegraphics[scale = 0.4]{Figures/treeonproducer_big.png}
+\includegraphics[scale = 0.5]{Figures/treeonproducer_big.png}
 
 \caption{TreeOnProducer (Rate vs Time) Large} \label{treeonproducer_big} 
 
@@ -248,11 +248,17 @@ Notably this strategy can be used when you want to do a \textit{Equal Cost Multi
 
 Figure \ref{load} shows well a simple case usage of this strategy using \textit{load balancing} strategy to use multipath routing.
 
+There is a very important issue in this case of strategy, and the important concept is that when the routing strategies has decided or multi faces for each node the forwarder strategy can not be more best-route! Actually in this case engine of forwarder should allow the kernel to pass packets through diferent faces. Kernel lets operates like a switch to forward the packets into th network.
+
+By this way we see clearly that designing a routing strategy also depends on forwarding strategies. 
+
+In NFD, there is different forwarding strategies \textit{best-route} which uses the best route in terms of cost link function. \textit{multicast} which send the packets in multicast way, \textit{broadcast} which pipline all packets toward all, faces in PIT table. These namespaces has been implemented and used in our studied works and experiments.
+
 \begin{figure}[H]
 
 \begin{center}
 
-\includegraphics[scale = 0.4]{Figures/Load.png}
+\includegraphics[scale = 0.6]{Figures/Load.png}
 
 \caption{Multipath load balancing strategy Graph} \label{Load} 
 
@@ -308,7 +314,7 @@ By running this strategy on Lurch, it can understand whenever you want to do a E
 \begin{center}
 
 
-\includegraphics[scale = 0.4]{Figures/Multi-Repo-Client.png}
+\includegraphics[scale = 0.5]{Figures/Multi-Repo-Client.png}
 
 \caption{Multi Consumers and Producers Large} \label{Multi-Repo-Client} 
 
@@ -344,12 +350,12 @@ Now let's consider an interesting point of this strategy in Mobility of ICN. Fig
 
 \includegraphics[scale = 0.4]{Figures/Step1.png}
 
-\caption{Producer Mobility step 1} \label{Step1} 
+\caption{Producer Mobility step 1 \& Routing update} \label{Step1} 
 
 
 \includegraphics[scale = 0.4]{Figures/Step2.png}
 
-\caption{Producer Mobility step 2} \label{Step2} 
+\caption{Producer Mobility step 2 \& Routing update} \label{Step2} 
 
 \end{center}
 
