@@ -124,7 +124,7 @@ You can see for marginal paths you have on the stable rates.
 
 \subsection{TreeOnConsumer}
 Figure \ref{TreeOnConsumer_big} shows a red subgraph, $a1, a2, a3, a4$ are Acces Points on which the mobile clients are connected through \textit{TreeOnConsumer} tree on the network.\\
-In \ref{treeonconsumer_big}  rates are traced against time as well. The 'sj' link curve is upper than the other becasue you have 3 clients Child on this side against 'sg' side in which you have just one Child. So the Interest/Data packets are bigger on right first depth of tree.
+In \ref{treeonconsumer_big}  rates are traced against time as well.
 
 \begin{figure}[H]
 
@@ -147,7 +147,7 @@ In \ref{treeonconsumer_big}  rates are traced against time as well. The 'sj' lin
 
 Figure \ref{Mob1} shows the first step of client mobility in which the mobile station is attached to node $n10$. Figure \ref{mob1} shows also the Interest/Data packets which are going through shortest paths.
 
-You can see in figure \ref{Mo2} that as soon as mobile client is attached to $n11$ routing update is happened and new routing is traced.
+You can see in figure \ref{Mob2} that as soon as mobile client is attached to $n11$ routing update is happened and new routing is traced.
 
 Same case for \ref{Mob3} which is for showing that update can occured. This update can be designed periodically or to have an algorithm. After we need to know more practical constraints like how much time takes that an routing update happens? The answer depends on what we use for engine forwarder and its implementations. 
 
@@ -170,6 +170,10 @@ Same case for \ref{Mob3} which is for showing that update can occured. This upda
 \end{center}
 
 \end{figure}
+
+Now in figure \ref{Mob2} and \ref{Mob1} you see the rates which are changed whenever producer is changed. This changed is done mannually in this case.
+
+
 
 \begin{figure}[H]
 
@@ -216,6 +220,8 @@ Figure \ref{TreeOnProducer_big} shows $a6$ as Access Point client which recieves
 
 This strategy can be used whenever client can achieve to multiple repositories and it can download his chunk at the same time.
 
+This is very usefull specially in case of load balancing strategy. Client can get his packets with different paths using different producers in the sense that maybe on the network mobile node wants download a higher data rates so he can use the benefit of multihoming of the content which is searching.
+
 \begin{figure}[H]
 
 \begin{center}
@@ -239,6 +245,29 @@ This strategy can be used whenever client can achieve to multiple repositories a
 Figure \ref{MinCostMultiPath} shows how the \textit{MinCostmultiPath} tree is chosen to deliver content to all clients which are connected to access points.
  
 Notably this strategy can be used when you want to do a \textit{Equal Cost Multi Path} (ECMP) routing in which your minimized paths have equal cost to destination so we should use load-balance or multipath forwading strategy to allow traffic to pass along the network. 
+
+Figure \ref{load} shows well a simple case usage of this strategy using \textit{load balancing} strategy to use multipath routing.
+
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.4]{Figures/Load.png}
+
+\caption{Multipath load balancing strategy Graph} \label{Load} 
+
+
+\includegraphics[scale = 0.4]{Figures/load.pdf}
+
+\caption{Multipath load balancing strategy (Rate vs Time) } \label{load} 
+
+
+\end{center}
+
+\end{figure}
+
+
+
 
 The algorithm of this strategy is written by the idea of searching minimum multipath from producer to client.
 
@@ -315,12 +344,12 @@ Now let's consider an interesting point of this strategy in Mobility of ICN. Fig
 
 \includegraphics[scale = 0.4]{Figures/Step1.png}
 
-\caption{Producer Mobility step 1 Large} \label{Step1} 
+\caption{Producer Mobility step 1} \label{Step1} 
 
-\includegraphics[scale = 0.4]{Figures/step1.png}
 
-\caption{Producer Mobility step 1 (Rate vs Time) Large} \label{step1} 
+\includegraphics[scale = 0.4]{Figures/Step2.png}
 
+\caption{Producer Mobility step 2} \label{Step2} 
 
 \end{center}
 
@@ -335,10 +364,10 @@ Now let's consider an interesting point of this strategy in Mobility of ICN. Fig
 
 \begin{center}
 
+\includegraphics[scale = 0.4]{Figures/step1.png}
 
-\includegraphics[scale = 0.4]{Figures/Step2.png}
+\caption{Producer Mobility step 1 (Rate vs Time) Large} \label{step1} 
 
-\caption{Producer Mobility step 2 Large} \label{Step2} 
 
 \includegraphics[scale = 0.4]{Figures/step2.png}
 
@@ -348,6 +377,39 @@ Now let's consider an interesting point of this strategy in Mobility of ICN. Fig
 \end{center}
 
 \end{figure}
+
+
+
+Now let's consider a case which i call it \textit{Dense} network becasue the number of clients and repositories are more than rests.
+
+Figure \ref{Dense} shows well automatic routing best shortest path for each consumer to achieve to producers using this strategy.
+
+Figure \ref{dense} shows also the stairs of rates falling down in the network becasue of waterfall sense of Network. Basically more you go deeper to network the capacity rate will be increased which is real assumption in networks becasue (backbone / backhaul / Mobile edge, ...)
+\begin{figure}[H]
+
+\begin{center}
+
+
+\includegraphics[scale = 0.4]{Figures/dense.png}
+
+\caption{Dense Network} \label{Dense} 
+
+\includegraphics[scale = 0.4]{Figures/dense.pdf}
+
+\caption{Dense Network (Rate vs Time) Large} \label{dense} 
+
+
+\end{center}
+
+\end{figure}
+
+
+
+
+
+
+
+
 
 
 
