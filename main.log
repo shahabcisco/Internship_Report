@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.19)  1 SEP 2016 00:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.12)  1 SEP 2016 14:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
 LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
 (./Thesis.cls
 Document Class: Thesis 2007/22/02 v1.0 LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
@@ -1249,7 +1249,11 @@ zlibrarydecorations.shapes.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
 decorations.shapes.code.tex)))
 Package hyperref Info: Option `colorlinks' set `true' on input line 53.
- (./main.aux)
+ (./main.aux
+
+LaTeX Warning: Label `nfd' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
@@ -1273,8 +1277,7 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
-
-(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
@@ -1382,13 +1385,13 @@ Chapter 1.
 ------------------------------------------------------------------------------
  1 Introduction
 ------------------------------------------------------------------------------
-<Pictures/cisco.jpg, id=298, 1872.9975pt x 3329.43875pt>
+<Pictures/cisco.jpg, id=302, 1872.9975pt x 3329.43875pt>
 File: Pictures/cisco.jpg Graphic file (type jpg)
 
 <use Pictures/cisco.jpg>
 Package pdftex.def Info: Pictures/cisco.jpg used on input line 30.
 (pdftex.def)             Requested size: 187.31071pt x 332.96338pt.
- <Pictures/photos.png, id=299, 803.0pt x 602.25pt>
+ <Pictures/photos.png, id=303, 803.0pt x 602.25pt>
 File: Pictures/photos.png Graphic file (type png)
 
 <use Pictures/photos.png>
@@ -1399,47 +1402,47 @@ Package pdftex.def Info: Pictures/photos.png used on input line 43.
 
 
 ] [2 <./Pictures/cisco.jpg> <./Pictures/photos.png>] [3] <Pictures/lurch.png, i
-d=317, 725.71124pt x 427.5975pt>
+d=321, 725.71124pt x 427.5975pt>
 File: Pictures/lurch.png Graphic file (type png)
 
 <use Pictures/lurch.png>
 Package pdftex.def Info: Pictures/lurch.png used on input line 78.
 (pdftex.def)             Requested size: 254.00273pt x 149.66136pt.
- <Pictures/table.png, id=320, 798.985pt x 445.665pt>
+ <Pictures/table.png, id=324, 798.985pt x 445.665pt>
 File: Pictures/table.png Graphic file (type png)
 
 <use Pictures/table.png>
 Package pdftex.def Info: Pictures/table.png used on input line 94.
 (pdftex.def)             Requested size: 239.69734pt x 133.70053pt.
  [4 <./Pictures/lurch.png> <./Pictures/table.png>]
-<Pictures/data.png, id=331, 724.7075pt x 414.54875pt>
+<Pictures/data.png, id=335, 724.7075pt x 414.54875pt>
 File: Pictures/data.png Graphic file (type png)
  <use Pictures/data.png>
 Package pdftex.def Info: Pictures/data.png used on input line 110.
 (pdftex.def)             Requested size: 253.65143pt x 145.09422pt.
 
-<Pictures/script.png, id=333, 726.715pt x 270.00874pt>
+<Pictures/script.png, id=337, 726.715pt x 270.00874pt>
 File: Pictures/script.png Graphic file (type png)
 
 <use Pictures/script.png>
 Package pdftex.def Info: Pictures/script.png used on input line 128.
 (pdftex.def)             Requested size: 254.35405pt x 94.50447pt.
 
-<Pictures/start_repo.png, id=334, 726.715pt x 328.22626pt>
+<Pictures/start_repo.png, id=338, 726.715pt x 328.22626pt>
 File: Pictures/start_repo.png Graphic file (type png)
 
 <use Pictures/start_repo.png>
 Package pdftex.def Info: Pictures/start_repo.png used on input line 141.
 (pdftex.def)             Requested size: 254.35405pt x 114.8809pt.
  [5 <./Pictures/data.png> <./Pictures/script.png>] <Pictures/download.png, id=3
-43, 724.7075pt x 294.09875pt>
+47, 724.7075pt x 294.09875pt>
 File: Pictures/download.png Graphic file (type png)
 
 <use Pictures/download.png>
 Package pdftex.def Info: Pictures/download.png used on input line 160.
 (pdftex.def)             Requested size: 253.65143pt x 102.9361pt.
 
-<Pictures/capacity.png, id=345, 725.71124pt x 325.215pt>
+<Pictures/capacity.png, id=349, 725.71124pt x 325.215pt>
 File: Pictures/capacity.png Graphic file (type png)
 
 <use Pictures/capacity.png>
@@ -1447,33 +1450,33 @@ Package pdftex.def Info: Pictures/capacity.png used on input line 175.
 (pdftex.def)             Requested size: 254.00273pt x 113.82695pt.
  [6 <./Pictures/start_repo.png> <./Pictures/download.png> <./Pictures/capacity.
 png>]
-<Pictures/auto.png, id=354, 711.65875pt x 354.32375pt>
+<Pictures/auto.png, id=358, 711.65875pt x 354.32375pt>
 File: Pictures/auto.png Graphic file (type png)
  <use Pictures/auto.png>
 Package pdftex.def Info: Pictures/auto.png used on input line 191.
 (pdftex.def)             Requested size: 249.08429pt x 124.01517pt.
 
-<Pictures/peertopeer.png, id=357, 305.14pt x 334.24875pt>
+<Pictures/peertopeer.png, id=361, 305.14pt x 334.24875pt>
 File: Pictures/peertopeer.png Graphic file (type png)
 
 <use Pictures/peertopeer.png>
 Package pdftex.def Info: Pictures/peertopeer.png used on input line 210.
 (pdftex.def)             Requested size: 122.05382pt x 133.69713pt.
  [7 <./Pictures/auto.png>]
-<Pictures/spec.png, id=364, 376.40625pt x 182.93344pt>
+<Pictures/spec.png, id=368, 376.40625pt x 182.93344pt>
 File: Pictures/spec.png Graphic file (type png)
  <use Pictures/spec.png>
 Package pdftex.def Info: Pictures/spec.png used on input line 228.
 (pdftex.def)             Requested size: 225.84547pt x 109.7609pt.
 
-<Pictures/internetofthings.png, id=365, 851.18pt x 493.845pt>
+<Pictures/internetofthings.png, id=369, 851.18pt x 493.845pt>
 File: Pictures/internetofthings.png Graphic file (type png)
 
 <use Pictures/internetofthings.png>
 Package pdftex.def Info: Pictures/internetofthings.png used on input line 240.
 (pdftex.def)             Requested size: 297.91745pt x 172.84833pt.
  [8 <./Pictures/peertopeer.png> <./Pictures/spec.png>] <Pictures/2020.jpg, id=3
-74, 1002.74625pt x 505.89pt>
+78, 1002.74625pt x 505.89pt>
 File: Pictures/2020.jpg Graphic file (type jpg)
 
 <use Pictures/2020.jpg>
@@ -1485,298 +1488,306 @@ Chapter 2.
 ------------------------------------------------------------------------------
  2 Theory of Routing Algorithms
 ------------------------------------------------------------------------------
-[11
-
-] <Pictures/nfd.png, id=392, 722.7pt x 580.1675pt>
+<Pictures/nfd.png, id=390, 722.7pt x 580.1675pt>
 File: Pictures/nfd.png Graphic file (type png)
  <use Pictures/nfd.png>
-Package pdftex.def Info: Pictures/nfd.png used on input line 29.
+Package pdftex.def Info: Pictures/nfd.png used on input line 24.
 (pdftex.def)             Requested size: 252.94878pt x 203.06166pt.
 
-[12 <./Pictures/nfd.png>]
+[11
+
+] <Pictures/network.png, id=397, 660.4675pt x 400.49625pt>
+File: Pictures/network.png Graphic file (type png)
+
+<use Pictures/network.png>
+Package pdftex.def Info: Pictures/network.png used on input line 37.
+(pdftex.def)             Requested size: 231.16708pt x 140.17578pt.
+ [12 <./Pictures/nfd.png> <./Pictures/network.png>]
+File: Pictures/nfd.png Graphic file (type png)
+
+<use Pictures/nfd.png>
+Package pdftex.def Info: Pictures/nfd.png used on input line 62.
+(pdftex.def)             Requested size: 252.94878pt x 203.06166pt.
+ [13]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 65.
+(hyperref)                removing `math shift' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 65.
+(hyperref)                removing `math shift' on input line 98.
 
-<Pictures/treeonconsumer.jpg, id=403, 3009.2425pt x 1568.86125pt>
+<Pictures/treeonconsumer.jpg, id=414, 3009.2425pt x 1568.86125pt>
 File: Pictures/treeonconsumer.jpg Graphic file (type jpg)
 
 <use Pictures/treeonconsumer.jpg>
-Package pdftex.def Info: Pictures/treeonconsumer.jpg used on input line 77.
+Package pdftex.def Info: Pictures/treeonconsumer.jpg used on input line 110.
 (pdftex.def)             Requested size: 300.94188pt x 156.89531pt.
- [13]
-<Pictures/treeonproducer.png, id=410, 466.74374pt x 317.185pt>
+ [14]
+<Pictures/treeonproducer.png, id=421, 466.74374pt x 317.185pt>
 File: Pictures/treeonproducer.png Graphic file (type png)
 
 <use Pictures/treeonproducer.png>
-Package pdftex.def Info: Pictures/treeonproducer.png used on input line 92.
+Package pdftex.def Info: Pictures/treeonproducer.png used on input line 125.
 (pdftex.def)             Requested size: 186.69418pt x 126.87173pt.
 
-<Pictures/balance.jpg, id=412, 528.97626pt x 159.59625pt>
+<Pictures/balance.jpg, id=423, 528.97626pt x 159.59625pt>
 File: Pictures/balance.jpg Graphic file (type jpg)
 
 <use Pictures/balance.jpg>
-Package pdftex.def Info: Pictures/balance.jpg used on input line 111.
+Package pdftex.def Info: Pictures/balance.jpg used on input line 144.
 (pdftex.def)             Requested size: 370.28085pt x 111.7166pt.
- [14 <./Pictures/treeonconsumer.jpg> <./Pictures/treeonproducer.png>] <Pictures
-/max.jpg, id=420, 229.85875pt x 207.77625pt>
+ [15 <./Pictures/treeonconsumer.jpg> <./Pictures/treeonproducer.png>] <Pictures
+/max.jpg, id=431, 229.85875pt x 207.77625pt>
 File: Pictures/max.jpg Graphic file (type jpg)
 
 <use Pictures/max.jpg>
-Package pdftex.def Info: Pictures/max.jpg used on input line 132.
+Package pdftex.def Info: Pictures/max.jpg used on input line 165.
 (pdftex.def)             Requested size: 183.88722pt x 166.2212pt.
- [15 <./Pictures/balance.jpg>])
-(./Chapters/experience.tex [16 <./Pictures/max.jpg>]
+ [16 <./Pictures/balance.jpg>])
+(./Chapters/experience.tex [17 <./Pictures/max.jpg>]
 Chapter 3.
 ------------------------------------------------------------------------------
  3 Experimental Results on Routing Strategies
 ------------------------------------------------------------------------------
-[17
+[18
 
-] <Figures/TreeOnConsumer.png, id=437, 477.785pt x 324.21124pt>
+] <Figures/TreeOnConsumer.png, id=448, 477.785pt x 324.21124pt>
 File: Figures/TreeOnConsumer.png Graphic file (type png)
 
 <use Figures/TreeOnConsumer.png>
 Package pdftex.def Info: Figures/TreeOnConsumer.png used on input line 31.
 (pdftex.def)             Requested size: 191.11061pt x 129.68219pt.
 
-<Figures/treeonconsumer.png, id=438, 642.4pt x 479.7925pt>
+<Figures/treeonconsumer.png, id=449, 642.4pt x 479.7925pt>
 File: Figures/treeonconsumer.png Graphic file (type png)
 
 <use Figures/treeonconsumer.png>
 Package pdftex.def Info: Figures/treeonconsumer.png used on input line 36.
 (pdftex.def)             Requested size: 256.95544pt x 191.91359pt.
-
-<Figures/TreeOnProducer.png, id=441, 477.785pt x 324.21124pt>
+ [19 <./Figures/TreeOnConsumer.png> <./Figures/treeonconsumer.png>]
+<Figures/TreeOnProducer.png, id=459, 477.785pt x 324.21124pt>
 File: Figures/TreeOnProducer.png Graphic file (type png)
 
 <use Figures/TreeOnProducer.png>
-Package pdftex.def Info: Figures/TreeOnProducer.png used on input line 53.
+Package pdftex.def Info: Figures/TreeOnProducer.png used on input line 58.
 (pdftex.def)             Requested size: 191.11061pt x 129.68219pt.
 
-<Figures/treeonproducer.png, id=442, 644.4075pt x 478.78876pt>
+<Figures/treeonproducer.png, id=460, 644.4075pt x 478.78876pt>
 File: Figures/treeonproducer.png Graphic file (type png)
 
 <use Figures/treeonproducer.png>
-Package pdftex.def Info: Figures/treeonproducer.png used on input line 58.
+Package pdftex.def Info: Figures/treeonproducer.png used on input line 63.
 (pdftex.def)             Requested size: 257.75844pt x 191.5121pt.
- [18 <./Figures/TreeOnConsumer.png> <./Figures/treeonconsumer.png>]
-<Figures/MinCostMultipath.png, id=451, 477.785pt x 324.21124pt>
+ [20 <./Figures/TreeOnProducer.png> <./Figures/treeonproducer.png>]
+<Figures/MinCostMultipath.png, id=469, 477.785pt x 324.21124pt>
 File: Figures/MinCostMultipath.png Graphic file (type png)
 
 <use Figures/MinCostMultipath.png>
-Package pdftex.def Info: Figures/MinCostMultipath.png used on input line 75.
+Package pdftex.def Info: Figures/MinCostMultipath.png used on input line 86.
 (pdftex.def)             Requested size: 191.11061pt x 129.68219pt.
 
-<Figures/mincostmultipath.png, id=452, 645.41125pt x 479.7925pt>
+<Figures/mincostmultipath.png, id=470, 645.41125pt x 479.7925pt>
 File: Figures/mincostmultipath.png Graphic file (type png)
 
 <use Figures/mincostmultipath.png>
-Package pdftex.def Info: Figures/mincostmultipath.png used on input line 79.
+Package pdftex.def Info: Figures/mincostmultipath.png used on input line 90.
 (pdftex.def)             Requested size: 258.15993pt x 191.91359pt.
- [19 <./Figures/TreeOnProducer.png> <./Figures/treeonproducer.png>] <Figures/Ma
-xFlow.png, id=462, 477.785pt x 324.21124pt>
+
+<Figures/MaxFlow.png, id=473, 477.785pt x 324.21124pt>
 File: Figures/MaxFlow.png Graphic file (type png)
 
 <use Figures/MaxFlow.png>
-Package pdftex.def Info: Figures/MaxFlow.png used on input line 96.
+Package pdftex.def Info: Figures/MaxFlow.png used on input line 107.
 (pdftex.def)             Requested size: 191.11061pt x 129.68219pt.
- [20 <./Figures/MinCostMultipath.png> <./Figures/mincostmultipath.png>] <Figure
-s/maxflow.png, id=469, 655.44875pt x 464.73625pt>
+ [21 <./Figures/MinCostMultipath.png> <./Figures/mincostmultipath.png>] <Figure
+s/maxflow.png, id=480, 655.44875pt x 464.73625pt>
 File: Figures/maxflow.png Graphic file (type png)
 
 <use Figures/maxflow.png>
-Package pdftex.def Info: Figures/maxflow.png used on input line 109.
+Package pdftex.def Info: Figures/maxflow.png used on input line 120.
 (pdftex.def)             Requested size: 262.17485pt x 185.8912pt.
 
-<Figures/TreeOnConsumer_big.png, id=472, 803.0pt x 602.25pt>
+<Figures/TreeOnConsumer_big.png, id=483, 803.0pt x 602.25pt>
 File: Figures/TreeOnConsumer_big.png Graphic file (type png)
 
 <use Figures/TreeOnConsumer_big.png>
-Package pdftex.def Info: Figures/TreeOnConsumer_big.png used on input line 133.
+Package pdftex.def Info: Figures/TreeOnConsumer_big.png used on input line 144.
 
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-<Figures/treeonconsumer_big.png, id=473, 640.3925pt x 479.7925pt>
+<Figures/treeonconsumer_big.png, id=484, 640.3925pt x 479.7925pt>
 File: Figures/treeonconsumer_big.png Graphic file (type png)
 
 <use Figures/treeonconsumer_big.png>
-Package pdftex.def Info: Figures/treeonconsumer_big.png used on input line 138.
+Package pdftex.def Info: Figures/treeonconsumer_big.png used on input line 149.
 
 (pdftex.def)             Requested size: 256.15245pt x 191.91359pt.
- [21 <./Figures/MaxFlow.png> <./Figures/maxflow.png>] <Figures/Mob1.png, id=484
+ [22 <./Figures/MaxFlow.png> <./Figures/maxflow.png>] <Figures/Mob1.png, id=495
 , 803.0pt x 602.25pt>
 File: Figures/Mob1.png Graphic file (type png)
 
 <use Figures/Mob1.png>
-Package pdftex.def Info: Figures/Mob1.png used on input line 160.
+Package pdftex.def Info: Figures/Mob1.png used on input line 171.
 (pdftex.def)             Requested size: 401.49902pt x 301.12425pt.
- <Figures/mob1.png, id=485, 641.39626pt x 482.80376pt>
+ <Figures/mob1.png, id=496, 641.39626pt x 482.80376pt>
 File: Figures/mob1.png Graphic file (type png)
 
 <use Figures/mob1.png>
-Package pdftex.def Info: Figures/mob1.png used on input line 165.
+Package pdftex.def Info: Figures/mob1.png used on input line 176.
 (pdftex.def)             Requested size: 256.55396pt x 193.11807pt.
- [22 <./Figures/TreeOnConsumer_big.png> <./Figures/treeonconsumer_big.png>] <Fi
-gures/Mob2.png, id=494, 803.0pt x 602.25pt>
+ [23 <./Figures/TreeOnConsumer_big.png> <./Figures/treeonconsumer_big.png>] <Fi
+gures/Mob2.png, id=506, 803.0pt x 602.25pt>
 File: Figures/Mob2.png Graphic file (type png)
 
 <use Figures/Mob2.png>
-Package pdftex.def Info: Figures/Mob2.png used on input line 182.
+Package pdftex.def Info: Figures/Mob2.png used on input line 193.
 (pdftex.def)             Requested size: 401.49902pt x 301.12425pt.
- <Figures/mob2.png, id=495, 633.36626pt x 481.8pt>
+ <Figures/mob2.png, id=507, 633.36626pt x 481.8pt>
 File: Figures/mob2.png Graphic file (type png)
 
 <use Figures/mob2.png>
-Package pdftex.def Info: Figures/mob2.png used on input line 187.
+Package pdftex.def Info: Figures/mob2.png used on input line 198.
 (pdftex.def)             Requested size: 253.34201pt x 192.71658pt.
- [23 <./Figures/Mob1.png> <./Figures/mob1.png>]
-<Figures/Mob3.png, id=503, 803.0pt x 602.25pt>
+ [24 <./Figures/Mob1.png> <./Figures/mob1.png>]
+<Figures/Mob3.png, id=514, 803.0pt x 602.25pt>
 File: Figures/Mob3.png Graphic file (type png)
  <use Figures/Mob3.png>
-Package pdftex.def Info: Figures/Mob3.png used on input line 200.
+Package pdftex.def Info: Figures/Mob3.png used on input line 211.
 (pdftex.def)             Requested size: 401.49902pt x 301.12425pt.
 
-<Figures/mob3.png, id=504, 634.37pt x 476.78125pt>
+<Figures/mob3.png, id=515, 634.37pt x 476.78125pt>
 File: Figures/mob3.png Graphic file (type png)
  <use Figures/mob3.png>
-Package pdftex.def Info: Figures/mob3.png used on input line 205.
+Package pdftex.def Info: Figures/mob3.png used on input line 216.
 (pdftex.def)             Requested size: 317.18422pt x 238.39003pt.
 
-[24 <./Figures/Mob2.png> <./Figures/mob2.png>] [25 <./Figures/Mob3.png> <./Figu
-res/mob3.png>] <Figures/TreeOnProducer_big.png, id=518, 803.0pt x 602.25pt>
+[25 <./Figures/Mob2.png> <./Figures/mob2.png>] [26 <./Figures/Mob3.png> <./Figu
+res/mob3.png>] <Figures/TreeOnProducer_big.png, id=529, 803.0pt x 602.25pt>
 File: Figures/TreeOnProducer_big.png Graphic file (type png)
 
 <use Figures/TreeOnProducer_big.png>
-Package pdftex.def Info: Figures/TreeOnProducer_big.png used on input line 229.
+Package pdftex.def Info: Figures/TreeOnProducer_big.png used on input line 240.
 
 (pdftex.def)             Requested size: 401.49902pt x 301.12425pt.
 
-<Figures/treeonproducer_big.png, id=519, 697.60625pt x 478.78876pt>
+<Figures/treeonproducer_big.png, id=530, 697.60625pt x 478.78876pt>
 File: Figures/treeonproducer_big.png Graphic file (type png)
 
 <use Figures/treeonproducer_big.png>
-Package pdftex.def Info: Figures/treeonproducer_big.png used on input line 234.
+Package pdftex.def Info: Figures/treeonproducer_big.png used on input line 245.
 
 (pdftex.def)             Requested size: 348.80226pt x 239.39378pt.
- [26] [27 <./Figures/TreeOnProducer_big.png> <./Figures/treeonproducer_big.png>
+ [27] [28 <./Figures/TreeOnProducer_big.png> <./Figures/treeonproducer_big.png>
 ]
-<Figures/Load.png, id=532, 803.0pt x 602.25pt>
+<Figures/Load.png, id=543, 803.0pt x 602.25pt>
 File: Figures/Load.png Graphic file (type png)
  <use Figures/Load.png>
-Package pdftex.def Info: Figures/Load.png used on input line 261.
-(pdftex.def)             Requested size: 481.80373pt x 361.35278pt.
+Package pdftex.def Info: Figures/Load.png used on input line 272.
+(pdftex.def)             Requested size: 401.49902pt x 301.12425pt.
 
-Overfull \hbox (64.33066pt too wide) in paragraph at lines 261--262
- [] 
- []
-
-<Figures/load.pdf, id=533, 642.4pt x 481.8pt>
+<Figures/load.pdf, id=544, 642.4pt x 481.8pt>
 File: Figures/load.pdf Graphic file (type pdf)
  <use Figures/load.pdf>
-Package pdftex.def Info: Figures/load.pdf used on input line 266.
+Package pdftex.def Info: Figures/load.pdf used on input line 277.
 (pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
- [28]
-<Figures/MinCostMultipath_big.png, id=538, 803.0pt x 602.25pt>
+ [29]
+<Figures/MinCostMultipath_big.png, id=550, 803.0pt x 602.25pt>
 File: Figures/MinCostMultipath_big.png Graphic file (type png)
 
 <use Figures/MinCostMultipath_big.png>
-Package pdftex.def Info: Figures/MinCostMultipath_big.png used on input line 28
-4.
+Package pdftex.def Info: Figures/MinCostMultipath_big.png used on input line 29
+5.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-<Figures/mincostmultipath_big.png, id=539, 640.3925pt x 528.97626pt>
+<Figures/mincostmultipath_big.png, id=551, 640.3925pt x 528.97626pt>
 File: Figures/mincostmultipath_big.png Graphic file (type png)
 
 <use Figures/mincostmultipath_big.png>
-Package pdftex.def Info: Figures/mincostmultipath_big.png used on input line 28
-9.
+Package pdftex.def Info: Figures/mincostmultipath_big.png used on input line 30
+0.
 (pdftex.def)             Requested size: 256.15245pt x 211.58675pt.
- [29 <./Figures/Load.png> <./Figures/load.pdf>] [30 <./Figures/MinCostMultipath
+ [30 <./Figures/Load.png> <./Figures/load.pdf>] [31 <./Figures/MinCostMultipath
 _big.png> <./Figures/mincostmultipath_big.png>] <Figures/Multi-Repo-Client.png,
- id=562, 803.0pt x 602.25pt>
+ id=573, 803.0pt x 602.25pt>
 File: Figures/Multi-Repo-Client.png Graphic file (type png)
 
 <use Figures/Multi-Repo-Client.png>
-Package pdftex.def Info: Figures/Multi-Repo-Client.png used on input line 317.
+Package pdftex.def Info: Figures/Multi-Repo-Client.png used on input line 328.
 (pdftex.def)             Requested size: 401.49902pt x 301.12425pt.
 
-<Figures/multi-repo-client.png, id=563, 627.34375pt x 466.74374pt>
+<Figures/multi-repo-client.png, id=574, 627.34375pt x 466.74374pt>
 File: Figures/multi-repo-client.png Graphic file (type png)
 
 <use Figures/multi-repo-client.png>
-Package pdftex.def Info: Figures/multi-repo-client.png used on input line 334.
+Package pdftex.def Info: Figures/multi-repo-client.png used on input line 345.
 (pdftex.def)             Requested size: 250.93304pt x 186.69418pt.
- [31 <./Figures/Multi-Repo-Client.png>]
-<Figures/Step1.png, id=570, 803.0pt x 602.25pt>
+ [32 <./Figures/Multi-Repo-Client.png>]
+<Figures/Step1.png, id=581, 803.0pt x 602.25pt>
 File: Figures/Step1.png Graphic file (type png)
  <use Figures/Step1.png>
-Package pdftex.def Info: Figures/Step1.png used on input line 351.
+Package pdftex.def Info: Figures/Step1.png used on input line 362.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-<Figures/Step2.png, id=571, 803.0pt x 602.25pt>
+<Figures/Step2.png, id=582, 803.0pt x 602.25pt>
 File: Figures/Step2.png Graphic file (type png)
  <use Figures/Step2.png>
-Package pdftex.def Info: Figures/Step2.png used on input line 356.
+Package pdftex.def Info: Figures/Step2.png used on input line 367.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-[32 <./Figures/multi-repo-client.png>]
-<Figures/step1.png, id=577, 642.4pt x 476.78125pt>
+[33 <./Figures/multi-repo-client.png>]
+<Figures/step1.png, id=588, 642.4pt x 476.78125pt>
 File: Figures/step1.png Graphic file (type png)
  <use Figures/step1.png>
-Package pdftex.def Info: Figures/step1.png used on input line 373.
+Package pdftex.def Info: Figures/step1.png used on input line 384.
 (pdftex.def)             Requested size: 256.95544pt x 190.7091pt.
 
-<Figures/step2.png, id=578, 640.3925pt x 478.78876pt>
+<Figures/step2.png, id=589, 640.3925pt x 478.78876pt>
 File: Figures/step2.png Graphic file (type png)
  <use Figures/step2.png>
-Package pdftex.def Info: Figures/step2.png used on input line 378.
+Package pdftex.def Info: Figures/step2.png used on input line 389.
 (pdftex.def)             Requested size: 256.15245pt x 191.5121pt.
 
-[33 <./Figures/Step1.png> <./Figures/Step2.png>]
-<Figures/dense.png, id=587, 803.0pt x 602.25pt>
+[34 <./Figures/Step1.png> <./Figures/Step2.png>]
+<Figures/dense.png, id=598, 803.0pt x 602.25pt>
 File: Figures/dense.png Graphic file (type png)
  <use Figures/dense.png>
-Package pdftex.def Info: Figures/dense.png used on input line 399.
+Package pdftex.def Info: Figures/dense.png used on input line 410.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-<Figures/dense.pdf, id=588, 642.4pt x 481.8pt>
+<Figures/dense.pdf, id=599, 642.4pt x 481.8pt>
 File: Figures/dense.pdf Graphic file (type pdf)
  <use Figures/dense.pdf>
-Package pdftex.def Info: Figures/dense.pdf used on input line 403.
+Package pdftex.def Info: Figures/dense.pdf used on input line 414.
 (pdftex.def)             Requested size: 256.95544pt x 192.71658pt.
- [34 <./Figures/step1.png> <./Figures/step2.png>] [35 <./Figures/dense.png> <./
-Figures/dense.pdf>] <Figures/MaxFlow_big.png, id=613, 803.0pt x 602.25pt>
+ [35 <./Figures/step1.png> <./Figures/step2.png>] [36 <./Figures/dense.png> <./
+Figures/dense.pdf>] <Figures/MaxFlow_big.png, id=624, 803.0pt x 602.25pt>
 File: Figures/MaxFlow_big.png Graphic file (type png)
 
 <use Figures/MaxFlow_big.png>
-Package pdftex.def Info: Figures/MaxFlow_big.png used on input line 436.
+Package pdftex.def Info: Figures/MaxFlow_big.png used on input line 447.
 (pdftex.def)             Requested size: 321.1943pt x 240.89572pt.
 
-<Figures/maxflow_big.png, id=614, 667.49374pt x 477.785pt>
+<Figures/maxflow_big.png, id=625, 667.49374pt x 477.785pt>
 File: Figures/maxflow_big.png Graphic file (type png)
 
 <use Figures/maxflow_big.png>
-Package pdftex.def Info: Figures/maxflow_big.png used on input line 441.
+Package pdftex.def Info: Figures/maxflow_big.png used on input line 452.
 (pdftex.def)             Requested size: 266.99277pt x 191.11061pt.
-) (./Chapters/conclusion.tex [36 <./Figures/MaxFlow_big.png> <./Figures/maxflow
+) (./Chapters/conclusion.tex [37 <./Figures/MaxFlow_big.png> <./Figures/maxflow
 _big.png>]
 Chapter 4.
 ------------------------------------------------------------------------------
  4 Conclusions
 ------------------------------------------------------------------------------
-) (./Appendices/AppendixA.tex [37
+) (./Appendices/AppendixA.tex [38
 
 ]
 Appendix A.
 ------------------------------------------------------------------------------
  A Code Implementation
 ------------------------------------------------------------------------------
-[38
+[39
 
 ]
 Overfull \hbox (102.73845pt too wide) in paragraph at lines 57--58
@@ -1790,7 +1801,7 @@ Overfull \hbox (102.73845pt too wide) in paragraph at lines 58--59
 ][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[39]
+[40]
 Overfull \hbox (16.03653pt too wide) in paragraph at lines 121--123
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][] 
@@ -1826,7 +1837,7 @@ Overfull \hbox (0.73619pt too wide) in paragraph at lines 156--158
 ][][][][][][][][][] 
  []
 
-[40]
+[41]
 Overfull \hbox (138.43924pt too wide) in paragraph at lines 161--164
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -1860,11 +1871,11 @@ Overfull \hbox (21.13664pt too wide) in paragraph at lines 199--201
 [][][][][][][][][][][][][][][][][] 
  []
 
-[41]) [42]
+[42]) [43]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
-[43
+[44
 
 
 ]
@@ -1874,16 +1885,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 395.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 395.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 395.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C81C317D0C2FFC9B6A27644027592118;5123.
+(rerunfilecheck)             Checksum: 27514E36AACBB358B90482369800977C;5123.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 395.
  ) 
 Here is how much of TeX's memory you used:
- 28005 strings out of 493029
- 520099 string characters out of 6136234
- 629095 words of memory out of 5000000
- 30620 multiletter control sequences out of 15000+600000
+ 28014 strings out of 494910
+ 520261 string characters out of 6179836
+ 624405 words of memory out of 5000000
+ 30381 multiletter control sequences out of 15000+600000
  15845 words of font info for 58 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 36 hyphenation exceptions out of 8191
  55i,12n,77p,1157b,1806s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
@@ -1896,10 +1911,10 @@ s/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type
 ic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmtt8.pfb>
-Output written on main.pdf (51 pages, 5567489 bytes).
+Output written on main.pdf (52 pages, 6067121 bytes).
 PDF statistics:
- 979 PDF objects out of 1000 (max. 8388607)
- 805 compressed objects within 9 object streams
- 339 named destinations out of 1000 (max. 500000)
- 518 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 990 PDF objects out of 1000 (max. 8388607)
+ 813 compressed objects within 9 object streams
+ 342 named destinations out of 1000 (max. 500000)
+ 523 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -11,6 +11,39 @@ As it is also in IP routing's networks, routing is responsible for building the 
 
 According to \cite{oran} as we also work on mobility part of ICN: Some ICN designs are extremely mobile friendly, allowing  both  clients  and  servers  to  move  without  needing complex rendezvous techniques as in existing   IP-based approaches explains well why we have designed our algorithms in this vision.
 
+As figure \ref{network} shows normally in literature we devide the whole network in 3 spaces, Mobile edge, Backhaul, Backbone. 
+
+In our model we try to model this architecture which is used in cellular networks like 3G, 4G LTE, ... in virtual space we have a real experiment.
+Our try is to adapt it to 5G network and to create a new network.
+ 
+
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.35]{Pictures/nfd.png}
+
+\caption{nfd-status on shahab container} \label{nfd} 
+
+\end{center}
+
+\end{figure}
+
+
+\begin{figure}[H]
+
+\begin{center}
+
+\includegraphics[scale = 0.35]{Pictures/network.png}
+
+\caption{Real Architecture of Network} \label{network} 
+
+\end{center}
+
+\end{figure}
+
+
+
 \section{NFD in NDN Networks}
 NFD is a network forwarder that implements NDN forwarder. After the initial release, NFD became a core component of the NDN Platform and will follow the same release cycle. 
 
@@ -65,7 +98,7 @@ For Discovering more about algorithms we refere you to \ref{Appendix} to see the
 \subsection{Consumer $\&$ Producer Trees Strategy}
 In ICN the cost metric is \textit{number of hops} becasue of naturity of ICN architecture in which you \textit{search} content so basically in Graph sense nearer nodes are preferred always. This is the idea that enables us to think about \textit{TreeOnConsumer} and \textit{TreeOnProducer} strategies in which you want to find the tree which finds the shortest paths either from one producer to consumers or one consumer to producers properly.
 
-The idea of \textit{TreeOnConsumer} is based on this concept that imagine once in cellular networks at the same time maybe you can have $N$ clients or consumers that searche exactly the same \textit{content}, like a special video.
+The idea of \textit{TreeOnConsumer} is based on this concept that imagine once in cellular networks at the same time maybe you can have $N$ clients or consumers that search exactly the same \textit{content}, like a special video.
 
 Figure \ref{consumer} shows this concept properly.
 

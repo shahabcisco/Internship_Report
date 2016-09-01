@@ -46,6 +46,11 @@ Figure \ref{treeonconsumer} shows 4 traced rates in which yellow and green one a
 \subsection{TreeOnProducer}
 Figure \ref{TreeOnProducer} shows 'jordan', a client who searches '/n/a/noseg' and 2 producers ('shahab','mauro') who send packets to client by this strategy using tree of \textit{TreeOnProducer}. 
 Figure \ref{treeonproducer} shows as well this downloading traced during time which can be used whenever client wants a high quality content.
+
+Imagine a case in which the clients are searching a very huge amount of data, specially let's say 10 clients that they want to watch a video at the same timethrough connected base station.
+
+This strategy can be very usefull in the case that by understanding multihoming of the core system or backhaul which base stations are connected.
+
 \begin{figure}[H]
 
 \begin{center}
@@ -66,6 +71,12 @@ Figure \ref{treeonproducer} shows as well this downloading traced during time wh
 
 \subsection{MinCostMultipath}
 Figure \ref{MinCostMultipath} shows \textit{MinCostMultipath} tree of minimum of network in which we use number of hops as cost of links. This is the case in which we want to broadcast video livestreaming as we discussed. Same chunk of datas are searching at the same time for a live movie like a football match content to all clients.
+
+
+This figure will be usefull when you have a multihoming system in which you are able to download your content from different nodes. This strategy will be a good idea in the case that you have a lot clients on one base station are attached.
+
+This is a co-algorithm of TreeOnConsumer or a way of rethinking of that. In TreeOnConsumer you assume that multi nodes are searching the same content while in TreeOnProducer you have just one client that searches content but with using multihoming advantage of network. 
+
  
 Figure \ref{mincost} shows traced data as well.
 \begin{figure}[H]
@@ -258,7 +269,7 @@ In NFD, there is different forwarding strategies \textit{best-route} which uses 
 
 \begin{center}
 
-\includegraphics[scale = 0.6]{Figures/Load.png}
+\includegraphics[scale = 0.5]{Figures/Load.png}
 
 \caption{Multipath load balancing strategy Graph} \label{Load} 
 
