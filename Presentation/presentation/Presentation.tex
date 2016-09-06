@@ -414,22 +414,35 @@ Mobile vs PC Internet Traffic user $\longrightarrow$ 5G mobile networks
 \subsection{ICN Brief Introduction}
 
 \begin{frame}{Named Data networking (NDN)}
-
+\only<1>{
 \begin{itemize}
-\item V.Jacobson et al proposition, \textit{Networking Named Content} 2009.
+\item \textbf{N}amed \textbf{D}ata \textbf{N}etworking $\Rightarrow$ \textit{\textbf{Name}} base Philosophy vs TCP/IP \textit{\textbf{Calling}} Networking.
 
-\item \textbf{I}nformation \textbf{C}entric \textbf{N}etworking $\Rightarrow$ \textit{\textbf{Name}} base Philosophy vs IP \textit{\textbf{Calling}} Networking.
+\item V.Jacobson et al proposition, \textit{Networking Named Content} 2009.
 
 \item A Good fit network desiging for Video Delivery Applications in \textbf{5G}.
 
 \end{itemize}
-\only<1>{
+
 \begin{center}
-\includegraphics[scale=0.28]{figures/architecture.png}
+\includegraphics[scale=0.15]{figures/architecture.png}
 \end{center}
 }
 
 \only<2>{
+\begin{itemize}
+\item \textbf{Lurch} is an orchestrator originally developped for ccnx. 
+\item We developped Lurch:
+
+\begin{itemize}
+\item For NFD, NDN forwarder.
+\item New Routing Strategies.
+\item Different interfaces to interact with strategies at run time (Client, Repositories, forwading strategies, ...)
+
+\end{itemize}
+\end{itemize} 
+
+
 \begin{center}
 \includegraphics[scale=0.28]{figures/sdn.png}
 \end{center}
@@ -445,179 +458,35 @@ Mobile vs PC Internet Traffic user $\longrightarrow$ 5G mobile networks
 
 \subsection{Virtualization and Linux Containers}
 
-\subsubsection{Choix du Filtre Gaussien}
+\subsubsection{Virtualization and Linux Containers}
 
-\begin{frame}{Choix du Filtre Gaussien}
-\uncover<1->{
-- GFSK modulation $\rightarrow$ $BT$(Paramètre de filtre Gaussien) $=$} \only<1>{1}\only<2>{\textbf{1} $\rightarrow$ Normal-Rate}\only<1>{$,0.5, 0.3$}
+\begin{frame}{Virtualization and Linux Containers}
 \only<1>{
-\begin{itemize}
-\item Bit Error Rate
-\item Intérference entre canaux adjacents
-\end{itemize}
-\begin{figure}
-\includegraphics[scale=0.22]{figures/fig1.jpg}
-\includegraphics[scale=0.22]{figures/fig2.jpg} \\
-\centering
-\includegraphics[scale=0.22]{figures/fig3.jpg} 
-\end{figure}}
-\only<2>{\includegraphics[scale=0.5]{figures/fig1.jpg}}
-%  \vspace{-0.6cm}
-%  \uncover<1->{
-%  \begin{block}{Channel Model}
-%  \centering
-%  The channel model is : the \textit{K}-User Gaussian Symmetric Complex-Valued Interference Channel (GS-CIC).
-%  \begin{itemize}
-%   \item By using a simple lattice IA [Ordentlich \textit{et al.} 2012], the \textit{K}-User case will be approximately equivalent to a 2-User case.
-%   \end{itemize}
-%   \begin{equation}
-%    \label{Channel_Mod}
-%    \mathbf{y}=H\mathbf{x}+\mathbf{z},\hspace{0.1cm}
-%    with\hspace{0.1cm}H=\left[\begin{array}{cc} 1 & g\\ g & 1 \end{array}\right]
-%    \end{equation}
-%    
-%    \begin{minipage}{0.4\textwidth}
-%    \begin{flushleft}{
-%    $\mathbf{y}:$ The output-vector of size 2.\\
-%    $\mathbf{x}:$ The input-vector of size 2.\\
-%    $\mathbf{z}:$ The noise-vector of size 2. (With $\mathcal{CN}\left(0,{\sigma}^2\right)$)\\ 
-%    $g:$ Complex-valued channel interferer coefficient. \\(With $g=\rho e^{i\phi}\in\C$)}
-%    \end{flushleft}
-%    \end{minipage}
-%    \begin{minipage}{0.5\textwidth}
-%    \vspace{-0.2cm}  
-%    
-%    \begin{figure}[h]
-%    \centering
-%    \begin{tikzpicture}[scale=0.7]
-%
-%      \draw (0,0) rectangle (0.7,-0.7);
-%      \node at (-0.75,-0.35) {$w_1$};
-%      \draw [->] (-0.52,-0.35)--(0,-0.35);  
-%      \node at (0.35,-0.35) {$\mathcal{E}_1$};
-%      \draw [->] (0.7,-0.35)--(2.25,-0.35); 
-%      \node at (0.4,-0.95) {$\mathrm{TX}_1$}; 
-%      \node at (0.9,-0.15) {${x}_1$};
-%      \draw (2.4,-0.35) circle [radius=0.15];
-%      \draw  (2.3,-0.35)--(2.5,-0.35);
-%      \draw (2.4,-0.25)--(2.4,-0.45);
-%      \node at (1.8,-0.15) {$1$};
-%      \node at (2.45,0.25) {${z}_1$};  
-%      \draw [->] (2.4,0.18)--(2.4,-0.2); 
-%      \draw [->] (2.55,-0.35)--(3.25,-0.35); 
-%      \node at (3,-0.15) {${y}_1$};
-%      \draw (3.25,0) rectangle (3.95,-0.7);
-%      \node at (3.6,-0.35) {$\mathcal{D}_1$};
-%      \node at (3.65,-0.95) {$\mathrm{RX}_1$}; 
-%      \draw [->] (3.95,-0.35)--(4.47,-0.35); 
-%      \node at (4.7,-0.3) {$\hat{w}_1$};
-%                              
-%      \draw (0,-2) rectangle (0.7,-2.7);
-%      \node at (-0.75,-2.35) {${w}_2$};
-%      \draw [->] (-0.52,-2.35)--(0,-2.35);  
-%      \node at (0.35,-2.35) {$\mathcal{E}_2$};
-%      \draw [->] (0.7,-2.35)--(2.25,-2.35); 
-%      \node at (0.4,-2.95) {$\mathrm{TX}_2$}; 
-%      \node at (0.9,-2.15) {${x}_2$};
-%      \draw (2.4,-2.35) circle [radius=0.15];
-%      \draw  (2.3,-2.35)--(2.5,-2.35);
-%      \draw (2.4,-2.25)--(2.4,-2.45);
-%      \node at (1.8,-2.15) {$1$};
-%      \node at (2.45,-1.75) {${z}_2$};  
-%      \draw [->] (2.4,-1.82)--(2.4,-2.2); 
-%      \draw [->] (2.55,-2.35)--(3.25,-2.35); 
-%      \node at (3,-2.15) {${y}_2$};
-%      \draw (3.25,-2) rectangle (3.95,-2.7);
-%      \node at (3.6,-2.35) {$\mathcal{D}_2$};
-%      \node at (3.65,-2.95) {$\mathrm{RX}_2$}; 
-%      \draw [->] (3.95,-2.35)--(4.47,-2.35); 
-%      \node at (4.7,-2.3) {$\hat{w}_2$};           
-%   
-%      \draw [->] (1,-0.35)--(2.3,-2.25); 
-%      \draw [->] (1,-2.35)--(2.3,-0.45); 
-%      \node at (1.27,-1) {$g$}; 
-%      \node at (1.3,-1.65) {$g$};
-%   
-% \end{tikzpicture}
-% \vspace{-0.4cm}
-% \caption{2-User GS-CFC.}\label{GS-CFC}
-% \end{figure}
-% \end{minipage}
-%    
-% \end{block}}
-% 
-% \vspace{-0.3cm}
-% 
-% \uncover<2->{
-% \begin{block}{Lattice Structure}
-% \centering
-% $\rightarrow$ We consider the \underline{nested $\Z[i]$-lattice codes} [Ordentlich \textit{et al.} 2012].
-% \end{block}}
+Virtual Machines (VM) vs Linux Containers.
+
+\begin{center}
+\includegraphics[scale=0.42]{figures/lxc.png} 
+\end{center}
+
+}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Routing Strategies}
-\begin{frame}{Design Mask}
-\textbf{Publié la nouvelle Spécification de DASH7 (Version 1.0), En Mai 2015.}
-\begin{figure}
-\uncover<1->{
-\includegraphics[scale=0.2]{figures/test.jpg}}
-\uncover<2->{
-\includegraphics[scale=0.27]{figures/maskhigh.jpg}}
-\uncover<3->{
-\includegraphics[scale=0.2]{figures/masklow.jpg}$\rightarrow$ Cognitive Radio (SDR)}
-\end{figure}
+\begin{frame}{Routing Strategies}
+We proposed 4 different routing strategies for different situation of networks which can cover all of needs:
+\begin{itemize}
 
-% \vspace{-0.4cm}
-% \uncover<1->{
-% \begin{block}
-% \centering
-% \begin{itemize}
-% 
-%  \item A channel is called symmetric when:\\
-%  \begin{center}
-%  $H(i,j)=g\hspace{0.1cm}\text{for all}\hspace{0.1cm}{i \not= j}\hspace{0.1cm}\text{and after normalization}\hspace{0.1cm}H(i,j)= 1.$
-%  \end{center}
-%  
-%  \item All the users have the same power constraint, for user $i$ and $n$ channel uses:\\
-%  \begin{center}
-%  ${\frac{1}{n}} \sum_{j=0}^{n} \vert{\mathbf{x}_{i}}\vert^2 \leq P_\mathrm{i}$
-%  \end{center}
-%  
-%  \vspace{-0.2cm}
-%  \item The $\SNR$ is defined as:\\
-%  \vspace{-0.2cm}
-%  \begin{center}
-%  $\SNR=\frac{P}{\sigma^2}$
-%  \end{center}
-%
-%  \item For the 2-User GS-CFC the Interference to Noise Ratio ($\mathsf{INR}$) is defined as:\\
-%  \begin{center}
-%  $\text{For user i,}\hspace{0.1cm}\mathsf{INR}_{i}=\vert g\vert^2\SNR$
-%  \end{center}
-%\item The \textit{interference level} is:\\
-%\begin{center}
-%$\alpha=\frac{\log_{2}(\mathsf{INR_{i}})}{\log_{2}(\SNR)}$
-%\end{center}  
-%  
-%  \end{itemize}
-%  \end{block}}
-%
-% \uncover<2->{
-%   \begin{block}
-%   \centering
-%    \begin{itemize}
-%     \item We focus on Strong and Very Strong interference regimes when:\\
-%  	 \begin{center}
-%     $1<\alpha<2$ and $\alpha\geq2$ 
-%  	 \end{center}}
-%     \uncover<3->{
-%     \item Asymptotic regimes of $\SNR$ are considered (when $\SNR\rightarrow\infty$).}
-%     \uncover<4->{
-%     \item The Complex-valued channel does not split to two parallel real-valued channels.
-%    \end{itemize}
-%   \end{block}}
-   
+\item \textbf{TreeOnConsumer} : N clients searching the same content from one repository detected by Lurch (Multicast mode).
+
+\item \textbf{TreeOnProducer}: One client who wants get the packet from N Repositories (feed) of needed data.
+
+\item \textbf{MinCostMultiPath}: Using different paths with Equal Cost to retrieve the data using a proper forwarder strategy (load-balancing).
+
+\item \textbf{MaxFlow}: Allow to maximize the throughput using paths based on maximum flow algorithm between clients and repositories.
+
+\end{itemize}
 \end{frame}
 
 \begin{frame}
