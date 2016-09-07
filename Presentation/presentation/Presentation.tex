@@ -435,7 +435,7 @@ Mobile vs PC Internet Traffic user $\longrightarrow$ 5G mobile networks
 \item We developped Lurch:
 
 \begin{itemize}
-\item For NFD, NDN forwarder.
+\item For NFD (NDN forwarder).
 \item New Routing Strategies.
 \item Different interfaces to interact with strategies at run time (Client, Repositories, forwading strategies, ...)
 
@@ -480,7 +480,7 @@ We proposed 4 different routing strategies for different situation of networks w
 
 \item \textbf{TreeOnConsumer} : N clients searching the same content from one repository detected by Lurch (Multicast mode).
 
-\item \textbf{TreeOnProducer}: One client who wants get the packet from N Repositories (feed) of needed data.
+\item \textbf{TreeOnProducer}: One client who gets the packet from N Repositories of needed data.
 
 \item \textbf{MinCostMultiPath}: Using different paths with Equal Cost to retrieve the data using a proper forwarder strategy (load-balancing).
 
@@ -488,150 +488,78 @@ We proposed 4 different routing strategies for different situation of networks w
 
 \end{itemize}
 \end{frame}
-
-\begin{frame}
-\begin{center}
-\includegraphics[scale=0.48]{figures/physique.jpg}
-\end{center}
-
-\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Routing Algorithms}
+\subsection{Routing Algorithms Results}
 
-\subsubsection{Les Codes Proposés}
+\subsubsection{TreeOnConsumer}
 
-\begin{frame}{Codages du Canal}
-- Les Codes de Contrôle d'erreur 
-\begin{itemize}
-\item Codage à Détecter les erreurs (CRC, CheckSum, Parité, ...).
-\item Codage à Détecter et Corriger les erreurs(LDPC, Convolutif,Turbo, RS, BCH, ...).
-\end{itemize}
-\begin{block}{Le Concept Principal de Notre Proposition}
-Header + Payload + CRC (Convolutif) $\rightarrow$ Header (\textbf{RS}), Payload (\textbf{LDPC}) + CRC 
-\begin{itemize}
-\item Header: RS $\rightarrow$ La longeur petite
-\\-RS(60,28)
-\begin{itemize}
-\item Encodage: Structure algébrique des polynomials ($g(x)$).
-\item Décodage: Error Trapping.
-\end{itemize}
-\item Payload: LDPC  $\rightarrow$ Pourquoi? 
- 
-\end{itemize}
-\begin{table}
-\begin{center}
-    \begin{tabular}{| l | l | l |}
-    \hline
-     Header & Payload & CRC16 \\ \hline
-        $ 28 Bit $ & $16-255 Byte$ & $2 Byte$ \\ \hline   
-     \end{tabular}
-    \end{center}
-\end{table}
+\begin{frame}{TreeOnConsumer}
 
-\end{block}
+\only<1>{
+One producer to multiple consumer.
+
+\includegraphics[scale=0.32]{figures/TreeOnConsumer.png} 
+\includegraphics[scale=0.22]{figures/treeonconsumer.png} 
+}
+\only<2>{
+One producer to multiple consumer.
+
+\includegraphics[scale=0.22]{figures/TreeOnConsumer_big.png} 
+\includegraphics[scale=0.23]{figures/treeonconsumer_big.png} 
+
+}
 
 \end{frame}
 
 %%%%%%%%%%%%%%%
-\subsubsection{Les Résultats et les Courbes BLER des Nouveaux Codes}
+\subsubsection{TreeOnProducer}
 
-\begin{frame}{LDPC vs Convolutif dans les expériences et Handbooks ...}
-%
+\begin{frame}{TreeOnProducer}
+\only<1>{
+One Consumer to multiple producer.
 
-\begin{block}{Pourquoi LDPC?}
-\begin{itemize}
-\item Très proche à la limite de Shannon (0.042dB).
-\item Augmentation la taille de Matrice Parité Check $\rightarrow$ Meilleur Performance. 
-\item Pour changer le taux on peut juste modifier les lignes.
-\item Ils ne sont pas brevetés et très répandu.
-\item Application Réseau: 5G, Wi-Fi, IEEE 802.16 (WiMAX), 10GBase-T de Ethernet, DVB-S2, ... .
+\includegraphics[scale=0.32]{figures/TreeOnProducer.png} 
+\includegraphics[scale=0.22]{figures/treeonproducer.png} 
+}
+\only<2>{
+One Consumer to multiple producer.
 
-\end{itemize}
-\end{block}
+\includegraphics[scale=0.22]{figures/TreeOnProducer_big.png} 
+\includegraphics[scale=0.21]{figures/treeonproducer_big.png} 
+
+}
+
+
 
 \end{frame}
 
-\begin{frame}{LDPC}
 
-\begin{block}{Choix de LDPC (Méthodes Aléatoires)}
+\subsubsection{MinCostMultiPath}
 
-\begin{itemize}
-\item En vert: Gallagar,Computer generated, 1963 $\rightarrow$ Dégradation, \textit{girth = 4-cycle} $\rightarrow$  Matrice de \textbf{Génératrice} (Encodage: non complèxe)
- 
- 
-\item En rouge: Mackay-Neal, 1996 \cite{errorcontrolcoding}$\rightarrow$ Eviter les 4-cycles $\rightarrow$ Matrice \textbf{Génératrice} (Encodage: complèxe)
-\end{itemize}
-
-\end{block}
-
-\begin{center}
-\includegraphics[scale=0.35]{figures/ber_ldpc.jpg}
-\includegraphics[scale=0.4]{figures/H.png}
-
-\end{center}
-\end{frame}
-
-\begin{frame}{LDPC (1/2) vs Convolutif (1/2)}
+\begin{frame}{MinCostMultiPath}
 
 
 \only<1>{
-\begin{block}{LDPC Contre Convolutif (Encodage)}
-
-
-
-- \textbf{LDPC Mackay-Neal}: Complèxe $\rightarrow$ Algorithm de Richardson-Urbanke $\rightarrow$ Diréctement a travers de \textbf{H} --- $O(n^{2})\rightarrow O(n+g^{2})$. 
- 
-
-- \textbf{Convolutif}: Circuit de Shift Register.  
- 
-
-\end{block}}
-
-
-
-
-
+\includegraphics[scale=0.22]{figures/Load.png} 
+\includegraphics[scale=0.25]{figures/load.pdf} 
+}
 \only<2>{
-\begin{block}{LDPC Contre Convolutif (Décodage)}
-
- \textbf{LDPC}: 
- \begin{itemize}
-\item Hard: Algorithme de Bit flipping $\rightarrow$ Graph Tanner (iteration = 10) .
-\item Soft: Algorithme de Log-DomainSimple (Version simplifiée de l'algorithm SPA) $\rightarrow$ Probabilité a priori (ML)  (iteration = 10)
-
-\end{itemize}
-
-- \textbf{Convolutif}: Algorithm de Viterbi $\rightarrow$ Graph Trellis
- 
-
-\end{block}}
-
-\only<4>{
-
-\begin{block}{LDPC(1/2) vs Convolutif(1/2)}
-Modèle de canal: AWGN \& TU5 (Typical-Urban)$\rightarrow$ Jakes algorithm
-
-
-
-\end{block}
-
-
+\includegraphics[scale=0.22]{figures/MinCostMultipath_big.png} 
+\includegraphics[scale=0.21]{figures/mincostmultipath_big.png} 
 
 }
 
 
+\only<3>{
+
+Producer Mobility with Routing update.
+
+\includegraphics[scale=0.20]{figures/Step1.png} 
+\includegraphics[scale=0.20]{figures/Step2.png} 
 
 
-\begin{center}
-\only<1>{\includegraphics[scale=0.28]{figures/matrix.jpg} 
-\includegraphics[scale=0.15]{figures/encoder.png}}
-\only<2>{
-\includegraphics[scale=0.3]{figures/bipartite.jpg}\includegraphics[scale=0.3]{figures/viterbi.jpg}
 }
-\only<3>{\begin{block}{LDPC vs Convolutif} \begin{center} \includegraphics[scale=0.2]{figures/bler_conv.jpg} \end{center} \end{block}}
-\only<4>{\includegraphics[scale=0.4]{figures/LDPC_Conv_final.jpg}}
-\end{center}
 
 
 
@@ -640,39 +568,40 @@ Modèle de canal: AWGN \& TU5 (Typical-Urban)$\rightarrow$ Jakes algorithm
 
 
 
+\subsubsection{Maximum Flow}
+
+\begin{frame}{Maximum Flow}
+
+
+\only<1>{
+Maximum Flow algorithm chooses the path which maximizes through from consumer to producer.
+
+\includegraphics[scale=0.32]{figures/MaxFlow.png} 
+\includegraphics[scale=0.22]{figures/maxflow.png} 
+}
+\only<2>{
+Maximum Flow algorithm chooses the path which maximizes through from consumer to producer.
+
+\includegraphics[scale=0.22]{figures/MaxFlow_big.png} 
+\includegraphics[scale=0.21]{figures/maxflow_big.png} 
+
+}
 
 
 
-%%%%%%%%%%%%%%%%%%%
-%
-%\begin{frame}
-%\begin{block}{Résultat}
-%Codage de Header (RS(60,28)) et Codage de Payload(LDPC(256,128)+CRC)
-%\end{block}
-%
-%\centering
-%\includegraphics[scale=0.4]{figures/LDPC_RS.jpg}
-%
-%  \end{frame}
-  
-  %%%%%%%%%%%%%%%%%%%
-  
-%%%%%%%%%%%%%%%%%%%
 
-
-%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%
+\end{frame}
 
 \section{Conclusion}
 
 \begin{frame}{Conclusion}
 \begin{itemize}
  
-\item Les Travaux de recherche dovient avoir toujours à la tête les aspects et contraintes pratiques.  
-\item La Simulation est un trés bons moyen pour avoir un preuve théorique Mathèmatique.
-\item Les Nouvelle Propositions des canaux et Nouveaux Codage du canal peut utiliser au sein de protocole de DASH7.
-\item Les Autres développements peut se faire au future comme avoir un Relay, Egaliseur, Software Defined Radio ... .
+\item There is always some limitations in practical against pure theoritical works which can be seen when you work experimental..  
+\item ICN is one of the most challenging domain who has a lot of passion in research and development.
+\item Software Define Networking is beautiful idea which allows to interact with your network on data centers and to shift heavy calculations.
+
+\item Coding is one of way that you can realize your system.
 \end{itemize}
 
 \end{frame}
@@ -692,16 +621,6 @@ Modèle de canal: AWGN \& TU5 (Typical-Urban)$\rightarrow$ Jakes algorithm
 
 \end{frame}
 
-
-
-
-\begin{thebibliography}{9}
-
-\bibitem{errorcontrolcoding} 
-Shu Lin, Daniel J.Costello, Jr. 
-\textit{Error Control Coding}. (Second Edition), 2004.
-
-\end{thebibliography}
 
 
 \end{document}

@@ -31,30 +31,30 @@
 \headcommand {\beamer@subsubsectionentry {0}{2}{2}{2}{13}{Routing Strategies}}
 \headcommand {\slideentry {2}{2}{2}{13/13}{Virtualization and Linux Containers}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\slideentry {2}{2}{3}{14/14}{Virtualization and Linux Containers}{0}}
-\headcommand {\beamer@framepages {14}{14}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{15}{Routing Algorithms}}\headcommand {\beamer@subsectionpages {12}{14}}
-\headcommand {\beamer@subsubsectionentry {0}{2}{3}{1}{15}{Les Codes Propos\IeC {\'e}s}}
-\headcommand {\slideentry {2}{3}{1}{15/15}{Routing Algorithms}{0}}
-\headcommand {\beamer@framepages {15}{15}}
-\headcommand {\beamer@subsubsectionentry {0}{2}{3}{2}{16}{Les R\IeC {\'e}sultats et les Courbes BLER des Nouveaux Codes}}
-\headcommand {\slideentry {2}{3}{2}{16/16}{Routing Algorithms}{0}}
-\headcommand {\beamer@framepages {16}{16}}
-\headcommand {\slideentry {2}{3}{3}{17/17}{Routing Algorithms}{0}}
-\headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {2}{3}{4}{18/21}{Routing Algorithms}{0}}
-\headcommand {\beamer@framepages {18}{21}}
-\headcommand {\sectionentry {3}{Conclusion}{22}{Conclusion}{0}}
-\headcommand {\beamer@sectionpages {9}{21}}
-\headcommand {\beamer@subsectionpages {15}{21}}
-\headcommand {\slideentry {3}{0}{1}{22/22}{}{0}}
-\headcommand {\beamer@framepages {22}{22}}
-\headcommand {\slideentry {3}{0}{2}{23/23}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{14}{Routing Algorithms Results}}\headcommand {\beamer@subsectionpages {12}{13}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{3}{1}{14}{TreeOnConsumer}}
+\headcommand {\slideentry {2}{3}{1}{14/15}{Routing Algorithms Results}{0}}
+\headcommand {\beamer@framepages {14}{15}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{3}{2}{16}{TreeOnProducer}}
+\headcommand {\slideentry {2}{3}{2}{16/17}{Routing Algorithms Results}{0}}
+\headcommand {\beamer@framepages {16}{17}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{3}{3}{18}{MinCostMultiPath}}
+\headcommand {\slideentry {2}{3}{3}{18/20}{Routing Algorithms Results}{0}}
+\headcommand {\beamer@framepages {18}{20}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{3}{4}{21}{Maximum Flow}}
+\headcommand {\slideentry {2}{3}{4}{21/22}{Routing Algorithms Results}{0}}
+\headcommand {\beamer@framepages {21}{22}}
+\headcommand {\sectionentry {3}{Conclusion}{23}{Conclusion}{0}}
+\headcommand {\beamer@sectionpages {9}{22}}
+\headcommand {\beamer@subsectionpages {14}{22}}
+\headcommand {\slideentry {3}{0}{1}{23/23}{}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\slideentry {3}{0}{3}{24/24}{}{0}}
+\headcommand {\slideentry {3}{0}{2}{24/24}{}{0}}
 \headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {3}{0}{3}{25/25}{}{0}}
+\headcommand {\beamer@framepages {25}{25}}
 \headcommand {\beamer@partpages {1}{25}}
-\headcommand {\beamer@subsectionpages {22}{25}}
-\headcommand {\beamer@sectionpages {22}{25}}
+\headcommand {\beamer@subsectionpages {23}{25}}
+\headcommand {\beamer@sectionpages {23}{25}}
 \headcommand {\beamer@documentpages {25}}
-\headcommand {\def \inserttotalframenumber {18}}
+\headcommand {\def \inserttotalframenumber {17}}
