@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.12)  7 SEP 2016 14:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.12)  7 SEP 2016 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2227,15 +2227,15 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 File: figures/architecture.png Graphic file (type png)
 
 <use figures/architecture.png>
-Package pdftex.def Info: figures/architecture.png used on input line 453.
+Package pdftex.def Info: figures/architecture.png used on input line 460.
 (pdftex.def)             Requested size: 282.74417pt x 116.53033pt.
 File: figures/tpt.pdf Graphic file (type pdf)
  <use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 453.
+Package pdftex.def Info: figures/tpt.pdf used on input line 460.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 453.
+Package pdftex.def Info: figures/cisco.png used on input line 460.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2248,16 +2248,16 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 <figures/sdn.png, id=207, 469.755pt x 331.2375pt>
 File: figures/sdn.png Graphic file (type png)
  <use figures/sdn.png>
-Package pdftex.def Info: figures/sdn.png used on input line 453.
+Package pdftex.def Info: figures/sdn.png used on input line 460.
 (pdftex.def)             Requested size: 131.5305pt x 92.74586pt.
 File: figures/tpt.pdf Graphic file (type pdf)
 
 <use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 453.
+Package pdftex.def Info: figures/tpt.pdf used on input line 460.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 453.
+Package pdftex.def Info: figures/cisco.png used on input line 460.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2266,19 +2266,19 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 
 [11
 
- <./figures/sdn.png>] <figures/lxc.png, id=219, 519.9425pt x 270.00874pt>
-File: figures/lxc.png Graphic file (type png)
+ <./figures/sdn.png>] <figures/grid.jpg, id=220, 376.45119pt x 261.57425pt>
+File: figures/grid.jpg Graphic file (type jpg)
 
-<use figures/lxc.png>
-Package pdftex.def Info: figures/lxc.png used on input line 473.
-(pdftex.def)             Requested size: 218.37436pt x 113.4029pt.
+<use figures/grid.jpg>
+Package pdftex.def Info: figures/grid.jpg used on input line 460.
+(pdftex.def)             Requested size: 180.6945pt x 125.5542pt.
 File: figures/tpt.pdf Graphic file (type pdf)
  <use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 473.
+Package pdftex.def Info: figures/tpt.pdf used on input line 460.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 473.
+Package pdftex.def Info: figures/cisco.png used on input line 460.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2287,14 +2287,19 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 
 [12
 
- <./figures/lxc.png>]
+ <./figures/grid.jpg>] <figures/lxc.png, id=231, 519.9425pt x 270.00874pt>
+File: figures/lxc.png Graphic file (type png)
+
+<use figures/lxc.png>
+Package pdftex.def Info: figures/lxc.png used on input line 480.
+(pdftex.def)             Requested size: 218.37436pt x 113.4029pt.
 File: figures/tpt.pdf Graphic file (type pdf)
  <use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 490.
+Package pdftex.def Info: figures/tpt.pdf used on input line 480.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 490.
+Package pdftex.def Info: figures/cisco.png used on input line 480.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2303,26 +2308,14 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 
 [13
 
-] <figures/TreeOnConsumer.png, id=244, 477.785pt x 324.21124pt>
-File: figures/TreeOnConsumer.png Graphic file (type png)
-
-<use figures/TreeOnConsumer.png>
-Package pdftex.def Info: figures/TreeOnConsumer.png used on input line 513.
-(pdftex.def)             Requested size: 152.89432pt x 103.74971pt.
-
-<figures/treeonconsumer.png, id=245, 642.4pt x 479.7925pt>
-File: figures/treeonconsumer.png Graphic file (type png)
-
-<use figures/treeonconsumer.png>
-Package pdftex.def Info: figures/treeonconsumer.png used on input line 513.
-(pdftex.def)             Requested size: 141.32843pt x 105.55467pt.
+ <./figures/lxc.png>]
 File: figures/tpt.pdf Graphic file (type pdf)
  <use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 513.
+Package pdftex.def Info: figures/tpt.pdf used on input line 497.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 513.
+Package pdftex.def Info: figures/cisco.png used on input line 497.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2331,34 +2324,26 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 
 [14
 
- <./figures/TreeOnConsumer.png> <./figures/treeonconsumer.png>]
-<figures/TreeOnConsumer_big.png, id=260, 803.0pt x 602.25pt>
-File: figures/TreeOnConsumer_big.png Graphic file (type png)
+] <figures/TreeOnConsumer.png, id=256, 477.785pt x 324.21124pt>
+File: figures/TreeOnConsumer.png Graphic file (type png)
 
-<use figures/TreeOnConsumer_big.png>
-Package pdftex.def Info: figures/TreeOnConsumer_big.png used on input line 513.
+<use figures/TreeOnConsumer.png>
+Package pdftex.def Info: figures/TreeOnConsumer.png used on input line 520.
+(pdftex.def)             Requested size: 152.89432pt x 103.74971pt.
 
-(pdftex.def)             Requested size: 176.66054pt x 132.4954pt.
+<figures/treeonconsumer.png, id=257, 642.4pt x 479.7925pt>
+File: figures/treeonconsumer.png Graphic file (type png)
 
-<figures/treeonconsumer_big.png, id=261, 640.3925pt x 479.7925pt>
-File: figures/treeonconsumer_big.png Graphic file (type png)
-
-<use figures/treeonconsumer_big.png>
-Package pdftex.def Info: figures/treeonconsumer_big.png used on input line 513.
-
-(pdftex.def)             Requested size: 147.28717pt x 110.34995pt.
-
-Overfull \hbox (16.65784pt too wide) in paragraph at lines 513--513
-[][][]  
- []
-
+<use figures/treeonconsumer.png>
+Package pdftex.def Info: figures/treeonconsumer.png used on input line 520.
+(pdftex.def)             Requested size: 141.32843pt x 105.55467pt.
 File: figures/tpt.pdf Graphic file (type pdf)
-<use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 513.
+ <use figures/tpt.pdf>
+Package pdftex.def Info: figures/tpt.pdf used on input line 520.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 513.
+Package pdftex.def Info: figures/cisco.png used on input line 520.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2367,27 +2352,34 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 
 [15
 
- <./figures/TreeOnConsumer_big.png> <./figures/treeonconsumer_big.png>]
-<figures/TreeOnProducer.png, id=274, 477.785pt x 324.21124pt>
-File: figures/TreeOnProducer.png Graphic file (type png)
+ <./figures/TreeOnConsumer.png> <./figures/treeonconsumer.png>]
+<figures/TreeOnConsumer_big.png, id=272, 803.0pt x 602.25pt>
+File: figures/TreeOnConsumer_big.png Graphic file (type png)
 
-<use figures/TreeOnProducer.png>
-Package pdftex.def Info: figures/TreeOnProducer.png used on input line 535.
-(pdftex.def)             Requested size: 152.89432pt x 103.74971pt.
+<use figures/TreeOnConsumer_big.png>
+Package pdftex.def Info: figures/TreeOnConsumer_big.png used on input line 520.
 
-<figures/treeonproducer.png, id=275, 644.4075pt x 478.78876pt>
-File: figures/treeonproducer.png Graphic file (type png)
+(pdftex.def)             Requested size: 176.66054pt x 132.4954pt.
 
-<use figures/treeonproducer.png>
-Package pdftex.def Info: figures/treeonproducer.png used on input line 535.
-(pdftex.def)             Requested size: 141.77008pt x 105.33385pt.
+<figures/treeonconsumer_big.png, id=273, 640.3925pt x 479.7925pt>
+File: figures/treeonconsumer_big.png Graphic file (type png)
+
+<use figures/treeonconsumer_big.png>
+Package pdftex.def Info: figures/treeonconsumer_big.png used on input line 520.
+
+(pdftex.def)             Requested size: 147.28717pt x 110.34995pt.
+
+Overfull \hbox (16.65784pt too wide) in paragraph at lines 520--520
+[][][]  
+ []
+
 File: figures/tpt.pdf Graphic file (type pdf)
- <use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 535.
+<use figures/tpt.pdf>
+Package pdftex.def Info: figures/tpt.pdf used on input line 520.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 535.
+Package pdftex.def Info: figures/cisco.png used on input line 520.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2396,34 +2388,27 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 
 [16
 
- <./figures/TreeOnProducer.png> <./figures/treeonproducer.png>]
-<figures/TreeOnProducer_big.png, id=290, 803.0pt x 602.25pt>
-File: figures/TreeOnProducer_big.png Graphic file (type png)
+ <./figures/TreeOnConsumer_big.png> <./figures/treeonconsumer_big.png>]
+<figures/TreeOnProducer.png, id=287, 477.785pt x 324.21124pt>
+File: figures/TreeOnProducer.png Graphic file (type png)
 
-<use figures/TreeOnProducer_big.png>
-Package pdftex.def Info: figures/TreeOnProducer_big.png used on input line 535.
+<use figures/TreeOnProducer.png>
+Package pdftex.def Info: figures/TreeOnProducer.png used on input line 542.
+(pdftex.def)             Requested size: 152.89432pt x 103.74971pt.
 
-(pdftex.def)             Requested size: 176.66054pt x 132.4954pt.
+<figures/treeonproducer.png, id=288, 644.4075pt x 478.78876pt>
+File: figures/treeonproducer.png Graphic file (type png)
 
-<figures/treeonproducer_big.png, id=291, 697.60625pt x 478.78876pt>
-File: figures/treeonproducer_big.png Graphic file (type png)
-
-<use figures/treeonproducer_big.png>
-Package pdftex.def Info: figures/treeonproducer_big.png used on input line 535.
-
-(pdftex.def)             Requested size: 146.50163pt x 100.5486pt.
-
-Overfull \hbox (15.8723pt too wide) in paragraph at lines 535--535
-[][][]  
- []
-
+<use figures/treeonproducer.png>
+Package pdftex.def Info: figures/treeonproducer.png used on input line 542.
+(pdftex.def)             Requested size: 141.77008pt x 105.33385pt.
 File: figures/tpt.pdf Graphic file (type pdf)
-<use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 535.
+ <use figures/tpt.pdf>
+Package pdftex.def Info: figures/tpt.pdf used on input line 542.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 535.
+Package pdftex.def Info: figures/cisco.png used on input line 542.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2432,30 +2417,34 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 
 [17
 
- <./figures/TreeOnProducer_big.png> <./figures/treeonproducer_big.png>]
-<figures/Load.png, id=305, 803.0pt x 602.25pt>
-File: figures/Load.png Graphic file (type png)
- <use figures/Load.png>
-Package pdftex.def Info: figures/Load.png used on input line 566.
+ <./figures/TreeOnProducer.png> <./figures/treeonproducer.png>]
+<figures/TreeOnProducer_big.png, id=302, 803.0pt x 602.25pt>
+File: figures/TreeOnProducer_big.png Graphic file (type png)
+
+<use figures/TreeOnProducer_big.png>
+Package pdftex.def Info: figures/TreeOnProducer_big.png used on input line 542.
+
 (pdftex.def)             Requested size: 176.66054pt x 132.4954pt.
 
-<figures/load.pdf, id=306, 642.4pt x 481.8pt>
-File: figures/load.pdf Graphic file (type pdf)
- <use figures/load.pdf>
-Package pdftex.def Info: figures/load.pdf used on input line 566.
-(pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
+<figures/treeonproducer_big.png, id=303, 697.60625pt x 478.78876pt>
+File: figures/treeonproducer_big.png Graphic file (type png)
 
-Overfull \hbox (29.97028pt too wide) in paragraph at lines 566--566
+<use figures/treeonproducer_big.png>
+Package pdftex.def Info: figures/treeonproducer_big.png used on input line 542.
+
+(pdftex.def)             Requested size: 146.50163pt x 100.5486pt.
+
+Overfull \hbox (15.8723pt too wide) in paragraph at lines 542--542
 [][][]  
  []
 
 File: figures/tpt.pdf Graphic file (type pdf)
 <use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 566.
+Package pdftex.def Info: figures/tpt.pdf used on input line 542.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 566.
+Package pdftex.def Info: figures/cisco.png used on input line 542.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2464,34 +2453,30 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 
 [18
 
- <./figures/Load.png> <./figures/load.pdf>]
-<figures/MinCostMultipath_big.png, id=328, 803.0pt x 602.25pt>
-File: figures/MinCostMultipath_big.png Graphic file (type png)
-
-<use figures/MinCostMultipath_big.png>
-Package pdftex.def Info: figures/MinCostMultipath_big.png used on input line 56
-6.
+ <./figures/TreeOnProducer_big.png> <./figures/treeonproducer_big.png>]
+<figures/Load.png, id=317, 803.0pt x 602.25pt>
+File: figures/Load.png Graphic file (type png)
+ <use figures/Load.png>
+Package pdftex.def Info: figures/Load.png used on input line 573.
 (pdftex.def)             Requested size: 176.66054pt x 132.4954pt.
 
-<figures/mincostmultipath_big.png, id=329, 640.3925pt x 528.97626pt>
-File: figures/mincostmultipath_big.png Graphic file (type png)
+<figures/load.pdf, id=318, 642.4pt x 481.8pt>
+File: figures/load.pdf Graphic file (type pdf)
+ <use figures/load.pdf>
+Package pdftex.def Info: figures/load.pdf used on input line 573.
+(pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
 
-<use figures/mincostmultipath_big.png>
-Package pdftex.def Info: figures/mincostmultipath_big.png used on input line 56
-6.
-(pdftex.def)             Requested size: 134.48639pt x 111.08829pt.
-
-Overfull \hbox (3.85706pt too wide) in paragraph at lines 566--566
+Overfull \hbox (29.97028pt too wide) in paragraph at lines 573--573
 [][][]  
  []
 
 File: figures/tpt.pdf Graphic file (type pdf)
 <use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 566.
+Package pdftex.def Info: figures/tpt.pdf used on input line 573.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 566.
+Package pdftex.def Info: figures/cisco.png used on input line 573.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2500,30 +2485,34 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 
 [19
 
- <./figures/MinCostMultipath_big.png> <./figures/mincostmultipath_big.png>]
-<figures/Step1.png, id=344, 803.0pt x 602.25pt>
-File: figures/Step1.png Graphic file (type png)
- <use figures/Step1.png>
-Package pdftex.def Info: figures/Step1.png used on input line 566.
-(pdftex.def)             Requested size: 160.59715pt x 120.44786pt.
+ <./figures/Load.png> <./figures/load.pdf>]
+<figures/MinCostMultipath_big.png, id=341, 803.0pt x 602.25pt>
+File: figures/MinCostMultipath_big.png Graphic file (type png)
 
-<figures/Step2.png, id=345, 803.0pt x 602.25pt>
-File: figures/Step2.png Graphic file (type png)
- <use figures/Step2.png>
-Package pdftex.def Info: figures/Step2.png used on input line 566.
-(pdftex.def)             Requested size: 160.59715pt x 120.44786pt.
+<use figures/MinCostMultipath_big.png>
+Package pdftex.def Info: figures/MinCostMultipath_big.png used on input line 57
+3.
+(pdftex.def)             Requested size: 176.66054pt x 132.4954pt.
 
-Overfull \hbox (13.90443pt too wide) in paragraph at lines 566--566
+<figures/mincostmultipath_big.png, id=342, 640.3925pt x 528.97626pt>
+File: figures/mincostmultipath_big.png Graphic file (type png)
+
+<use figures/mincostmultipath_big.png>
+Package pdftex.def Info: figures/mincostmultipath_big.png used on input line 57
+3.
+(pdftex.def)             Requested size: 134.48639pt x 111.08829pt.
+
+Overfull \hbox (3.85706pt too wide) in paragraph at lines 573--573
 [][][]  
  []
 
 File: figures/tpt.pdf Graphic file (type pdf)
 <use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 566.
+Package pdftex.def Info: figures/tpt.pdf used on input line 573.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 566.
+Package pdftex.def Info: figures/cisco.png used on input line 573.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2532,27 +2521,30 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 
 [20
 
- <./figures/Step1.png> <./figures/Step2.png>]
-<figures/MaxFlow.png, id=359, 477.785pt x 324.21124pt>
-File: figures/MaxFlow.png Graphic file (type png)
+ <./figures/MinCostMultipath_big.png> <./figures/mincostmultipath_big.png>]
+<figures/Step1.png, id=356, 803.0pt x 602.25pt>
+File: figures/Step1.png Graphic file (type png)
+ <use figures/Step1.png>
+Package pdftex.def Info: figures/Step1.png used on input line 573.
+(pdftex.def)             Requested size: 160.59715pt x 120.44786pt.
 
-<use figures/MaxFlow.png>
-Package pdftex.def Info: figures/MaxFlow.png used on input line 593.
-(pdftex.def)             Requested size: 152.89432pt x 103.74971pt.
+<figures/Step2.png, id=357, 803.0pt x 602.25pt>
+File: figures/Step2.png Graphic file (type png)
+ <use figures/Step2.png>
+Package pdftex.def Info: figures/Step2.png used on input line 573.
+(pdftex.def)             Requested size: 160.59715pt x 120.44786pt.
 
-<figures/maxflow.png, id=360, 655.44875pt x 464.73625pt>
-File: figures/maxflow.png Graphic file (type png)
+Overfull \hbox (13.90443pt too wide) in paragraph at lines 573--573
+[][][]  
+ []
 
-<use figures/maxflow.png>
-Package pdftex.def Info: figures/maxflow.png used on input line 593.
-(pdftex.def)             Requested size: 144.19916pt x 102.24228pt.
 File: figures/tpt.pdf Graphic file (type pdf)
- <use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 593.
+<use figures/tpt.pdf>
+Package pdftex.def Info: figures/tpt.pdf used on input line 573.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 593.
+Package pdftex.def Info: figures/cisco.png used on input line 573.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2561,32 +2553,27 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 
 [21
 
- <./figures/MaxFlow.png> <./figures/maxflow.png>]
-<figures/MaxFlow_big.png, id=374, 803.0pt x 602.25pt>
-File: figures/MaxFlow_big.png Graphic file (type png)
+ <./figures/Step1.png> <./figures/Step2.png>]
+<figures/MaxFlow.png, id=371, 477.785pt x 324.21124pt>
+File: figures/MaxFlow.png Graphic file (type png)
 
-<use figures/MaxFlow_big.png>
-Package pdftex.def Info: figures/MaxFlow_big.png used on input line 593.
-(pdftex.def)             Requested size: 176.66054pt x 132.4954pt.
+<use figures/MaxFlow.png>
+Package pdftex.def Info: figures/MaxFlow.png used on input line 600.
+(pdftex.def)             Requested size: 152.89432pt x 103.74971pt.
 
-<figures/maxflow_big.png, id=375, 667.49374pt x 477.785pt>
-File: figures/maxflow_big.png Graphic file (type png)
+<figures/maxflow.png, id=372, 655.44875pt x 464.73625pt>
+File: figures/maxflow.png Graphic file (type png)
 
-<use figures/maxflow_big.png>
-Package pdftex.def Info: figures/maxflow_big.png used on input line 593.
-(pdftex.def)             Requested size: 140.17783pt x 100.3378pt.
-
-Overfull \hbox (9.5485pt too wide) in paragraph at lines 593--593
-[][][]  
- []
-
+<use figures/maxflow.png>
+Package pdftex.def Info: figures/maxflow.png used on input line 600.
+(pdftex.def)             Requested size: 144.19916pt x 102.24228pt.
 File: figures/tpt.pdf Graphic file (type pdf)
-<use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 593.
+ <use figures/tpt.pdf>
+Package pdftex.def Info: figures/tpt.pdf used on input line 600.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 593.
+Package pdftex.def Info: figures/cisco.png used on input line 600.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2595,15 +2582,32 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 
 [22
 
- <./figures/MaxFlow_big.png> <./figures/maxflow_big.png>]
-(./Presentation.toc)
+ <./figures/MaxFlow.png> <./figures/maxflow.png>]
+<figures/MaxFlow_big.png, id=386, 803.0pt x 602.25pt>
+File: figures/MaxFlow_big.png Graphic file (type png)
+
+<use figures/MaxFlow_big.png>
+Package pdftex.def Info: figures/MaxFlow_big.png used on input line 600.
+(pdftex.def)             Requested size: 176.66054pt x 132.4954pt.
+
+<figures/maxflow_big.png, id=387, 667.49374pt x 477.785pt>
+File: figures/maxflow_big.png Graphic file (type png)
+
+<use figures/maxflow_big.png>
+Package pdftex.def Info: figures/maxflow_big.png used on input line 600.
+(pdftex.def)             Requested size: 140.17783pt x 100.3378pt.
+
+Overfull \hbox (9.5485pt too wide) in paragraph at lines 600--600
+[][][]  
+ []
+
 File: figures/tpt.pdf Graphic file (type pdf)
- <use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 595.
+<use figures/tpt.pdf>
+Package pdftex.def Info: figures/tpt.pdf used on input line 600.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 595.
+Package pdftex.def Info: figures/cisco.png used on input line 600.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2612,14 +2616,15 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 
 [23
 
-]
+ <./figures/MaxFlow_big.png> <./figures/maxflow_big.png>]
+(./Presentation.toc)
 File: figures/tpt.pdf Graphic file (type pdf)
  <use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 607.
+Package pdftex.def Info: figures/tpt.pdf used on input line 602.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 607.
+Package pdftex.def Info: figures/cisco.png used on input line 602.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
@@ -2628,27 +2633,43 @@ Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 
 [24
 
-] <figures/merci.jpg, id=407, 448.67625pt x 269.005pt>
-File: figures/merci.jpg Graphic file (type jpg)
-
-<use figures/merci.jpg>
-Package pdftex.def Info: figures/merci.jpg used on input line 622.
-(pdftex.def)             Requested size: 224.33757pt x 134.50217pt.
+]
 File: figures/tpt.pdf Graphic file (type pdf)
  <use figures/tpt.pdf>
-Package pdftex.def Info: figures/tpt.pdf used on input line 622.
+Package pdftex.def Info: figures/tpt.pdf used on input line 614.
 (pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
 File: figures/cisco.png Graphic file (type png)
  <use figures/cisco.png>
-Package pdftex.def Info: figures/cisco.png used on input line 622.
+Package pdftex.def Info: figures/cisco.png used on input line 614.
 (pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
 
 Overfull \hbox (14.22684pt too wide) has occurred while \output is active
 [][][] 
  []
 
-Package atenddvi Info: Last page = 25.
 [25
+
+] <figures/merci.jpg, id=421, 448.67625pt x 269.005pt>
+File: figures/merci.jpg Graphic file (type jpg)
+
+<use figures/merci.jpg>
+Package pdftex.def Info: figures/merci.jpg used on input line 629.
+(pdftex.def)             Requested size: 224.33757pt x 134.50217pt.
+File: figures/tpt.pdf Graphic file (type pdf)
+ <use figures/tpt.pdf>
+Package pdftex.def Info: figures/tpt.pdf used on input line 629.
+(pdftex.def)             Requested size: 22.76228pt x 22.76216pt.
+File: figures/cisco.png Graphic file (type png)
+ <use figures/cisco.png>
+Package pdftex.def Info: figures/cisco.png used on input line 629.
+(pdftex.def)             Requested size: 31.2982pt x 16.5618pt.
+
+Overfull \hbox (14.22684pt too wide) has occurred while \output is active
+[][][] 
+ []
+
+Package atenddvi Info: Last page = 26.
+[26
 
  <./figures/merci.jpg>]
 \tf@nav=\write6
@@ -2660,20 +2681,20 @@ Package atenddvi Info: Last page = 25.
 \tf@snm=\write8
 \openout8 = `Presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 626.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 626.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 633.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 633.
  (./Presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 626.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 626.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 633.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 633.
 Package rerunfilecheck Info: File `Presentation.out' has not changed.
-(rerunfilecheck)             Checksum: A16C7FAC0098E89EA941C6F287B134EA;523.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 626.
+(rerunfilecheck)             Checksum: 39A65CD022F75F196EDB0008947DA46F;523.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 633.
  ) 
 Here is how much of TeX's memory you used:
- 43877 strings out of 494910
- 1006022 string characters out of 6179836
+ 43885 strings out of 494910
+ 1006149 string characters out of 6179836
  1167968 words of memory out of 5000000
- 46216 multiletter control sequences out of 15000+600000
+ 46221 multiletter control sequences out of 15000+600000
  80858 words of font info for 64 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  56i,19n,79p,10415b,813s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2684,10 +2705,10 @@ hare/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public
 re/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msam5.pfb>
-Output written on Presentation.pdf (25 pages, 2563714 bytes).
+Output written on Presentation.pdf (26 pages, 2668977 bytes).
 PDF statistics:
- 460 PDF objects out of 1000 (max. 8388607)
- 355 compressed objects within 4 object streams
- 65 named destinations out of 1000 (max. 500000)
- 252 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 473 PDF objects out of 1000 (max. 8388607)
+ 366 compressed objects within 4 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 257 words of extra memory for PDF output out of 10000 (max. 10000000)
 
