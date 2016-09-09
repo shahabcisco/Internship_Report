@@ -8,50 +8,51 @@
 \contentsline {figure}{\numberline {1.7}{\ignorespaces Downloading Step\relax }}{6}{figure.caption.16}
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Link Capacity Modification\relax }}{6}{figure.caption.17}
 \contentsline {figure}{\numberline {1.9}{\ignorespaces Link Capacity Modification\relax }}{7}{figure.caption.18}
-\contentsline {figure}{\numberline {1.10}{\ignorespaces PeerToPeer Network\relax }}{7}{figure.caption.20}
-\contentsline {figure}{\numberline {1.11}{\ignorespaces ICN vs TCP/IP OSI model\relax }}{8}{figure.caption.21}
-\contentsline {figure}{\numberline {1.12}{\ignorespaces Smart Room in IoT\relax }}{8}{figure.caption.22}
-\contentsline {figure}{\numberline {1.13}{\ignorespaces Plan 2020\relax }}{9}{figure.caption.23}
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Link Capacity Modification\relax }}{7}{figure.caption.19}
+\contentsline {figure}{\numberline {1.11}{\ignorespaces PeerToPeer Network\relax }}{8}{figure.caption.21}
+\contentsline {figure}{\numberline {1.12}{\ignorespaces ICN vs TCP/IP OSI model\relax }}{8}{figure.caption.22}
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Smart Room in IoT\relax }}{9}{figure.caption.23}
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Plan 2020\relax }}{9}{figure.caption.24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces nfd-status on shahab container\relax }}{11}{figure.caption.25}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Real Architecture of Network\relax }}{11}{figure.caption.26}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces nfd-status on shahab container\relax }}{12}{figure.caption.28}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces TreeOnConsumer\relax }}{14}{figure.caption.32}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces TreeOnProducer\relax }}{14}{figure.caption.33}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Eqaul Cost Multipath Strategy on CISCO Router\relax }}{15}{figure.caption.35}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Maximum Flow Strategy\relax }}{16}{figure.caption.37}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces nfd-status on shahab container\relax }}{12}{figure.caption.26}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Real Architecture of Network\relax }}{12}{figure.caption.27}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces nfd-status on shahab container\relax }}{13}{figure.caption.29}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces TreeOnConsumer\relax }}{15}{figure.caption.33}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces TreeOnProducer\relax }}{15}{figure.caption.34}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Eqaul Cost Multipath Strategy on CISCO Router\relax }}{16}{figure.caption.36}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Maximum Flow Strategy\relax }}{17}{figure.caption.38}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces TreeOnConsumer Tree Medium\relax }}{18}{figure.caption.42}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces TreeOnConsumer (Rate vs Time) Medium\relax }}{18}{figure.caption.42}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces TreeOnProducer Tree Medium\relax }}{19}{figure.caption.44}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces TreeOnProducer (Rate vs Time) Medium\relax }}{19}{figure.caption.44}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces MinCostMultipath Tree Medium\relax }}{20}{figure.caption.46}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces MinCostMultipath (Rate vs Time) Medium\relax }}{20}{figure.caption.46}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces MaxFlow Medium\relax }}{21}{figure.caption.48}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces MaxFlow (Rate vs Time(s)) Medium\relax }}{21}{figure.caption.49}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces TreeOnConsumer Tree Large\relax }}{22}{figure.caption.52}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces TreeOnConsumer (Rate vs Time) Large\relax }}{22}{figure.caption.52}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces TreeOnConsumer Mobility Large\relax }}{23}{figure.caption.53}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces TreeOnConsumer Mobility (Rate vs Time) Large\relax }}{23}{figure.caption.53}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces TreeOnConsumer Mobility Large\relax }}{24}{figure.caption.54}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces TreeOnConsumer Mobility (Rate vs Time) Large\relax }}{24}{figure.caption.54}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces TreeOnConsumer Mobility Large\relax }}{25}{figure.caption.55}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces TreeOnConsumer Mobility (Rate vs Time) Large\relax }}{25}{figure.caption.55}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces TreeOnProducer Tree Medium\relax }}{27}{figure.caption.57}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces TreeOnProducer (Rate vs Time) Large\relax }}{27}{figure.caption.57}
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Multipath load balancing strategy Graph\relax }}{29}{figure.caption.59}
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Multipath load balancing strategy (Rate vs Time) \relax }}{29}{figure.caption.59}
-\contentsline {figure}{\numberline {3.21}{\ignorespaces MinCostMultiPath Tree Large\relax }}{30}{figure.caption.60}
-\contentsline {figure}{\numberline {3.22}{\ignorespaces MinCostMultiPath (Rate vs Time) Large\relax }}{30}{figure.caption.60}
-\contentsline {figure}{\numberline {3.23}{\ignorespaces Multi Consumers and Producers Large\relax }}{31}{figure.caption.61}
-\contentsline {figure}{\numberline {3.24}{\ignorespaces Multi Consumers and Producers (Rate vs Time) Large\relax }}{32}{figure.caption.62}
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Producer Mobility step 1 \& Routing update\relax }}{33}{figure.caption.63}
-\contentsline {figure}{\numberline {3.26}{\ignorespaces Producer Mobility step 2 \& Routing update\relax }}{33}{figure.caption.63}
-\contentsline {figure}{\numberline {3.27}{\ignorespaces Producer Mobility step 1 (Rate vs Time) Large\relax }}{34}{figure.caption.64}
-\contentsline {figure}{\numberline {3.28}{\ignorespaces Producer Mobility step 2 (Rate vs Time) Large\relax }}{34}{figure.caption.64}
-\contentsline {figure}{\numberline {3.29}{\ignorespaces Dense Network\relax }}{35}{figure.caption.65}
-\contentsline {figure}{\numberline {3.30}{\ignorespaces Dense Network (Rate vs Time) Large\relax }}{35}{figure.caption.65}
-\contentsline {figure}{\numberline {3.31}{\ignorespaces MaxFlow Tree Large\relax }}{36}{figure.caption.67}
-\contentsline {figure}{\numberline {3.32}{\ignorespaces MaxFlow (Rate vs Time) Large\relax }}{36}{figure.caption.67}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces TreeOnConsumer Tree Medium\relax }}{19}{figure.caption.43}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces TreeOnConsumer (Rate vs Time) Medium\relax }}{19}{figure.caption.43}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces TreeOnProducer Tree Medium\relax }}{20}{figure.caption.45}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces TreeOnProducer (Rate vs Time) Medium\relax }}{20}{figure.caption.45}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces MinCostMultipath Tree Medium\relax }}{21}{figure.caption.47}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces MinCostMultipath (Rate vs Time) Medium\relax }}{21}{figure.caption.47}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces MaxFlow Medium\relax }}{22}{figure.caption.49}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces MaxFlow (Rate vs Time(s)) Medium\relax }}{22}{figure.caption.50}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces TreeOnConsumer Tree Large\relax }}{23}{figure.caption.53}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces TreeOnConsumer (Rate vs Time) Large\relax }}{23}{figure.caption.53}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces TreeOnConsumer Mobility Large\relax }}{24}{figure.caption.54}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces TreeOnConsumer Mobility (Rate vs Time) Large\relax }}{24}{figure.caption.54}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces TreeOnConsumer Mobility Large\relax }}{25}{figure.caption.55}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces TreeOnConsumer Mobility (Rate vs Time) Large\relax }}{25}{figure.caption.55}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces TreeOnConsumer Mobility Large\relax }}{26}{figure.caption.56}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces TreeOnConsumer Mobility (Rate vs Time) Large\relax }}{26}{figure.caption.56}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces TreeOnProducer Tree Medium\relax }}{28}{figure.caption.58}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces TreeOnProducer (Rate vs Time) Large\relax }}{28}{figure.caption.58}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Multipath load balancing strategy Graph\relax }}{30}{figure.caption.60}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Multipath load balancing strategy (Rate vs Time) \relax }}{30}{figure.caption.60}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces MinCostMultiPath Tree Large\relax }}{31}{figure.caption.61}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces MinCostMultiPath (Rate vs Time) Large\relax }}{31}{figure.caption.61}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Multi Consumers and Producers Large\relax }}{32}{figure.caption.62}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Multi Consumers and Producers (Rate vs Time) Large\relax }}{33}{figure.caption.63}
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Producer Mobility step 1 \& Routing update\relax }}{34}{figure.caption.64}
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Producer Mobility step 2 \& Routing update\relax }}{34}{figure.caption.64}
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Producer Mobility step 1 (Rate vs Time) Large\relax }}{35}{figure.caption.65}
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Producer Mobility step 2 (Rate vs Time) Large\relax }}{35}{figure.caption.65}
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Dense Network\relax }}{36}{figure.caption.66}
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Dense Network (Rate vs Time) Large\relax }}{36}{figure.caption.66}
+\contentsline {figure}{\numberline {3.31}{\ignorespaces MaxFlow Tree Large\relax }}{37}{figure.caption.68}
+\contentsline {figure}{\numberline {3.32}{\ignorespaces MaxFlow (Rate vs Time) Large\relax }}{37}{figure.caption.68}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
