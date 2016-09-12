@@ -221,7 +221,7 @@ grid (current bounding box.north east);
 \newcommand{\theTitle}{Routing Algorithms in NDN Networks}
 \newcommand{\thefootnotedef}{Routing Algorithms in NDN networks}
 \newcommand{\theAuthors}{shahab SHARIAT BAGHERI}
-\newcommand{\theResponsible}{Luca MUSCARIELLO\\Beatrice PESQUET \\ Pablo PIANTANIDA}
+\newcommand{\theResponsible}{Luca MUSCARIELLO\\Pablo PIANTANIDA \\ Beatrice PESQUET}
 \newcommand{\theConferenceAndPlace}{Internship Defense \\
 Salle F801, TELECOM ParisTech}
 \newcommand{\theDate}{9/26/2016}
@@ -297,24 +297,6 @@ Salle F801, TELECOM ParisTech}
 \section{Internship Environment}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{CISCO \& PIRL}
-
-\begin{frame}{CISCO \& PIRL}
-
-Cisco Systems France.
-
-\begin{center}
-\includegraphics[scale=0.07]{figures/cisco.jpg}
-\end{center}
-
-
-\end{frame}
-%
-%\begin{frame}{PIRL}
-%
-%\textbf{P}aris \textbf{I}nnovation and and \textbf{R}esearch \textbf{L}aboratory.
-%
-%\end{frame}
 
 
 
@@ -357,50 +339,23 @@ Mobile vs PC Internet Traffic user $\longrightarrow$ 5G mobile networks
 
 }
 
+\end{frame}
 
+
+\subsection{CISCO \& PIRL}
+
+\begin{frame}{CISCO \& PIRL}
+
+Cisco Systems France.
+
+\begin{center}
+\includegraphics[scale=0.07]{figures/cisco.jpg}
+\end{center}
 
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%
 
-%\subsection{Interference Alignment Techniques}
-%\begin{frame}
-%\frametitle{Interference Alignment Techniques}
-%\vspace{-0.65cm}
-%\uncover<1->{
-%  \begin{block}{Which techniques to be used for IA ?}
-%  \centering
-%  \begin{itemize}
-%  \item Linear Lattice-based Interference Alignment. 
-%  \item The Compute-and-Forward (CoF) method described by [Nazer and Gastpar 2008].
-%  \end{itemize}
-%\end{block}}
-%\vspace{-0.31cm}
-%\uncover<2->{\begin{block}{Recent Research Studies ...}
-%   \begin{itemize}
-%   \item A coding scheme presented by [Khaleghi and Belfiore 2014] to improve the fading behavior of achievable sum rates defined in [Ordentlich \textit{et al.} 2012].
-%   \item Lattice codes over Eisenstein integers presented for CoF [Tunali \textit{et al.} 2012] to achieve higher rates.
-%   \end{itemize}}
-%   \vspace{-0.15cm}
-%   \uncover<3->{
-%  For the \underline{complex-valued interference channels} need to realize more research.}
-%  \vspace{0.1cm}
-%  \uncover<4->{\\$\rightarrow$ In this research we focus on \textcolor{red}{\textit{the complex-valued interference channels}} and employing $\Z[i]$-lattice codes.
-%   \end{block}}
-%   \vspace{-0.31cm}
-% \uncover<5->{
-%   \begin{block}{In Compute-and-Forward scheme [Receiver's Point of View]}
-%    \centering
-%    \begin{enumerate}
-%     \item Receiving linear combination of the transmitted codewords.
-%     \item Deciding which equation(s) to be decoded.}
-%     \uncover<6->{
-%     \item Applying the corresponding Minimum Mean Square Error estimation (MMSE).
-%     \item Decoding the equation(s) in $\Lambda_{\textrm{lattice}}$.
-%    \end{enumerate}
-%   \end{block}}
-%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Ideas and Strategies}
@@ -430,8 +385,8 @@ Mobile vs PC Internet Traffic user $\longrightarrow$ 5G mobile networks
 
 \begin{itemize}
 \item For NFD (NDN forwarder).
-\item New Routing Strategies.
 \item Different interfaces to interact with strategies at run time (Client, Repositories, forwading strategies, ...)
+\item \textit{New Routing Strategies}.
 
 \begin{center}
 \includegraphics[scale=0.28]{figures/sdn.png}
@@ -529,7 +484,7 @@ One Consumer to multiple producer.
 One Consumer to multiple producer.
 
 \includegraphics[scale=0.22]{figures/TreeOnProducer_big.png} 
-\includegraphics[scale=0.21]{figures/treeonproducer_big.png} 
+\includegraphics[scale=0.21]{figures/TreeOnProducer_big.pdf} 
 
 }
 
@@ -542,6 +497,7 @@ One Consumer to multiple producer.
 
 \begin{frame}{MinCostMultiPath}
 
+Load balancing strategies in equal cost multipath case.
 
 \only<1>{
 \includegraphics[scale=0.22]{figures/Load.png} 
@@ -585,7 +541,10 @@ Maximum Flow algorithm chooses the path which maximizes through from consumer to
 \only<2>{
 Maximum Flow algorithm chooses the path which maximizes through from consumer to producer.
 
-\includegraphics[scale=0.42]{figures/MaxFlow2.png} 
+\begin{center}
+\includegraphics[scale=0.32]{figures/MaxFlow2.png} 
+\end{center}
+
 
 
 }
@@ -600,11 +559,11 @@ Maximum Flow algorithm chooses the path which maximizes through from consumer to
 \begin{frame}{Conclusion}
 \begin{itemize}
  
-\item There is always some limitations in practical against pure theoritical works which can be seen when you work experimental..  
+\item There is always some limitations in practical against pure theoritical works which can be seen when you work on experimental platforms.
 \item ICN is one of the most challenging domain who has a lot of passion in research and development.
-\item Software Define Networking is beautiful idea which allows to interact with your network on data centers and to shift heavy calculations.
+\item In Engineering there is always bottlnecks, understanding and discovering of where these bottlenecks are.
 
-\item Coding is one of way that you can realize your system.
+\item Coding is beautiful idea that through it you can realize your ideas in real world.
 \end{itemize}
 
 \end{frame}

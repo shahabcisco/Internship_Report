@@ -17,17 +17,6 @@ In our model we try to model this architecture which is used in cellular network
 Our try is to adapt it to 5G network and to create a new network.
  
 
-\begin{figure}[H]
-
-\begin{center}
-
-\includegraphics[scale = 0.35]{Pictures/nfd.png}
-
-\caption{nfd-status on shahab container} \label{nfd} 
-
-\end{center}
-
-\end{figure}
 
 
 \begin{figure}[H]
@@ -47,7 +36,7 @@ Our try is to adapt it to 5G network and to create a new network.
 \section{NFD in NDN Networks}
 NFD is a network forwarder that implements NDN forwarder. After the initial release, NFD became a core component of the NDN Platform and will follow the same release cycle. 
 
-There are different modules on NFD for different stuffs like \textit{core} which produce different varities between different modules of NFD. \textit{Faces} implements the face concept in NDN. \textit{Tables} which contains some data structures like Content Store (CS) and tables like FIB and PIB for forwarding and pending information for NDN Data/Interest packets and \textit{Forwarding}, which interacts with forwarding strategies to choose and manage faces and \textit{RIB Management} which implements routing table information about routes and each prefix according to propoer faces. this is not a seperate module from NFD Management. Basically we create some faces for each prefix by a given routing strategy which are proposed in this work and it will fill up FIB properly against these information by which you find proper routes.
+There are different modules on NFD for different stuffs like \textit{core} which produce different varities between different modules of NFD. \textit{Faces} implements the face concept in NDN. \textit{Tables} which contains some data structures like Content Store (CS) and tables like FIB and PIB for forwarding and pending information for NDN Data/Interest packets and \textit{Forwarding}, which interacts with forwarding strategies to choose and manage faces and \textit{RIB Management} which implements routing table information about routes and each prefix according to proper faces. this is not a seperate module from NFD Management. Basically we create some faces for each prefix by a given routing strategy which are proposed in this work and it will fill up FIB properly against these information by which you find proper routes.
 
 For example figure \ref{nfd} shows 2 faceIDs which are created by our proposed routing strategies in RIB and FIB: $67344$, $67876$. As you see these faces have routes toward 'jordan' and 'luca' thanks to strategies of TreeOnProducer.   
 
@@ -98,9 +87,7 @@ For Discovering more about algorithms we refere you to \ref{Appendix} to see the
 \subsection{Consumer $\&$ Producer Trees Strategy}
 In ICN the cost metric is \textit{number of hops} becasue of naturity of ICN architecture in which you \textit{search} content so basically in Graph sense nearer nodes are preferred always. This is the idea that enables us to think about \textit{TreeOnConsumer} and \textit{TreeOnProducer} strategies in which you want to find the tree which finds the shortest paths either from one producer to consumers or one consumer to producers properly.
 
-The idea of \textit{TreeOnConsumer} is based on this concept that imagine once in cellular networks at the same time maybe you can have $N$ clients or consumers that search exactly the same \textit{content}, like a special video.
-
-Figure \ref{consumer} shows this concept properly.
+The idea of \textit{TreeOnConsumer} is based on this concept that imagine once in cellular networks at the same time maybe you can have $N$ clients or consumers that search exactly the same \textit{content}, like a special video. Figure \ref{consumer} shows this concept properly.
 
 
 \begin{figure}[H]
