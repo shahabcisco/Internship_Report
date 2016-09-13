@@ -20,14 +20,14 @@
 \contentsline {subsection}{\numberline {3.2.1}TreeOnConsumer}{19}{subsection.41}
 \contentsline {subsection}{\numberline {3.2.2}TreeOnProducer}{19}{subsection.43}
 \contentsline {subsection}{\numberline {3.2.3}MinCostMultipath}{20}{subsection.45}
-\contentsline {subsection}{\numberline {3.2.4}MaxFlow}{21}{subsection.47}
-\contentsline {section}{\numberline {3.3}Strategies on Large Size NDN Networks}{22}{section.50}
-\contentsline {subsection}{\numberline {3.3.1}TreeOnConsumer}{22}{subsection.51}
-\contentsline {subsection}{\numberline {3.3.2}TreeOnProducer}{27}{subsection.56}
-\contentsline {subsection}{\numberline {3.3.3}MinCostMultipath}{29}{subsection.58}
-\contentsline {subsection}{\numberline {3.3.4}MaxFlow}{36}{subsection.66}
-\contentsline {chapter}{\numberline {4}Conclusions}{38}{chapter.68}
+\contentsline {subsection}{\numberline {3.2.4}MaxFlow}{22}{subsection.47}
+\contentsline {section}{\numberline {3.3}Strategies on Large Size NDN Networks}{23}{section.50}
+\contentsline {subsection}{\numberline {3.3.1}TreeOnConsumer}{23}{subsection.51}
+\contentsline {subsection}{\numberline {3.3.2}TreeOnProducer}{28}{subsection.56}
+\contentsline {subsection}{\numberline {3.3.3}MinCostMultipath}{30}{subsection.58}
+\contentsline {subsection}{\numberline {3.3.4}MaxFlow}{37}{subsection.66}
+\contentsline {chapter}{\numberline {4}Conclusions}{39}{chapter.68}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Code Implementation}{39}{appendix.69}
+\contentsline {chapter}{\numberline {A}Code Implementation}{40}{appendix.69}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{44}{dummy.286}
+\contentsline {chapter}{Bibliography}{45}{dummy.286}

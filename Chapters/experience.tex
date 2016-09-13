@@ -7,11 +7,11 @@
 \lhead{Chapter 2. \emph{Experimental Results on Routing Strategies}}
 
 \section{Experiment Test Setup}
-We tested our experiments on clusters of cisco's server with linux containers with different configuration set ups on Lurch. In the case of needs, dynamic modifications also have been added on Lurch to be more interactive for different test scnearios.
+We tested our experiments on cisco's server with linux containers with different configuration set ups on Lurch. In the case of needs, dynamic modifications also have been added on Lurch to be more interactive for different test scnearios.
 
 In this chapter we will show, test and validate our 4 routing strategies on 2 different setup networks with 5 nodes (medium size) and another one with 17 nodes (large size) each one with costumized capacity. We plot rates in Kbps vs time for each link involved in strategy. $\{ai\}$, $i=$1:8 are Access Points and nodes with \textit{NodeID} are Autonomous nodes in the network.
    
-In all scenarios we plot the figures of each link by nodeID of ends connected. In, Out means the direction of packets that come to node. So In always is Data packets and Out are Interest packets. As it's clear they are larger than We consider number of hops as cost of link as it is meaningful in ICN architecture.
+In all scenarios we plot the figures of each link by nodeID of connected ends. \textit{In}, \textit{Out} means the direction of packets that come to node. So \textit{In} always is Data packets and Out are Interest packets. As it's clear they are larger than We consider number of hops as cost of link as it is meaningful in ICN architecture.
 \textit{TreeOnConsumer}, \textit{TreeOnProducer}, \textit{MinCostMultipath}, \textit{MaxFlow} are 4 different parameters of RoutingNDN module to choose which are done for \textit{Medium} and \textit{Large} size. We have put the result of each case inside the subsection.
 
 In all cases Clients are searching /n/a/noseg chunk and repositories are containing /n folder which has alphabetical letters to like a,b,c,d, ... then chunks of \textit{BigBuckBunny.mp4} are appended to them. Engine of repository is an application called \textit{repo-ng}. 
@@ -20,9 +20,9 @@ In all cases Clients are searching /n/a/noseg chunk and repositories are contain
 
 
 \subsection{TreeOnConsumer}
-As figure \ref{TreeOnConsumer} shows, 'luca' and 'jordan' nodes are clients searching '/n/a/noseg' chunk and 'shahab' node is producer of content. The first prefix of content is /n folder contains.
+As figure \ref{TreeOnConsumer} shows, 'luca' and 'jordan' nodes are clients searching '/n/a/noseg' chunk and 'shahab' node is producer of content. The first prefix of content is /n folder.
 
-Figure \ref{treeonconsumer} shows 4 traced rates in which yellow and green one are data packets. Same packets are routed through \textit{TreeOnConsumer} tree to the clients with different rates. In this figure you can see the delay between 'sj' and 'sl' which is becasue of capacity difference of between containers. So you have 2 threads on 2 different machines occuring and recorded at the same time.
+Figure \ref{treeonconsumer} shows 4 traced rates in which yellow and green one are data packets. Same packets are routed through \textit{TreeOnConsumer} tree to the clients with different rates. In this figure you can see the delay between 'shahab-jordan/In' and 'shahab-luca/In' which is becasue of capacity difference of between containers. So you have 2 threads on 2 different machines occuring and recorded at the same time.
 
 \begin{figure}[H]
 
@@ -47,9 +47,9 @@ Figure \ref{treeonconsumer} shows 4 traced rates in which yellow and green one a
 Figure \ref{TreeOnProducer} shows 'jordan', a client who searches '/n/a/noseg' and 2 producers ('shahab','mauro') who send packets to client by this strategy using tree of \textit{TreeOnProducer}. 
 Figure \ref{treeonproducer} shows as well this downloading traced during time which can be used whenever client wants a high quality content.
 
-Imagine a case in which the clients are searching a very huge amount of data, specially let's say 10 clients that they want to watch a video at the same timethrough connected base station.
+Imagine a case in which the clients are searching a very huge amount of data, specially let's say 10 clients that they want to watch a video at the same time through connected base station.
 
-This strategy can be very usefull in the case that by understanding multihoming of the core system or backhaul which base stations are connected.
+This strategy can be very usefull in the case that by understanding multihoming of the core system or backhaul to which base stations are connected.
 
 \begin{figure}[H]
 
@@ -70,13 +70,14 @@ This strategy can be very usefull in the case that by understanding multihoming 
 \end{figure}
 
 \subsection{MinCostMultipath}
-Figure \ref{MinCostMultipath} shows \textit{MinCostMultipath} tree of minimum of network in which we use number of hops as cost of links. This is the case in which we want to broadcast video livestreaming as we discussed. Same chunk of datas are searching at the same time for a live movie like a football match content to all clients.
+Figure \ref{MinCostMultipath} shows \textit{MinCostMultipath} tree of minimum network in which we use number of hops as cost of links. This is the case in which we want to broadcast video livestreaming as we discussed. Same chunk of datas are searching at the same time for a live movie like a football match content to all clients.
 
 
 This figure will be usefull when you have a multihoming system in which you are able to download your content from different nodes. This strategy will be a good idea in the case that you have a lot clients on one base station are attached.
 
 This is a co-algorithm of TreeOnConsumer or a way of rethinking of that. In TreeOnConsumer you assume that multi nodes are searching the same content while in TreeOnProducer you have just one client that searches content but with using multihoming advantage of network. 
 
+Whenever the algorithm has created multiple faces for this particular node, the strategy can not no more be \textit{best-route} becasue this strategy sends just on one face. So in this case we should use another strategy like \textit{multicast}, \textit{load-balance} or \textit{broadcast} to be able to do routing updates and properly sending the packets.
  
 Figure \ref{mincost} shows traced data as well.
 \begin{figure}[H]
@@ -253,11 +254,11 @@ This is very usefull specially in case of load balancing strategy. Client can ge
 
 
 \subsection{MinCostMultipath}
-Figure \ref{MinCostMultiPath} shows how the \textit{MinCostmultiPath} tree is chosen to deliver content to all clients which are connected to access points.
+Figure \ref{MinCostMultiPath} shows how the \textit{MinCostMultiPath} tree is chosen to deliver content to all clients which are connected to access points.
  
 Notably this strategy can be used when you want to do a \textit{Equal Cost Multi Path} (ECMP) routing in which your minimized paths have equal cost to destination so we should use load-balance or multipath forwading strategy to allow traffic to pass along the network. 
 
-Figure \ref{load} shows well a simple case usage of this strategy using \textit{load balancing} strategy to use multipath routing.
+Figure \ref{Load} shows well a simple case usage of this strategy using \textit{load balancing} strategy to use multipath routing.
 
 There is a very important issue in this case of strategy, and the important concept is that when the routing strategies has decided or multi faces for each node the forwarder strategy can not be more best-route! Actually in this case engine of forwarder should allow the kernel to pass packets through diferent faces. Kernel lets operates like a switch to forward the packets into th network.
 
@@ -436,9 +437,11 @@ Figure \ref{MaxFlow_big} shows the paths chosen by strategy to maximize the thro
 
 Figure \ref{maxflow_big} shows how the rates are changing during time with this strategy. As you can see data packets have maximum value to achieve the output.  
 
-The mobile stations are connected to $a2,a3$ Access Point can download their contents through taps interfaces.
+The mobile stations are connected to $a2,a3$ Access Points, they can download their contents through taps interfaces.
 
 The algorithm of this strategy is written by finding the paths which maximize throughput with preventing out of range extra loops.
+
+This algorithm finds the paths which is able to pass the packets from consumer to clients which maximizes the  total throughput. This allows to use maximum capacbility of packets and whole of network usage which is quiet good for a high rate communication.
 
 \begin{figure}[H]
 
