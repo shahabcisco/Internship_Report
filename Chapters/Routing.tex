@@ -7,7 +7,7 @@
 
 \lhead{Chapter 2. \emph{New Routing algorithms in ICN}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
-As it is also in IP routing's networks, routing is responsible for building the routing table and maintaining it in face of network changes, including both long-term topology and policy changes as well as short-term churns.  When there is a change in the network, routers need to exchange routing updates with each other in order to reach new global consistency. The time period after a change happens and before all routers agree on the new routing state is called the routing convergence period. Routing protocols need to converge fast in order to reduce packet loss and resume packet delivery after network changes. NDN routing does not need to converge fast thanks to its architecture and needs some strategies to pipline the packets to the destinations.
+As it is also in IP routing's networks, routing is responsible for building the routing table and maintaining it in face of network changes, including both long-term topology and policy changes as well as short-term churns.  When there is a change in the network, routers need to exchange routing updates with each other in order to reach new global consistency. The time period after a change happens and before all routers agree on the new routing state is called the routing convergence period. Routing protocols need to converge fast in order to reduce packet loss and resume packet delivery after network changes. NDN routing does not need to converge fast thanks to its architecture and needs some strategies to pipeline the packets to the destinations.
 
 According to \cite{oran} as we also work on mobility part of ICN: Some ICN designs are extremely mobile friendly, allowing  both  clients  and  servers  to  move  without  needing complex rendezvous techniques as in existing   IP-based approaches explains well why we have designed our algorithms in this vision.
 
@@ -36,7 +36,7 @@ Our try is to adapt it to 5G network and to create a new network.
 \section{NFD in NDN Networks}
 NFD is a network forwarder that implements NDN forwarder. After the initial release, NFD became a core component of the NDN Platform and will follow the same release cycle. 
 
-There are different modules on NFD for different stuffs like \textit{core} which produce different varities between different modules of NFD. \textit{Faces} implements the face concept in NDN. \textit{Tables} which contains some data structures like Content Store (CS) and tables like FIB and PIB for forwarding and pending information for NDN Data/Interest packets and \textit{Forwarding}, which interacts with forwarding strategies to choose and manage faces and \textit{RIB Management} which implements routing table information about routes and each prefix according to proper faces. this is not a seperate module from NFD Management. Basically we create some faces for each prefix by a given routing strategy which are proposed in this work and it will fill up FIB properly against these information by which you find proper routes.
+There are different modules on NFD for different stuffs like \textit{core} which produce different varieties between different modules of NFD. \textit{Faces} implements the face concept in NDN. \textit{Tables} which contains some data structures like Content Store (CS) and tables like FIB and PIB for forwarding and pending information for NDN Data/Interest packets and \textit{Forwarding}, which interacts with forwarding strategies to choose and manage faces and \textit{RIB Management} which implements routing table information about routes and each prefix according to proper faces. this is not a separate module from NFD Management. Basically we create some faces for each prefix by a given routing strategy which are proposed in this work and it will fill up FIB properly against these information by which you find proper routes.
 
 For example figure \ref{nfd} shows 2 faceIDs which are created by our proposed routing strategies in RIB and FIB: $67344$, $67876$. As you see these faces have routes toward 'jordan' and 'luca' thanks to strategies of TreeOnProducer.   
 
@@ -76,16 +76,16 @@ to rethink the role of routing in NDN. Routing protocols are responsible for dis
 
 In this subsection we introduce 4 different algorithms which are defined in function of network's need for NDN networks.
 
-We will also mention the ideas and reseaons for these strategies. Next section we will show some results and figures about algorithms for one medium size and large size of network.
+We will also mention the ideas and reasons for these strategies. Next section we will show some results and figures about algorithms for one medium size and large size of network.
 
 In this work we will work on Shortest path using different metrics. Basically number of hops for links in order to calculate our routes properly in function of network postion.
 
-\textit{ShortestPath} In \textit{Networkx} Python library is called \textit{Unweighted} method for Graph becasue it assumes number $1$ for each link which is simply number of hops. In ndnSim which is an ndn simulator, this weight has been put $1$ because of NDN. In this library \textit{Djikstra} is called \textit{weighted} methods becasue it cares about the number of weight to which the link is mapped and it's the way how it obtains proper paths. 
+\textit{ShortestPath} In \textit{Networkx} Python library is called \textit{Unweighted} method for Graph because it assumes number $1$ for each link which is simply number of hops. In ndnSim which is an ndn simulator, this weight has been put $1$ because of NDN. In this library \textit{Djikstra} is called \textit{weighted} methods because it cares about the number of weight to which the link is mapped and it's the way how it obtains proper paths. 
 
-For Discovering more about algorithms we refere you to \ref{Appendix} to see the details of implementation. 
+For Discovering more about algorithms we refer you to \ref{Appendix} to see the details of implementation. 
 
 \subsection{Consumer $\&$ Producer Trees Strategy}
-In ICN the cost metric is \textit{number of hops} becasue of naturity of ICN architecture in which you \textit{search} content so basically in Graph sense nearer nodes are preferred always. This is the idea that enables us to think about \textit{TreeOnConsumer} and \textit{TreeOnProducer} strategies in which you want to find the tree which finds the shortest paths either from one producer to consumers or one consumer to producers properly.
+In ICN the cost metric is \textit{number of hops} because of ICN architecture in which you \textit{search} content so basically in Graph sense nearer nodes are preferred always. This is the idea that enables us to think about \textit{TreeOnConsumer} and \textit{TreeOnProducer} strategies in which you want to find the tree which finds the shortest paths either from one producer to consumers or one consumer to producers properly.
 
 The idea of \textit{TreeOnConsumer} is based on this concept that imagine once in cellular networks at the same time maybe you can have $N$ clients or consumers that search exactly the same \textit{content}, like a special video. Figure \ref{consumer} shows this concept properly.
 
@@ -103,7 +103,7 @@ The idea of \textit{TreeOnConsumer} is based on this concept that imagine once i
 \end{figure}
      
 
-\textit{TreeOnProducer} is a bit inverse thinking of previous algorithm, in which imagine you, as a client to speed up your video downloading you can retrive your data using different repositories packets to catch up (Figure \ref{producer}).
+\textit{TreeOnProducer} is a bit inverse thinking of previous algorithm, in which imagine you, as a client to speed up your video downloading you can retrieve your data using different repositories packets to catch up (Figure \ref{producer}).
 
 \begin{figure}[H]
 
@@ -120,7 +120,7 @@ The idea of \textit{TreeOnConsumer} is based on this concept that imagine once i
 So the idea of \textit{TreeOnProducer} is to use all of network available repositories on the core part of the network by this way imagine a case of very dense clients on one cell network will be able to understand the amount of demands and to respond them at the same time using this strategy to have maximum possible usage of network. 
 
 \subsection{Minimum Cost MultiPath Strategy}
-Imagine a case you have multiDestination, like a live videostreaming football match that has a lot of viewers in the network at the same time, in this case nodes should do some kind of multicast sending packets to the networks so network should choose the routes which minimizes the cost of links from source to destinations. The cost is always number of hops in ICN context because of naturity of architecture. 
+Imagine a case you have multiDestination, like a live videostreaming football match that has a lot of viewers in the network at the same time, in this case nodes should do some kind of multicast sending packets to the networks so network should choose the routes which minimizes the cost of links from source to destinations. The cost is always number of hops in ICN context because of nativity of architecture. 
 
 Figure \ref{balance} shows well the idea of this strategy which is designed for multi-destination case with minimizing cost.
 
@@ -136,9 +136,9 @@ Figure \ref{balance} shows well the idea of this strategy which is designed for 
 
 \end{figure}
 
-As you can see in \ref{balance} is a simple topology example of real cisco routers implemented between 2 campus in this case you can deliver packets, one by one wich means packets can travers through one upper path and the other with belower path.
+As you can see in \ref{balance} is a simple topology example of real cisco routers implemented between 2 campus in this case you can deliver packets, one by one which means packets can travers through one upper path and the other with belower path.
 
-\textbf{Multi-Producer, Multi-Consumer} is when you have multiple consumers who are searching the same content and multiple producers for this content. This algorithm is the core of the strategies becasue of its ability. Actually this algorithm looks at the position of clients and producers then for each client finds the closest producer (as we said number of hops is always our metric) then routing is done.
+\textbf{Multi-Producer, Multi-Consumer} is when you have multiple consumers who are searching the same content and multiple producers for this content. This algorithm is the core of the strategies because of its ability. Actually this algorithm looks at the position of clients and producers then for each client finds the closest producer (as we said number of hops is always our metric) then routing is done.
 
 
 
@@ -161,9 +161,9 @@ This strategy is done by calculation of paths and links which produce maximum th
  
 Specially this strategy can be used when mobile phones want download video packets with very high quality video coding rates (i.e Ultra HD ,4K, ...) or to speed up downloading content and the network allows to get information through different paths from sources to clients. This strategy works with a weight (\textit{capacity}) on each link.
 
-As it's clear there is some paths which are not selected becasue it wouldn't produce total maximum flow on network.  The idea of this strategy is to use throughput capability of network to achieve to have the best quality at the edge user experience. 
+As it's clear there is some paths which are not selected because it wouldn't produce total maximum flow on network.  The idea of this strategy is to use throughput capability of network to achieve to have the best quality at the edge user experience. 
 
-This can be usefull whenever imagine a case the base station as a one cellular have to decide a lot of connected mobile stations at the same time. This needs a heavy packet transmission to all clients. Imagine also if all clients want to see a 4K video, so how much data should network be able to transfer to all clients. This decision can be taken by Lurch in which you are able to say to this base station to send the packets.
+This can be useful whenever imagine a case the base station as a one cellular have to decide a lot of connected mobile stations at the same time. This needs a heavy packet transmission to all clients. Imagine also if all clients want to see a 4K video, so how much data should network be able to transfer to all clients. This decision can be taken by Lurch in which you are able to say to this base station to send the packets.
 
  
 

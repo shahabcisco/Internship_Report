@@ -83,16 +83,16 @@ class RoutingNdn:
         """
         Get maximum network index
         """
-
         return self.network_index
+        
 
     def get_graph(self):
 
         """
         Get graph
         """
-
         return self.G
+        
 
     def algo_ndn(self, Algo_Name):
 
@@ -204,8 +204,6 @@ class RoutingNdn:
 
         :param n1: node1 of graph.
         :param n2: node2 of graph.
-        :param b: bandwidth of link.
-        :param c: cost of link.
         """
 
         self.G.add_edge(n1, n2)

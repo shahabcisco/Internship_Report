@@ -38,23 +38,23 @@ My internship has been held in CICSO Company and i had a great pleasure to be un
 
 \section{Tools of Internship}
 
-I used a machine with an operating system of the latest distribution of Linux Ubuntu 16.04, lenovo ThinkPad Laptop serie T450 of CORE i5 with 2 cores. Our expermimental tests are totally done on powerful cisco's server (pirl-ndn-2.com) with 48 cores and 252 GB memory RAM. We have used \textit{ifstat} of linux implementation to see the rates output of result and \textit{ndn-icp-download} application to downloading in MultiThreading processing on different containers at the same time. Latest version of Python (3.5) was used to compile the program.
+I used a machine with an operating system of the latest distribution of Linux Ubuntu 16.04, lenovo ThinkPad Laptop series T450 of CORE i5 with 2 cores. Our experimental tests are totally done on powerful cisco's server (pirl-ndn-2.com) with 48 cores and 252 GB memory RAM. We have used \textit{ifstat} of linux implementation to see the rates output of result and \textit{ndn-icp-download} application to downloading in MultiThreading processing on different containers at the same time. Latest version of Python (3.5) was used to compile the program.
 
 \textbf{\Huge{Lurch}} is an orchestrator for large scale and highly reconfigurable NDN experimental test-beds written in python for any platform, i.e., large Grids, local lab, providing connectivity among servers involved in the test-bed, ... .
 
-Basically Python language is perfectly designed to develop new algorithms becasue of it's very usefull functionalities and handfull algorithm sense, I mean you can write a 10 lines of C code in just one line in python! Albeit according to \cite{python} we note that Python implementations may be not as fast as C/C++ counterparts but they scale with the input size according to the theory which claims a good reason to choose \textit{Python} anyway as the core part of Lurch.
+Basically Python language is perfectly designed to develop new algorithms because of it's very useful functionalities and handful algorithm sense, I mean you can write a 10 lines of C code in just one line in python! Albeit according to \cite{python} we note that Python implementations may be not as fast as C/C++ counterparts but they scale with the input size according to the theory which claims a good reason to choose \textit{Python} anyway as the core part of Lurch.
 
-Actually this emulator emulates linux containers which are like virtual machines in function of your setup. I said like, becasue there is difference between VMs and containers and the difference is the overhead that comes with running a separate kernel and simulating all the hardware when we have VMs. These containers are produced by ubuntu image server installed on the server then \textit{Lurch} clone this image to different machines to have virtual network machines. 
+Actually this emulator emulates linux containers which are like virtual machines in function of your setup. I said like, because there is difference between VMs and containers and the difference is the overhead that comes with running a separate kernel and simulating all the hardware when we have VMs. These containers are produced by ubuntu image server installed on the server then \textit{Lurch} clone this image to different machines to have virtual network machines. 
 
-This tool can be used for researchers to test their customized network on the real virtual machines and run some usefull experiments. This means you can have your own OpenFlow who enables network controller to determine the path of network packets across a network of switches or virtual ethernet interfaces (MACVLAN interfaces).
+This tool can be used for researchers to test their customized network on the real virtual machines and run some useful experiments. This means you can have your own OpenFlow who enables network controller to determine the path of network packets across a network of switches or virtual ethernet interfaces (MACVLAN interfaces).
 
 Lurch produces some Modules in which you can setup your network: \textit{NDNmanager}, \textit{MobilityManager}, \textit{Topology}, \textit{Clustermanager}. We added a new Module Called \textit{RoutingNDN} in which you will find different algorithms to choose and some functionalities for modifying the Graph of network.
 We also added some new functionalities on \textit{CommandLineInterface}, \textit{NetworkManager}, \textit{ConfigReader} and \textit{NDNmanager} module to have the ability to change the network parameters like capacity, delay, forwarding plane instantly which was very important in our testing experiments.
 
 Figure \ref{cli} shows configuration, setup step of Lurch.
-'../Network' is the address of input configuration files like Topology, position of Clients and Producers and the content that they search, mobility model of network a setting file about URL server, layer2 protocols, information about mobility parameteres, ... . By this way you can make your clusters on server.
+'../Network' is the address of input configuration files like Topology, position of Clients and Producers and the content that they search, mobility model of network a setting file about URL server, layer2 protocols, information about mobility parameters, ... . By this way you can make your clusters on server.
 
-$m942$ is ExperimentID of the user who runs his expermiment on this server. We use SSH remote login service to enter to each containers.
+$m942$ is ExperimentID of the user who runs his experiment on this server. We use SSH remote login service to enter to each containers.
 
 \begin{figure}[H]
 
@@ -69,7 +69,7 @@ $m942$ is ExperimentID of the user who runs his expermiment on this server. We u
 \end{figure}
 
  
-Figure \ref{table} is the table of linux containers running on the server \textit{pirl-ndn-2.com}. You can see the IPv4 virtual interfaces on each container and the name NodeID for each interfaces which have the same as NodeID of end link. On Container \textit{m942michel} you see a \textit{wlan0} interface becasue this node is choosen Access Point node in setup level. This interface is now eumulated by ndnSIM using lxc-wifi-tap script. In figure \ref{data} you can see an example of how we can get our output in Kbps for each link.
+Figure \ref{table} is the table of linux containers running on the server \textit{pirl-ndn-2.com}. You can see the IPv4 virtual interfaces on each container and the name NodeID for each interfaces which have the same as NodeID of end link. On Container \textit{m942michel} you see a \textit{wlan0} interface because this node is chosen Access Point node in setup level. This interface is now emulated by ndnSIM using lxc-wifi-tap script. In figure \ref{data} you can see an example of how we can get our output in Kbps for each link.
 
 
 \begin{figure}[H]
@@ -86,7 +86,7 @@ Figure \ref{table} is the table of linux containers running on the server \texti
 
 
  
-\textit{setup environment} will setup completely your containers on the server with all of information needed to have a virtual network. As figure \ref{cli} shows step by step setups which are successful which is not quiet short! \textit{Routing scripts created} is where the routing scritps are creating in each different containers then you have \textit{NDN routing set} step when you push your scripts on containers. normally this stage takes more time than the previous step. Each routing scripts includes bash commands to run which are coming from NFD command line interfaces (Picture \ref{script}). By \textit{create} and  command you can create a new face and \textit{register} you can add the routes in the RIB.   
+\textit{setup environment} will setup completely your containers on the server with all of information needed to have a virtual network. As figure \ref{cli} shows step by step setups which are successful which is not quiet short! \textit{Routing scripts created} is where the routing scripts are creating in each different containers then you have \textit{NDN routing set} step when you push your scripts on containers. normally this stage takes more time than the previous step. Each routing scripts includes bash commands to run which are coming from NFD command line interfaces (Picture \ref{script}). By \textit{create} and  command you can create a new face and \textit{register} you can add the routes in the RIB.   
  
 \begin{figure}[H]
 
@@ -102,7 +102,7 @@ Figure \ref{table} is the table of linux containers running on the server \texti
  
  
  
-Next step to continue is doing \textit{start repo} command line which creates a dameon of \textit{repo-ng} application on all producer nodes NFD using a timer which waits for state of process intelligently. Figure \ref{repo} shows this step in Lurch. As you can see it declares you on which node the repository is created and how many repositories exist on the network.
+Next step to continue is doing \textit{start repo} command line which creates a daemon of \textit{repo-ng} application on all producer nodes NFD using a timer which waits for state of process intelligently. Figure \ref{repo} shows this step in Lurch. As you can see it declares you on which node the repository is created and how many repositories exist on the network.
 
 
 
@@ -136,7 +136,7 @@ Next step to continue is doing \textit{start repo} command line which creates a 
 
 In figure \ref{download} you can see by \textit{list client} and \textit{list repo} command line which lists the clients and producers on your network. Then as we have started repositories engine, now it's time to choose the routing algorithm. It's easy, you just write route set, then TAB to see the different algorithms which will appear on your terminal, then you can select one of them and click ENTER.
 
-Now it's time to run your experiment, this is doing just by \textit{start} command line you can see 2 downloading thread is started at the same time becasue you had 2 clients searching same content.  
+Now it's time to run your experiment, this is doing just by \textit{start} command line you can see 2 downloading thread is started at the same time because you had 2 clients searching same content.  
 
 \begin{figure}[H]
 
@@ -165,9 +165,9 @@ In figure \ref{capacity} by \textit{link show} command you can see all of link c
 
 \end{figure}
  
-We have implemented also implemented an algorithm to full automatization the routing, it means that in function of network situation you can adapt proper algorithm to your routing updates, which depend on workload system can be varried and played. This can be very usefull when we want to have demonstrations on our work.
+We have implemented also implemented an algorithm to full automation the routing, it means that in function of network situation you can adapt proper algorithm to your routing updates, which depend on workload system can be varied and played. This can be very useful when we want to have demonstrations on our work.
 
-Picture \ref{auto} shows well when we do \textit{route auto} TreeOnConsumer algorithm is chosen becasue of the structure of workload. It means that in workload you have one producer and 2 consumers who are searching the content. So this algorithm is just a brain who understands and can adapt algorithms to proper station of system.
+Picture \ref{auto} shows well when we do \textit{route auto} TreeOnConsumer algorithm is chosen because of the structure of workload. It means that in workload you have one producer and 2 consumers who are searching the content. So this algorithm is just a brain who understands and can adapt algorithms to proper station of system.
 
 \begin{figure}[H]
 
@@ -175,7 +175,7 @@ Picture \ref{auto} shows well when we do \textit{route auto} TreeOnConsumer algo
 
 \includegraphics[scale = 0.35]{Pictures/auto.png}
 
-\caption{Automatization algorithm} \label{auto} 
+\caption{Automation algorithm} \label{auto} 
 
 \end{center}
 
@@ -184,7 +184,7 @@ Picture \ref{auto} shows well when we do \textit{route auto} TreeOnConsumer algo
 
 In figure \ref{lxc} you can see the difference between linux containers and virtual machines which is very important. Actually linux containers use \textit{cgroups} kernel module to get prior for each machine on the same host server.
 
-This appearance makes linux containers to be very successful becasue of ability to manage and control the guests machines becasue basically they share one kernel on machine. 
+This appearance makes linux containers to be very successful because of ability to manage and control the guests machines because basically they share one kernel on machine. 
 
 \begin{figure}[H]
 
@@ -203,7 +203,7 @@ This appearance makes linux containers to be very successful becasue of ability 
 \section{Scope and Objectives}
 In These days, 2016,  there is a lot of research and new ideas on 5G cellular networks on different aspects of Research and Development from advanced chip designing techniques and hardware, antenna designing to whole different network architectures, algorithms, computations even some ideas to combine it with Quad drones robots and ... for the 2020 plan. It's a bit like the evolution from 1999 to 2000 for IT and computer science domain.
 
-ICN has a fundamental designing philosophy in which you will be able to have like a PeerToPeer (Figure \ref{peertopeer}) or IoT way of thinking in which each node will be a peer who can talk with his neighbours using P2P protocol on second layer of ICN model where he is searching chunk of your data as it's clear on the waist ICN Model (Figure \ref{spec}). 
+ICN has a fundamental designing philosophy in which you will be able to have like a PeerToPeer (Figure \ref{peertopeer}) or IoT way of thinking in which each node will be a peer who can talk with his neighbors using P2P protocol on second layer of ICN model where he is searching chunk of your data as it's clear on the waist ICN Model (Figure \ref{spec}). 
 
 
 \begin{figure}[H]
@@ -220,7 +220,7 @@ ICN has a fundamental designing philosophy in which you will be able to have lik
 
 
 
-Information Centric Networking layer model shows a bit names in ICN can be like a replacement in TCP/IP architecure in this sense you can imagine that all nodes have the same responsibility to pipline packets to the network and you can have Device 2 Device (D2D) communication in which instead of putting clock at a special time alarm in each night, Or at the evening, light and heat of Sunshine (with embedded Sensor installed on window) can capture temperature of heatness then talk to your Table-Lamp installed beside your bedroom and turn it on and your alarm clock to ring and waking you up or immediately turn your microwave on to heat bread inside (\ref{internetofthings})
+Information Centric Networking layer model shows a bit names in ICN can be like a replacement in TCP/IP architecture in this sense you can imagine that all nodes have the same responsibility to pipeline packets to the network and you can have Device 2 Device (D2D) communication in which instead of putting clock at a special time alarm in each night, Or at the evening, light and heat of Sunshine (with embedded Sensor installed on window) can capture temperature of heat then talk to your Table-Lamp installed beside your bedroom and turn it on and your alarm clock to ring and waking you up or immediately turn your microwave on to heat bread inside (\ref{internetofthings})
 
 
 
@@ -248,7 +248,7 @@ Information Centric Networking layer model shows a bit names in ICN can be like 
 
 \end{figure}
 
-Figure \ref{2020} estimation calculated shows more than 25 Billion things will be connected in 2020! \textit{Smart Cities} is another word that we hear everywhere in Technology domain in these days. So it sounds there exists a strong merging between communicaiton world and computer/artificial intelligence or robotics. This merging needs a better solution for communicating between machines/robots. We believe that ICN is a good architecture to solve this essential problem. It seems also more and more calling communication system philosophy is \textit{expired}! or if it is not today it will be expired in near future. ICN as Jacobson et al explained in \cite{jacobson} has more intelligent and logic architecture.
+Figure \ref{2020} estimation calculated shows more than 25 Billion things will be connected in 2020! \textit{Smart Cities} is another word that we hear everywhere in Technology domain in these days. So it sounds there exists a strong merging between communication world and computer/artificial intelligence or robotics. This merging needs a better solution for communicating between machines/robots. We believe that ICN is a good architecture to solve this essential problem. It seems also more and more calling communication system philosophy is \textit{expired}! or if it is not today it will be expired in near future. ICN as Jacobson et al explained in \cite{jacobson} has more intelligent and logic architecture.
 
 
 \begin{figure}[H]
@@ -264,9 +264,9 @@ Figure \ref{2020} estimation calculated shows more than 25 Billion things will b
 \end{figure}
 
 
- We beleive ICN architecture can be a very suitable fit for 5G networks becasue of its advantage against TCP/IP architecture, and important network functionalities like congestion control, storage data, security, and mobility protocols which can be a good idea specially in case of wireless mobile communication in which nodes can be moved with every speed and channel conditions in the case that all of objects are connected together and they talk together with ICN protocol specification.
+ We believe ICN architecture can be a very suitable fit for 5G networks because of its advantage against TCP/IP architecture, and important network functionalities like congestion control, storage data, security, and mobility protocols which can be a good idea specially in case of wireless mobile communication in which nodes can be moved with every speed and channel conditions in the case that all of objects are connected together and they talk together with ICN protocol specification.
 
-So if you are in Cisco Systems Paris and you search \textit{'movie.mp4'} on YouTube maybe on the network one of your neighbours has been downloaded once. So now instead of talking with YouTube's server in USA you can take it from one of your near nodes beside Issy val de seine train station and not making more extra traffic on network.
+So if you are in Cisco Systems Paris and you search \textit{'movie.mp4'} on YouTube maybe on the network one of your neighbors has been downloaded once. So now instead of talking with YouTube's server in USA you can take it from one of your near nodes beside Issy val de seine train station and not making more extra traffic on network.
 
 
 In this way Cisco has been investigated ICN in context of 5G and notably for popular applications like video delivery, which is one of the most popular applications in these days, people want to see a video on YouTube, Netflix, ... everywhere and everytime in the metro stations, in the building, in the bitches with different Transcoder of video coding and with the highest speed of downloading which network should produce them.

@@ -221,9 +221,9 @@ grid (current bounding box.north east);
 \newcommand{\theTitle}{Routing Algorithms in NDN Networks}
 \newcommand{\thefootnotedef}{Routing Algorithms in NDN networks}
 \newcommand{\theAuthors}{shahab SHARIAT BAGHERI}
-\newcommand{\theResponsible}{Luca MUSCARIELLO\\Pablo PIANTANIDA \\ Beatrice PESQUET}
+\newcommand{\theResponsible}{Luca MUSCARIELLO\\Pablo PIANTANIDA \\ Beatrice PESQUET \\ Jean Le Feuvre}
 \newcommand{\theConferenceAndPlace}{Internship Defense \\
-Salle F801, TELECOM ParisTech}
+Salle F801, TELECOM ParisTech \\ 10:00 AM, 9/19/2016}
 \newcommand{\theDate}{9/19/2016}
 
 %%%%%%
@@ -364,6 +364,8 @@ Cisco Systems France.
 
 \begin{frame}{Named Data networking (NDN)}
 \only<1>{
+Why ICN?
+
 \begin{itemize}
 \item \textbf{N}amed \textbf{D}ata \textbf{N}etworking $\Rightarrow$ \textit{\textbf{Name}} base Philosophy vs TCP/IP \textit{\textbf{Calling}} Networking.
 
@@ -373,12 +375,9 @@ Cisco Systems France.
 
 \end{itemize}
 
-\begin{center}
-\includegraphics[scale=0.15]{figures/architecture.png}
-\end{center}
 }
 
-\only<2>{
+
 \begin{itemize}
 \item \textbf{Lurch} is an orchestrator originally developped for ccnx. 
 \item We developped Lurch:
@@ -388,15 +387,21 @@ Cisco Systems France.
 \item Different interfaces to interact with strategies at run time (Client, Repositories, forwading strategies, ...)
 \item \textit{New Routing Strategies}.
 
+\only<2>{
 \begin{center}
-\includegraphics[scale=0.28]{figures/sdn.png}
+\includegraphics[scale=0.25]{figures/controller.png}
 \end{center}
+}
 
-
+\only<3>{
+\begin{center}
+\includegraphics[scale=0.15]{figures/architecture.png}
+\end{center}
+}
 
 \end{itemize}
 \end{itemize} 
-}
+
 
 
 

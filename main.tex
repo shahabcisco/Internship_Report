@@ -53,6 +53,12 @@
 \hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
 \title{\ttitle} % Defines the thesis title - don't touch this
 
+\lstset{
+  language=python,
+  basicstyle=\small,
+  breaklines=true
+  }
+
 
 \begin{document}
 
@@ -89,7 +95,7 @@
  \includegraphics[width=0.3\textwidth,natwidth=610,natheight=642]{cisco.png}
 
 \textsc{\LARGE Paris Saclay University and TELECOM ParisTech}\\[1.5cm] % University name
-\textsc{\Large Internship report \\ Master of Multimedia Netwokring} % Thesis type
+\textsc{\Large Internship report \\ Master of Multimedia Networking} % Thesis type
 
 \HRule \\[0.2cm] % Horizontal line
 {\huge \bfseries \ttitle}\\[0.4cm] % Thesis title
@@ -181,7 +187,7 @@ Albert Einstein
 \addtotoc{Abstract} % Add the "Abstract" page entry to the Contents
 
 \abstract % Add a gap in the Contents, for aesthetics
-\textbf{I}nformation \textbf{C}entric \textbf{N}etworking (ICN) in one sentence is rethinking of internet in the sense that it will be no more calling (IP-architecutre) for communication rather we search the content on the network using caching datas with different on each node. Notably this architecure is a good suite for embedded systems in which you have good control on chaching level , memory allocations, network functionalities. In this case like all networks in each node your packets need routing table to send. In this work we propose 4 different strategies called \textit{TreeOnConsumer}, \textit{TreeOnProducer}, \textit{MinCostMultipath}, \textit{MaxFlow} which decide the best path to create faces through proper interfaces then forward packets. Finally we design an algorithm to automatize the algorithm to be chosen in function of network conditions. We developed \textit{Lurch}, the emulator to interact with linux containers dynamically on cisco's server. We use \textit{ndn-icp-download} an application for downloading ndn content. We use \textit{ifstat} linux utility to read network interface statistics.  
+\textbf{I}nformation \textbf{C}entric \textbf{N}etworking (ICN) in one sentence is rethinking of internet in the sense that it will be no more calling (IP-architecutre) for communication rather we search the content on the network using caching data with different on each node. Notably this architecture is a good suite for embedded systems in which you have good control on caching level , memory allocations, network functionalities. In this case like all networks in each node your packets need routing table to send. In this work we propose 4 different strategies called \textit{TreeOnConsumer}, \textit{TreeOnProducer}, \textit{MinCostMultipath}, \textit{MaxFlow} which decide the best path to create faces through proper interfaces then forward packets. Finally we design an algorithm to automatize the algorithm to be chosen in function of network conditions. We developed \textit{Lurch}, the emulator to interact with linux containers dynamically on cisco's server. We use \textit{ndn-icp-download} an application for downloading ndn content. We use \textit{ifstat} linux utility to read network interface statistics.  
 Results are real data rate packet in Kbps using these algorithms which choose different paths according to proper algorithm and network condition.
 
 %\clearpage % Start a new page
@@ -352,10 +358,19 @@ Information Centric Networking for Media Distribution:
 Will it Blend?
 \textit{David Oran, Research \& Advanced Development 
 Cisco Systems, Cambridge, MA, USA}
-%
-%\bibitem{RF} 
-%N.P Kontakos and J.K Pollard
-%\textit{Bluetooth RF Layer Performance Evaluation} University College London, 2001
+
+\bibitem{new} 
+\textit{V. Jacobson}
+Congestion Avoidance and Control. In
+SIGCOMM
+, 1988
+
+
+
+\bibitem{RF} 
+N.P Kontakos and J.K Pollard
+\textit{ Jacobson, D. K. Smetters, N. Briggs, M. Plass, P. Stewart, J. D. Thornton, and R. Braynard. VoCCN: Voice-over Content-Centric Networks. In ReArch
+, 2009} University College London, 2001
 %
 %\bibitem{preamble} 
 %S. Nagaraj, S. Khan a,d C. Schlegel, Departement of Electrical Engineering University of Alberta,

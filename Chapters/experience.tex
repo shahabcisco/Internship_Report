@@ -7,9 +7,9 @@
 \lhead{Chapter 2. \emph{Experimental Results on Routing Strategies}}
 
 \section{Experiment Test Setup}
-We tested our experiments on cisco's server with linux containers with different configuration set ups on Lurch. In the case of needs, dynamic modifications also have been added on Lurch to be more interactive for different test scnearios.
+We tested our experiments on cisco's server with linux containers with different configuration set ups on Lurch. In the case of needs, dynamic modifications also have been added on Lurch to be more interactive for different test scenarios.
 
-In this chapter we will show, test and validate our 4 routing strategies on 2 different setup networks with 5 nodes (medium size) and another one with 17 nodes (large size) each one with costumized capacity. We plot rates in Kbps vs time for each link involved in strategy. $\{ai\}$, $i=$1:8 are Access Points and nodes with \textit{NodeID} are Autonomous nodes in the network.
+In this chapter we will show, test and validate our 4 routing strategies on 2 different setup networks with 5 nodes (medium size) and another one with 17 nodes (large size) each one with customized capacity. We plot rates in Kbps vs time for each link involved in strategy. $\{ai\}$, $i=$1:8 are Access Points and nodes with \textit{NodeID} are Autonomous nodes in the network.
    
 In all scenarios we plot the figures of each link by nodeID of connected ends. \textit{In}, \textit{Out} means the direction of packets that come to node. So \textit{In} always is Data packets and Out are Interest packets. As it's clear they are larger than We consider number of hops as cost of link as it is meaningful in ICN architecture.
 \textit{TreeOnConsumer}, \textit{TreeOnProducer}, \textit{MinCostMultipath}, \textit{MaxFlow} are 4 different parameters of RoutingNDN module to choose which are done for \textit{Medium} and \textit{Large} size. We have put the result of each case inside the subsection.
@@ -22,7 +22,7 @@ In all cases Clients are searching /n/a/noseg chunk and repositories are contain
 \subsection{TreeOnConsumer}
 As figure \ref{TreeOnConsumer} shows, 'luca' and 'jordan' nodes are clients searching '/n/a/noseg' chunk and 'shahab' node is producer of content. The first prefix of content is /n folder.
 
-Figure \ref{treeonconsumer} shows 4 traced rates in which yellow and green one are data packets. Same packets are routed through \textit{TreeOnConsumer} tree to the clients with different rates. In this figure you can see the delay between 'shahab-jordan/In' and 'shahab-luca/In' which is becasue of capacity difference of between containers. So you have 2 threads on 2 different machines occuring and recorded at the same time.
+Figure \ref{treeonconsumer} shows 4 traced rates in which yellow and green one are data packets. Same packets are routed through \textit{TreeOnConsumer} tree to the clients with different rates. In this figure you can see the delay between 'shahab-jordan/In' and 'shahab-luca/In' which is because of capacity difference of between containers. So you have 2 threads on 2 different machines occurring and recorded at the same time.
 
 \begin{figure}[H]
 
@@ -49,7 +49,7 @@ Figure \ref{treeonproducer} shows as well this downloading traced during time wh
 
 Imagine a case in which the clients are searching a very huge amount of data, specially let's say 10 clients that they want to watch a video at the same time through connected base station.
 
-This strategy can be very usefull in the case that by understanding multihoming of the core system or backhaul to which base stations are connected.
+This strategy can be very useful in the case that by understanding multihoming of the core system or backhaul to which base stations are connected.
 
 \begin{figure}[H]
 
@@ -70,14 +70,14 @@ This strategy can be very usefull in the case that by understanding multihoming 
 \end{figure}
 
 \subsection{MinCostMultipath}
-Figure \ref{MinCostMultipath} shows \textit{MinCostMultipath} tree of minimum network in which we use number of hops as cost of links. This is the case in which we want to broadcast video livestreaming as we discussed. Same chunk of datas are searching at the same time for a live movie like a football match content to all clients.
+Figure \ref{MinCostMultipath} shows \textit{MinCostMultipath} tree of minimum network in which we use number of hops as cost of links. This is the case in which we want to broadcast video livestreaming as we discussed. Same chunk of data are searching at the same time for a live movie like a football match content to all clients.
 
 
-This figure will be usefull when you have a multihoming system in which you are able to download your content from different nodes. This strategy will be a good idea in the case that you have a lot clients on one base station are attached.
+This figure will be useful when you have a multihoming system in which you are able to download your content from different nodes. This strategy will be a good idea in the case that you have a lot clients on one base station are attached.
 
 This is a co-algorithm of TreeOnConsumer or a way of rethinking of that. In TreeOnConsumer you assume that multi nodes are searching the same content while in TreeOnProducer you have just one client that searches content but with using multihoming advantage of network. 
 
-Whenever the algorithm has created multiple faces for this particular node, the strategy can not no more be \textit{best-route} becasue this strategy sends just on one face. So in this case we should use another strategy like \textit{multicast}, \textit{load-balance} or \textit{broadcast} to be able to do routing updates and properly sending the packets.
+Whenever the algorithm has created multiple faces for this particular node, the strategy can not no more be \textit{best-route} because this strategy sends just on one face. So in this case we should use another strategy like \textit{multicast}, \textit{load-balance} or \textit{broadcast} to be able to do routing updates and properly sending the packets.
  
 Figure \ref{mincost} shows traced data as well.
 \begin{figure}[H]
@@ -161,7 +161,7 @@ Figure \ref{Mob1} shows the first step of client mobility in which the mobile st
 
 You can see in figure \ref{Mob2} that as soon as mobile client is attached to $n11$ routing update is happened and new routing is traced.
 
-Same case for \ref{Mob3} which is for showing that update can occured. This update can be designed periodically or to have an algorithm. After we need to know more practical constraints like how much time takes that an routing update happens? The answer depends on what we use for engine forwarder and its implementations. 
+Same case for \ref{Mob3} which is for showing that update can occurred. This update can be designed periodically or to have an algorithm. After we need to know more practical constraints like how much time takes that an routing update happens? The answer depends on what we use for engine forwarder and its implementations. 
 
 
 
@@ -183,7 +183,7 @@ Same case for \ref{Mob3} which is for showing that update can occured. This upda
 
 \end{figure}
 
-Now in figure \ref{mob1} and \ref{mob2} you see the rates which are changed whenever producer is changed. This changed is done mannually in this case.
+Now in figure \ref{mob1} and \ref{mob2} you see the rates which are changed whenever producer is changed. This changed is done manually in this case.
 
 
 
@@ -228,11 +228,11 @@ Now in figure \ref{mob1} and \ref{mob2} you see the rates which are changed when
 
 
 \subsection{TreeOnProducer}
-Figure \ref{TreeOnProducer_big} shows $a6$ as Access Point client which recieves data from different producer nodes at the same time.
+Figure \ref{TreeOnProducer_big} shows $a6$ as Access Point client which receives data from different producer nodes at the same time.
 
 This strategy can be used whenever client can achieve to multiple repositories and it can download his chunk at the same time.
 
-This is very usefull specially in case of load balancing strategy. Client can get his packets with different paths using different producers in the sense that maybe on the network mobile node wants download a higher data rates so he can use the benefit of multihoming of the content which is searching.
+This is very useful specially in case of load balancing strategy. Client can get his packets with different paths using different producers in the sense that maybe on the network mobile node wants download a higher data rates so he can use the benefit of multihoming of the content which is searching.
 
 \begin{figure}[H]
 
@@ -256,15 +256,15 @@ This is very usefull specially in case of load balancing strategy. Client can ge
 \subsection{MinCostMultipath}
 Figure \ref{MinCostMultiPath} shows how the \textit{MinCostMultiPath} tree is chosen to deliver content to all clients which are connected to access points.
  
-Notably this strategy can be used when you want to do a \textit{Equal Cost Multi Path} (ECMP) routing in which your minimized paths have equal cost to destination so we should use load-balance or multipath forwading strategy to allow traffic to pass along the network. 
+Notably this strategy can be used when you want to do a \textit{Equal Cost Multi Path} (ECMP) routing in which your minimized paths have equal cost to destination so we should use load-balance or multipath forwarding strategy to allow traffic to pass along the network. 
 
 Figure \ref{Load} shows well a simple case usage of this strategy using \textit{load balancing} strategy to use multipath routing.
 
-There is a very important issue in this case of strategy, and the important concept is that when the routing strategies has decided or multi faces for each node the forwarder strategy can not be more best-route! Actually in this case engine of forwarder should allow the kernel to pass packets through diferent faces. Kernel lets operates like a switch to forward the packets into th network.
+There is a very important issue in this case of strategy, and the important concept is that when the routing strategies has decided or multi faces for each node the forwarder strategy can not be more best-route! Actually in this case engine of forwarder should allow the kernel to pass packets through different faces. Kernel lets operates like a switch to forward the packets into th network.
 
 By this way we see clearly that designing a routing strategy also depends on forwarding strategies. 
 
-In NFD, there is different forwarding strategies \textit{best-route} which uses the best route in terms of cost link function. \textit{multicast} which send the packets in multicast way, \textit{broadcast} which pipline all packets toward all, faces in PIT table. These namespaces has been implemented and used in our studied works and experiments.
+In NFD, there is different forwarding strategies \textit{best-route} which uses the best route in terms of cost link function. \textit{multicast} which send the packets in multicast way, \textit{broadcast} which pipeline all packets toward all, faces in PIT table. These namespaces has been implemented and used in our studied works and experiments.
 
 \begin{figure}[H]
 
@@ -308,15 +308,15 @@ The algorithm of this strategy is written by the idea of searching minimum multi
 \end{figure}
 
 
-\textbf{\Large{Multi Consumers and Producers}}. Figure \ref{Multi-Repo-Client} as you can see we can have $n$ producers and $m$ consumers want to download at the same time. This strategy chooses the shortest paths between clients and consumers using to give routes update. Actually for each consumer, algorithm looks which producer is closer using \textit{shortest path} then set routes properly. This strategy can be very usefull in ICN networks becasue of its architecture. 
+\textbf{\Large{Multi Consumers and Producers}}. Figure \ref{Multi-Repo-Client} as you can see we can have $n$ producers and $m$ consumers want to download at the same time. This strategy chooses the shortest paths between clients and consumers using to give routes update. Actually for each consumer, algorithm looks which producer is closer using \textit{shortest path} then set routes properly. This strategy can be very useful in ICN networks because of its architecture. 
 
 Routing is the core issues of any network even Network of streets and broadways! It's the idea of Routing in general is to have knowledge about network and its proper graph then have a table at each router to calculate best routes for each packet. This table can be static or dynamic, normally in practice routers are dynamic in function of network needs. 
 
-One beautiful idea which is very \textit{à la mode} in research and development in these days becasue of its advantages is to have a \textbf{S}oftware \textbf{D}efine \textbf{N}etwork. The SDN can be a central controller who allows users to modify the network in terms of capacities, network topology, routing, and whatever you can think about the network which can be changes dynamically.
+One beautiful idea which is very \textit{à la mode} in research and development in these days because of its advantages is to have a \textbf{S}oftware \textbf{D}efine \textbf{N}etwork. The SDN can be a central controller who allows users to modify the network in terms of capacities, network topology, routing, and whatever you can think about the network which can be changes dynamically.
 
-You can also imagine a scenario to occur, you can have algorithms inside algorithms to run full automate evidences. This strategy can be very usefull in these scnearios becasue of NDN architecutre.
+You can also imagine a scenario to occur, you can have algorithms inside algorithms to run full automate evidences. This strategy can be very useful in these scenarios because of NDN architecture.
 
-By running this strategy on Lurch, it can understand whenever you want to do a ECMP or Multi repository client. It's important becasue network when you have your controller (Lurch) who understands the scenario in which you want to apply your strategies. 
+By running this strategy on Lurch, it can understand whenever you want to do a ECMP or Multi repository client. It's important because network when you have your controller (Lurch) who understands the scenario in which you want to apply your strategies. 
 
   
 
@@ -398,11 +398,11 @@ Now let's consider an interesting point of this strategy in Mobility of ICN. Fig
 
 
 
-Now let's consider a case which i call it \textit{Dense} network becasue the number of clients and repositories are more than rests.
+Now let's consider a case which i call it \textit{Dense} network because the number of clients and repositories are more than rests.
 
 Figure \ref{Dense} shows well automatic routing best shortest path for each consumer to achieve to producers using this strategy.
 
-Figure \ref{dense} shows also the stairs of rates falling down in the network becasue of waterfall sense of Network. Basically more you go deeper to network the capacity rate will be increased which is real assumption in networks becasue (backbone / backhaul / Mobile edge, ...)
+Figure \ref{dense} shows also the stairs of rates falling down in the network because of waterfall sense of Network. Basically more you go deeper to network the capacity rate will be increased which is real assumption in networks because (backbone / backhaul / Mobile edge, ...)
 \begin{figure}[H]
 
 \begin{center}
@@ -441,7 +441,7 @@ The mobile stations are connected to $a2,a3$ Access Points, they can download th
 
 The algorithm of this strategy is written by finding the paths which maximize throughput with preventing out of range extra loops.
 
-This algorithm finds the paths which is able to pass the packets from consumer to clients which maximizes the  total throughput. This allows to use maximum capacbility of packets and whole of network usage which is quiet good for a high rate communication.
+This algorithm finds the paths which is able to pass the packets from consumer to clients which maximizes the  total throughput. This allows you to use maximum capability of packets and whole of network usage which is quiet good for a high rate communication.
 
 \begin{figure}[H]
 
