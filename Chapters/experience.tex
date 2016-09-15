@@ -11,7 +11,7 @@ We tested our experiments on cisco's server with linux containers with different
 
 In this chapter we will show, test and validate our 4 routing strategies on 2 different setup networks with 5 nodes (medium size) and another one with 17 nodes (large size) each one with customized capacity. We plot rates in Kbps vs time for each link involved in strategy. $\{ai\}$, $i=$1:8 are Access Points and nodes with \textit{NodeID} are Autonomous nodes in the network.
    
-In all scenarios we plot the figures of each link by nodeID of connected ends. \textit{In}, \textit{Out} means the direction of packets that come to node. So \textit{In} always is Data packets and Out are Interest packets. As it's clear they are larger than We consider number of hops as cost of link as it is meaningful in ICN architecture.
+In all scenarios we plot the figures of each link by nodeID of connected ends. \textit{In}, \textit{Out} means the direction of packets that come to node. So \textit{In} always is Data packets and Out are Interest packets. As it's clear they are larger tha.  We consider number of hops as cost of link as it is meaningful in ICN architecture.
 \textit{TreeOnConsumer}, \textit{TreeOnProducer}, \textit{MinCostMultipath}, \textit{MaxFlow} are 4 different parameters of RoutingNDN module to choose which are done for \textit{Medium} and \textit{Large} size. We have put the result of each case inside the subsection.
 
 In all cases Clients are searching /n/a/noseg chunk and repositories are containing /n folder which has alphabetical letters to like a,b,c,d, ... then chunks of \textit{BigBuckBunny.mp4} are appended to them. Engine of repository is an application called \textit{repo-ng}. 

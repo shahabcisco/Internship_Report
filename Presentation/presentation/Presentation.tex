@@ -363,7 +363,7 @@ Cisco Systems France.
 \subsection{ICN Brief Introduction}
 
 \begin{frame}{Named Data networking (NDN)}
-\only<1>{
+
 Why ICN?
 
 \begin{itemize}
@@ -375,46 +375,12 @@ Why ICN?
 
 \end{itemize}
 
-}
-
-
-\begin{itemize}
-\item \textbf{Lurch} is an orchestrator originally developped for ccnx. 
-\item We developped Lurch:
-
-\begin{itemize}
-\item For NFD (NDN forwarder).
-\item Different interfaces to interact with strategies at run time (Client, Repositories, forwading strategies, ...)
-\item \textit{New Routing Strategies}.
-
-\only<2>{
-\begin{center}
-\includegraphics[scale=0.25]{figures/controller.png}
-\end{center}
-}
-
-\only<3>{
-\begin{center}
-\includegraphics[scale=0.15]{figures/architecture.png}
-\end{center}
-}
-
-\end{itemize}
-\end{itemize} 
-
-
-
-
-
 \end{frame}
-
-
-
 
 
 \subsection{Virtualization and Linux Containers}
 
-\subsubsection{Virtualization and Linux Containers}
+
 
 \begin{frame}{Virtualization and Linux Containers}
 \only<1>{
@@ -428,6 +394,33 @@ Virtual Machines (VM) vs Linux Containers.
 
 \end{frame}
 
+\begin{frame}{Lurch}
+
+\begin{itemize}
+\item \textbf{Lurch} is an orchestrator originally developped for ccnx. 
+\item We developped Lurch:
+
+\begin{itemize}
+\item For NFD (NDN forwarder).
+\item Different interfaces to interact with strategies at run time (Client, Repositories, forwading strategies, ...)
+\item \textit{New Routing Strategies}.
+
+
+
+\begin{center}
+\includegraphics[scale=0.25]{figures/controller.png}
+\end{center}
+
+
+\end{itemize}
+\end{itemize} 
+
+
+
+
+\end{frame}
+
+
 \begin{frame}{Large Scale Platform Grid5000}
 
 Grid5000 platform
@@ -438,8 +431,22 @@ Grid5000 platform
 
 \end{frame}
 
+\begin{frame}{Virtualization Stack}
+
+
+\begin{center}
+\includegraphics[scale=0.15]{figures/architecture.png}
+\end{center}
+
+\end{frame}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Routing Strategies}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Routing Algorithms Results}
 \begin{frame}{Routing Strategies}
 We proposed 4 different routing strategies for different situation of networks which can cover all of needs:
 \begin{itemize}
@@ -454,9 +461,6 @@ We proposed 4 different routing strategies for different situation of networks w
 
 \end{itemize}
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Routing Algorithms Results}
 
 \subsection{TreeOnConsumer}
 

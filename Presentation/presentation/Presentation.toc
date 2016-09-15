@@ -4,10 +4,8 @@
 \beamer@subsectionintoc {1}{2}{CISCO \& PIRL}{7}{0}{1}
 \beamer@sectionintoc {2}{Ideas and Strategies}{8}{0}{2}
 \beamer@subsectionintoc {2}{1}{ICN Brief Introduction}{9}{0}{2}
-\beamer@subsectionintoc {2}{2}{Virtualization and Linux Containers}{12}{0}{2}
-\beamer@subsubsectionintoc {2}{2}{1}{Virtualization and Linux Containers}{12}{0}{2}
-\beamer@subsubsectionintoc {2}{2}{2}{Routing Strategies}{14}{0}{2}
-\beamer@sectionintoc {3}{Routing Algorithms Results}{15}{0}{3}
+\beamer@subsectionintoc {2}{2}{Virtualization and Linux Containers}{10}{0}{2}
+\beamer@sectionintoc {3}{Routing Algorithms Results}{14}{0}{3}
 \beamer@subsectionintoc {3}{1}{TreeOnConsumer}{16}{0}{3}
 \beamer@subsectionintoc {3}{2}{TreeOnProducer}{18}{0}{3}
 \beamer@subsectionintoc {3}{3}{MinCostMultiPath}{20}{0}{3}
